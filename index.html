@@ -1,1112 +1,686 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="感官彩虹英語 Sense Rainbow English：Kelly 老師原創，用觸覺、視覺、聽覺、嗅覺、味覺、前庭覺、本體覺七大感官遊戲，帶 3–8 歲孩子開口說英文。給家長與兒童英語老師。線上購買即將開放。">
-  <meta property="og:title" content="感官彩虹英語 Sense Rainbow English">
-  <meta property="og:description" content="七大感官，玩出一道英語彩虹。給 3–8 歲孩子的原創英文遊戲課程，線上購買即將開放。">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#1F3A5F">
-  <title>感官彩虹英語 Sense Rainbow English｜用七大感官遊戲帶 3–8 歲孩子開口說英文</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --coral: #F47C5E;
-      --coral2: #E2603F;
-      --navy: #1F3A5F;
-      --crema: #FFF8EE;
-      --crema2: #EEF8F4;
-      --amar: #F7B733;
-      --menta: #4FB39A;
-      --ink: #2B3440;
-      --grey: #5E6A78;
-      --white: #fff;
-      --shadow: 0 12px 34px rgba(31,58,95,.12);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", Nunito, system-ui, -apple-system, sans-serif;
-      color: var(--ink);
-      background: var(--crema);
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    html[lang="en"] body {
-      font-family: Nunito, "PingFang TC", "Noto Sans TC", system-ui, sans-serif;
-    }
-    img, svg { max-width: 100%; height: auto; display: block; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 0 18px; }
-    h1, h2, h3 {
-      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", Nunito, sans-serif;
-      line-height: 1.2;
-      color: var(--navy);
-      font-weight: 800;
-      text-wrap: balance;
-    }
-    html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 {
-      font-family: Nunito, "Noto Sans TC", sans-serif;
-    }
-    .li { color: var(--coral2); }
-    .nb { display: inline-block; }
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 80;
-      background: var(--navy);
-      color: var(--crema);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 8px 14px;
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .3px;
-    }
-    .topbar .top-msg { flex: 1; text-align: center; min-width: 0; }
-    .lang-toggle {
-      flex: 0 0 auto;
-      display: inline-flex;
-      align-items: center;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 999px;
-      padding: 2px;
-    }
-    .lang-toggle button {
-      appearance: none;
-      border: 0;
-      background: transparent;
-      color: #DCE7F3;
-      font: inherit;
-      font-weight: 800;
-      font-size: .72rem;
-      letter-spacing: .4px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      line-height: 1;
-      font-family: Nunito, "Noto Sans TC", sans-serif;
-    }
-    .lang-toggle button[aria-pressed="true"] {
-      background: var(--coral);
-      color: #fff;
-    }
-    .hero {
-      background: linear-gradient(180deg, #FFE9DC, var(--crema));
-      padding: 26px 0 32px;
-      text-align: center;
-    }
-    .pill {
-      display: inline-block;
-      background: rgba(244,124,94,.16);
-      color: var(--coral2);
-      font-weight: 800;
-      font-size: .74rem;
-      letter-spacing: .6px;
-      padding: 6px 15px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-      text-wrap: balance;
-    }
-    .hero h1 { font-size: 2.05rem; margin-bottom: 10px; }
-    .hero .sub {
-      font-size: 1.08rem;
-      color: var(--grey);
-      max-width: 580px;
-      margin: 0 auto 18px;
-      text-wrap: pretty;
-    }
-    .hero-art {
-      max-width: 420px;
-      margin: 0 auto 18px;
-      filter: drop-shadow(0 16px 28px rgba(31,58,95,.18));
-    }
-    .nums {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 4px 0 8px;
-    }
-    .num {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 16px 18px;
-      min-width: 132px;
-      text-align: center;
-    }
-    .num .n {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--coral2);
-      font-family: Nunito, "Noto Sans TC", sans-serif;
-      line-height: 1;
-    }
-    .num .t {
-      font-size: .86rem;
-      color: var(--grey);
-      font-weight: 700;
-      margin-top: 4px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      max-width: 460px;
-      margin: 16px auto 0;
-      background: var(--coral);
-      color: #fff;
-      font-weight: 800;
-      text-align: center;
-      text-decoration: none;
-      padding: 19px 18px;
-      border-radius: 15px;
-      font-size: 1.16rem;
-      box-shadow: 0 10px 26px rgba(244,124,94,.45);
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      animation: pz 1.7s ease-in-out infinite;
-      text-wrap: balance;
-    }
-    .btn small {
-      display: block;
-      font-weight: 700;
-      font-size: .78rem;
-      color: rgba(255,255,255,.92);
-      margin-top: 3px;
-      animation: none;
-    }
-    @keyframes pz {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .btn { animation: none; }
-    }
-    .trust { font-size: .82rem; color: var(--grey); margin-top: 12px; }
-    .stars { color: var(--amar); letter-spacing: 2px; }
-    section { padding: 34px 0; }
-    .alt { background: var(--white); }
-    .lil { background: var(--crema2); }
-    .kduro {
-      background: linear-gradient(160deg, var(--navy), #2D5684);
-      color: var(--crema);
-    }
-    .kduro h2, .kduro h3 { color: var(--white); }
-    h2 { font-size: 1.62rem; text-align: center; margin-bottom: 8px; }
-    .lead {
-      text-align: center;
-      color: var(--grey);
-      max-width: 600px;
-      margin: 0 auto 20px;
-      font-size: 1.02rem;
-    }
-    .kduro .lead { color: #DCE7F3; }
-    .promise {
-      background: var(--amar);
-      text-align: center;
-      padding: 20px 18px;
-    }
-    .promise p {
-      max-width: 600px;
-      margin: 0 auto;
-      font-weight: 800;
-      color: var(--navy);
-      font-size: 1.22rem;
-      line-height: 1.3;
-      text-wrap: balance;
-    }
-    .rtesti { display: grid; gap: 16px; max-width: 640px; margin: 0 auto; }
-    .rt {
-      background: var(--white);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .rt .art {
-      aspect-ratio: 16/10;
-      background: linear-gradient(160deg, #FFE3D4, #D8F1EA);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .rt .art svg { width: 78%; max-width: 280px; height: auto; }
-    .sample-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--navy);
-      color: #fff;
-      font-size: .7rem;
-      font-weight: 800;
-      letter-spacing: .4px;
-      padding: 4px 10px;
-      border-radius: 999px;
-    }
-    .rt .body { padding: 16px 18px 18px; }
-    .rt .stars { font-size: 1rem; }
-    .rt .quote { font-size: .98rem; font-weight: 600; color: var(--ink); margin: 8px 0 10px; }
-    .rt .who { font-weight: 800; color: var(--navy); }
-    .rt .role { color: var(--grey); font-size: .84rem; }
-    @media (min-width: 641px) {
-      .rtesti { grid-template-columns: 1fr 1fr; }
-    }
-    .pains { max-width: 560px; margin: 0 auto; display: grid; gap: 12px; }
-    .pain {
-      background: var(--white);
-      border-left: 4px solid var(--coral);
-      border-radius: 12px;
-      padding: 13px 16px;
-      font-weight: 600;
-      box-shadow: var(--shadow);
-      font-size: .98rem;
-    }
-    .pain b { color: var(--navy); }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      max-width: 600px;
-      margin: 6px auto 8px;
-    }
-    .step {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 18px 12px;
-      text-align: center;
-    }
-    .step .si { font-size: 1.8rem; }
-    .step .sh { font-weight: 800; color: var(--navy); margin: 6px 0 3px; font-size: 1.05rem; }
-    .step .sp { font-size: .82rem; color: var(--grey); }
-    .feat { max-width: 560px; margin: 16px auto 0; display: grid; gap: 11px; }
-    .fitem {
-      display: flex;
-      gap: 11px;
-      align-items: flex-start;
-      background: var(--white);
-      border-radius: 12px;
-      padding: 12px 15px;
-      box-shadow: var(--shadow);
-    }
-    .fitem .ck {
-      flex: 0 0 auto;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--menta);
-      color: #fff;
-      font-weight: 800;
-      font-size: .8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
-    }
-    .fitem b { color: var(--navy); }
-    .show {
-      background: radial-gradient(120% 80% at 50% 0%, #2D5684 0%, #1F3A5F 55%, #152A45 100%);
-      color: #fff;
-      overflow: hidden;
-    }
-    .show h2 { color: #fff; }
-    .show .lead { color: #D6E2F0; }
-    .show .pill { background: rgba(247,183,51,.18); color: #FFD27A; }
-    .carousel { position: relative; margin-top: 8px; }
-    .track {
-      display: flex;
-      gap: 14px;
-      overflow-x: auto;
-      padding: 10px 8px 18px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .track::-webkit-scrollbar { display: none; }
-    .pcard {
-      flex: 0 0 auto;
-      width: min(72vw, 260px);
-      scroll-snap-align: center;
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(0,0,0,.35);
-      color: var(--ink);
-    }
-    .pcard .sheet { aspect-ratio: 3/4; background: #fff; }
-    .pcard .sheet svg { width: 100%; height: 100%; }
-    .pcard .cap { padding: 12px 14px 14px; text-align: center; background: #fff; }
-    .pcard .cap b { display: block; color: var(--navy); font-size: 1rem; font-weight: 800; }
-    .pcard .cap span {
-      display: inline-block;
-      margin-top: 6px;
-      font-size: .72rem;
-      font-weight: 800;
-      letter-spacing: .4px;
-      color: var(--navy);
-      background: var(--amar);
-      padding: 4px 10px;
-      border-radius: 99px;
-    }
-    .cnav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 4px;
-    }
-    .carr {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(255,255,255,.35);
-      background: rgba(255,255,255,.08);
-      color: #fff;
-      font-size: 1.5rem;
-      cursor: pointer;
-      line-height: 1;
-      font-family: inherit;
-    }
-    .carr:hover { background: rgba(255,255,255,.18); }
-    .dots { display: flex; gap: 7px; }
-    .dots i {
-      display: block;
-      width: 8px;
-      height: 8px;
-      border-radius: 99px;
-      background: rgba(255,255,255,.3);
-      transition: all .4s;
-    }
-    .dots i.on { width: 24px; background: var(--amar); }
-    .chint { text-align: center; font-size: .8rem; color: #A9BDD6; margin-top: 10px; }
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      max-width: 580px;
-      margin: 0 auto;
-    }
-    .chip {
-      background: var(--white);
-      border: 1px solid #F6D9CC;
-      color: var(--navy);
-      font-weight: 700;
-      font-size: .9rem;
-      padding: 8px 14px;
-      border-radius: 999px;
-      box-shadow: 0 4px 12px rgba(31,58,95,.06);
-    }
-    .bonuses {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      max-width: 600px;
-      margin: 6px auto 0;
-    }
-    .bonus {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 14px;
-    }
-    .bonus .bart {
-      height: 110px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .bonus .bart svg { width: 72px; height: 72px; }
-    .bonus .bt { font-weight: 800; color: var(--navy); font-size: .95rem; margin: 8px 12px 2px; }
-    .bonus .bd { color: var(--grey); font-size: .8rem; margin: 0 12px; }
-    .bonus .bfree {
-      display: inline-block;
-      background: rgba(244,124,94,.16);
-      color: var(--coral2);
-      font-weight: 800;
-      font-size: .68rem;
-      padding: 3px 10px;
-      border-radius: 999px;
-      margin-top: 8px;
-      letter-spacing: .4px;
-    }
-    .bonus.wide { grid-column: 1 / -1; }
-    .valuestack {
-      max-width: 460px;
-      margin: 0 auto 16px;
-      background: rgba(255,255,255,.08);
-      border-radius: 14px;
-      padding: 16px 18px;
-      text-align: left;
-    }
-    .valuestack .vr {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      font-size: .92rem;
-      padding: 7px 0;
-      border-bottom: 1px dashed rgba(255,255,255,.22);
-      color: var(--crema);
-    }
-    .valuestack .vr:last-child { border-bottom: none; }
-    .valuestack .vr span:first-child { flex: 1; }
-    .valuestack .vr b { color: var(--amar); white-space: nowrap; }
-    .valuestack .tot { font-weight: 800; margin-top: 6px; font-size: 1.02rem; }
-    .valuestack .tot b { color: #fff; }
-    .price {
-      background: var(--white);
-      border: 2px solid var(--coral);
-      border-radius: 20px;
-      max-width: 460px;
-      margin: 0 auto;
-      padding: 26px 22px;
-      text-align: center;
-      box-shadow: 0 16px 40px rgba(31,58,95,.16);
-    }
-    .price .val { color: var(--grey); font-size: 1.05rem; }
-    .price .now {
-      color: var(--coral2);
-      font-weight: 800;
-      font-size: 3.4rem;
-      line-height: 1;
-      display: block;
-      margin: 4px 0;
-      font-family: Nunito, "Noto Sans TC", sans-serif;
-    }
-    .price .save {
-      display: inline-block;
-      background: var(--coral);
-      color: #fff;
-      font-weight: 800;
-      font-size: .9rem;
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-top: 6px;
-    }
-    .price .cap { color: var(--grey); font-size: .82rem; margin-top: 10px; }
-    .demo-note {
-      display: inline-block;
-      margin-top: 10px;
-      background: rgba(31,58,95,.08);
-      color: var(--navy);
-      font-size: .78rem;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 999px;
-    }
-    .guar {
-      max-width: 520px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-      text-align: center;
-    }
-    .guar .g { font-size: 2.2rem; }
-    .guar b { color: var(--coral2); }
-    .guar p { color: var(--grey); margin-top: 6px; }
-    .tcards { display: grid; gap: 14px; max-width: 560px; margin: 0 auto; }
-    @media (min-width: 641px) {
-      .tcards { grid-template-columns: 1fr 1fr; }
-    }
-    .tcard {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 16px 18px;
-      display: flex;
-      gap: 13px;
-      align-items: flex-start;
-    }
-    .tcard .av {
-      flex: 0 0 auto;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: var(--crema2);
-      border: 2px solid var(--menta);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-    }
-    .tcard .tt { font-size: .95rem; color: var(--ink); }
-    .tcard .tn { font-weight: 800; color: var(--navy); margin-top: 8px; font-size: .9rem; }
-    .faq { max-width: 560px; margin: 0 auto; }
-    .faq details {
-      background: var(--white);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      margin-bottom: 10px;
-      padding: 2px 16px;
-    }
-    .faq summary {
-      font-weight: 700;
-      color: var(--navy);
-      padding: 13px 0;
-      cursor: pointer;
-      list-style: none;
-      font-size: .98rem;
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after {
-      content: '+';
-      float: right;
-      color: var(--coral);
-      font-weight: 800;
-    }
-    .faq details[open] summary::after { content: '\2013'; }
-    .faq p { color: var(--grey); padding: 0 0 13px; font-size: .95rem; }
-    .foot {
-      text-align: center;
-      color: var(--grey);
-      font-size: .82rem;
-      padding: 24px 22px 40px;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    .foot p + p { margin-top: 8px; }
-    .foot b { color: var(--coral2); }
-    .promise p { text-wrap: pretty; }
-    @media (max-width: 520px) {
-      .hero h1 { font-size: 1.7rem; }
-      h2 { font-size: 1.4rem; }
-      .bonuses { grid-template-columns: 1fr; }
-      .bonus.wide { grid-column: auto; }
-      .promise p { font-size: 1.08rem; }
-      .steps { grid-template-columns: 1fr; }
-      .price .now { font-size: 2.8rem; }
-      .topbar .top-msg { font-size: .7rem; text-align: left; }
-    }
-  
-    .rainbow-bar{height:6px;background:linear-gradient(90deg,#E85D5D,#F39A3D,#E8B21E,#4FAE5A,#4A90D9,#5B5FC7,#9B59B6)}
-    .tagline{font-weight:800;color:var(--navy);font-size:1rem;margin:-2px 0 12px}
-    .about{display:grid;gap:18px;max-width:640px;margin:0 auto;align-items:center}
-    @media(min-width:641px){.about{grid-template-columns:180px 1fr}}
-    .about .ph{width:170px;height:170px;margin:0 auto;border-radius:50%;background:linear-gradient(160deg,#FFE3D4,#D8F1EA);border:4px solid #fff;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--grey);font-weight:700;font-size:.82rem;gap:4px}
-    .about .ph span:first-child{font-size:3rem}
-    .about p{color:var(--ink);margin-bottom:10px}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-    .badges span{background:var(--crema2);border:1px solid #CFE9E0;color:var(--navy);font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px}
-    .senses{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:640px;margin:0 auto}
-    @media(min-width:641px){.senses{grid-template-columns:repeat(4,1fr)}}
-    .sense{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:14px 12px 14px;text-align:center;border-top:6px solid var(--c)}
-    .sense .ic{width:56px;height:56px;margin:0 auto 6px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,#fff);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
-    .sense .st{font-weight:800;color:var(--navy);font-size:.98rem}
-    .sense .sd{font-size:.8rem;color:var(--grey);margin-top:4px;line-height:1.45}
-    .sense .sd i{color:var(--c);font-style:normal;font-weight:800;filter:brightness(.85)}
-    .sense.wide{grid-column:1/-1}
-    @media(min-width:641px){.sense.wide{grid-column:auto}}
-    .rbnote{text-align:center;color:var(--grey);font-size:.85rem;margin-top:14px}
-    .mods{max-width:560px;margin:0 auto;display:grid;gap:10px;counter-reset:m}
-    .mod{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:12px 14px;border-left:6px solid var(--c)}
-    .mod .mi{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--c) 18%,#fff);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
-    .mod b{display:block;color:var(--navy);font-size:.98rem}
-    .mod span{display:block;color:var(--grey);font-size:.84rem}
-    .mod i{font-style:normal;font-weight:700;color:var(--coral2)}
-    .plans{display:grid;gap:14px;max-width:900px;margin:0 auto}
-    @media(min-width:760px){.plans{grid-template-columns:repeat(3,1fr)}}
-    .plan{background:#fff;color:var(--ink);border-radius:20px;padding:22px 20px;text-align:center;box-shadow:0 16px 40px rgba(0,0,0,.18);position:relative}
-    .plan.hot{border:3px solid var(--amar)}
-    .plan .pn{font-weight:800;color:var(--navy);font-size:1.2rem}
-    .plan .pf{color:var(--grey);font-size:.85rem}
-    .plan .pp{color:var(--coral2);font-weight:900;font-size:2.3rem;font-family:Nunito,"Noto Sans TC",sans-serif;margin:8px 0 2px;line-height:1.1}
-    .plan .pe{display:inline-block;background:rgba(244,124,94,.14);color:var(--coral2);font-weight:800;font-size:.78rem;padding:4px 12px;border-radius:999px}
-    .plan.hot .pe{background:var(--amar);color:var(--navy)}
-    .plan ul{list-style:none;text-align:left;margin:14px 0 0;display:grid;gap:7px;font-size:.9rem}
-    .plan li{padding-left:24px;position:relative}
-    .plan li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--menta);color:#fff;font-size:.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
-    .soon{max-width:520px;margin:22px auto 0;text-align:center}
-    .soon .sb{display:inline-block;background:rgba(255,255,255,.14);border:1.5px dashed rgba(255,255,255,.5);color:#fff;font-weight:800;padding:10px 18px;border-radius:14px;font-size:1.02rem}
-    .wbtn{display:block;width:100%;max-width:420px;margin:14px auto 0;background:var(--amar);color:var(--navy);font-weight:900;font-size:1.1rem;border:0;border-radius:15px;padding:16px;cursor:pointer;font-family:inherit;box-shadow:0 10px 24px rgba(247,183,51,.4)}
-    .soon small{display:block;color:#DCE7F3;font-size:.8rem;margin-top:8px}
-    .uses{display:grid;gap:12px;max-width:560px;margin:0 auto}
-    @media(min-width:641px){.uses{grid-template-columns:1fr 1fr}}
-    .use{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:14px 16px;font-size:.95rem;display:flex;gap:10px}
-    .use .ue{font-size:1.5rem}
-    .use b{color:var(--navy)}
-    .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;font-weight:700;font-size:.9rem;padding:12px 18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:all .3s;z-index:120;max-width:88vw;text-align:center}
-    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-    .chat-fab{position:fixed;right:16px;bottom:16px;z-index:110;display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:12px 16px 12px 12px;font-family:inherit;font-weight:800;font-size:.92rem;cursor:pointer;box-shadow:0 10px 28px rgba(31,58,95,.4)}
-    .chat-fab .dot{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#E85D5D,#E8B21E,#4FAE5A,#4A90D9,#9B59B6);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-    .chat-panel{position:fixed;right:16px;bottom:80px;z-index:115;width:min(360px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 110px));background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(31,58,95,.35);display:none;flex-direction:column;overflow:hidden}
-    .chat-panel.open{display:flex}
-    .chat-head{background:var(--navy);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
-    .chat-head .dot{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#E85D5D,#E8B21E,#4FAE5A,#4A90D9,#9B59B6);display:flex;align-items:center;justify-content:center}
-    .chat-head b{flex:1;font-size:1rem}
-    .chat-head button{background:rgba(255,255,255,.15);border:0;color:#fff;width:30px;height:30px;border-radius:50%;font-size:1.1rem;cursor:pointer}
-    .chat-human{background:#FFF3D6;color:var(--navy);font-size:.78rem;font-weight:700;padding:7px 14px}
-    .chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;background:var(--crema)}
-    .msg{max-width:86%;padding:9px 12px;border-radius:14px;font-size:.88rem;line-height:1.5}
-    .msg.bot{background:#fff;color:var(--ink);border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(31,58,95,.08)}
-    .msg.me{align-self:flex-end;background:var(--coral);color:#fff;border-bottom-right-radius:4px}
-    .chat-qs{padding:10px 12px 12px;display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid #F1E6DA;background:#fff}
-    .chat-qs button{background:var(--crema2);border:1px solid #CFE9E0;color:var(--navy);font-family:inherit;font-weight:700;font-size:.8rem;padding:7px 11px;border-radius:999px;cursor:pointer;text-align:left}
-    .chat-note{font-size:.72rem;color:var(--grey);padding:0 14px 10px;background:#fff}
-    .foot{padding-bottom:90px}
-    @media(max-width:520px){
-      .hero h1{font-size:1.6rem}
-      .nums{gap:8px;flex-wrap:nowrap}
-      .num{min-width:0;flex:1;padding:12px 6px}
-      .num .n{font-size:1.8rem}
-      .num .t{font-size:.74rem}
-      .bonuses{grid-template-columns:1fr 1fr;gap:10px}
-      .bonus.wide{grid-column:1/-1}
-      .bonus .bart{height:80px}
-      .bonus .bart span{font-size:2.2rem!important}
-      .steps{grid-template-columns:repeat(3,1fr);gap:8px}
-      .step{padding:14px 6px}
-      .step .sp{font-size:.74rem}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CY 感官玩英文 CY Sense Play｜用七大感官遊戲帶 3–8 歲孩子開口說英文 by C.Y. Kids</title>
+<meta name="description" content="CY 感官玩英文 CY Sense Play（by C.Y. Kids）：由 CY Academy 創辦人張正儀 Kelly 老師原創，用觸覺、視覺、聽覺、嗅覺、味覺、前庭覺、本體覺七大感官遊戲，帶 3–8 歲孩子開口說英文。給家長與兒童英語老師，線上購買即將開放。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CY 感官玩英文 CY Sense Play｜by C.Y. Kids">
+<meta property="og:description" content="摸一摸、聽一聽、動一動，英文自然說出口。給 3–8 歲孩子的七大感官英文遊戲課程，線上購買即將開放。">
+<meta property="og:url" content="https://kellychang2008.github.io/playenglish-demo/">
+<meta property="og:image" content="https://kellychang2008.github.io/playenglish-demo/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1B2035">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' role='img' aria-label='CY Sense Play'%3E%3Crect width='64' height='64' rx='16' fill='%231B2035'/%3E%3Ccircle cx='8.98' cy='26.62' r='3.1' fill='%23D9483B'/%3E%3Ccircle cx='14.18' cy='18.19' r='3.1' fill='%232F9873'/%3E%3Ccircle cx='22.30' cy='12.50' r='3.1' fill='%23D9A21E'/%3E%3Ccircle cx='32.00' cy='10.50' r='3.1' fill='%239C4FA3'/%3E%3Ccircle cx='41.70' cy='12.50' r='3.1' fill='%23E9822F'/%3E%3Ccircle cx='49.82' cy='18.19' r='3.1' fill='%233576BA'/%3E%3Ccircle cx='55.02' cy='26.62' r='3.1' fill='%235D58B0'/%3E%3Cpath d='M32 18.5c9.7 0 17.5 7.1 17.5 16.2S41.7 51 32 51c-2.4 0-4.6-.4-6.6-1.1L17.6 53l2.4-6.6c-3.4-3-5.5-7.1-5.5-11.7 0-9.1 7.8-16.2 17.5-16.2z' fill='%23F9F2E0'/%3E%3Ccircle cx='26.3' cy='33' r='2.6' fill='%231B2035'/%3E%3Ccircle cx='37.7' cy='33' r='2.6' fill='%231B2035'/%3E%3Cpath d='M25.5 39.2c3.6 4.2 9.4 4.2 13 0' fill='none' stroke='%23B02219' stroke-width='2.8' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='38.6' r='2' fill='%23F2A79D' opacity='.85'/%3E%3Ccircle cx='42' cy='38.6' r='2' fill='%23F2A79D' opacity='.85'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Nunito:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+:root{
+  --navy:#1B2035;--navy2:#262C47;--red:#B02219;--cta:#C7362A;--cta-d:#8E1A13;
+  --gold:#D6AD5A;--gold-d:#A8823A;--gold-s:#F6E7C4;--cream:#FCF8EE;--cream2:#F9F2E0;--line:#ECE3CF;
+  --ink:#1B2035;--muted:#585D73;--white:#fff;
+  --r:20px;--sh:0 1px 2px rgba(27,32,53,.06),0 10px 28px rgba(27,32,53,.08);--sh2:0 2px 4px rgba(27,32,53,.08),0 18px 40px rgba(27,32,53,.14);
+  --touch:#D9483B;--taste:#E9822F;--sight:#D9A21E;--hear:#2F9873;--smell:#3576BA;--bal:#5D58B0;--body:#9C4FA3;
+  --zh:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--en:Nunito,"Noto Sans TC",system-ui,sans-serif;--serif:"Cormorant Garamond",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--zh);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:16px}
+html[lang="en"] body{font-family:var(--en)}
+a{color:inherit}
+.ic{width:24px;height:24px;flex:0 0 auto;display:inline-block;vertical-align:middle}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px;margin:0 auto}
+h1,h2,h3{color:var(--navy);font-weight:900;line-height:1.22;letter-spacing:.01em;text-wrap:balance}
+h1{font-size:clamp(1.85rem,4.6vw,3.1rem)}
+h2{font-size:clamp(1.5rem,3.2vw,2.2rem);text-align:center;margin-bottom:10px}
+h3{font-size:1.12rem}
+.lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 32px;font-size:1.04rem;text-wrap:pretty}
+.kicker{display:inline-flex;align-items:center;gap:6px;background:var(--gold-s);color:var(--gold-d);font-weight:800;font-size:.8rem;letter-spacing:.06em;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.kicker .ic{width:16px;height:16px}
+.center{text-align:center}
+section{padding:72px 0}
+@media(max-width:640px){section{padding:52px 0}}
+.bg-white{background:#fff}.bg-cream2{background:var(--cream2)}
+/* announcement + header */
+.announce{background:var(--navy);color:#F3E9D2;text-align:center;font-size:.8rem;font-weight:700;padding:7px 12px;letter-spacing:.03em}
+.announce b{color:var(--gold)}
+.hdr{position:sticky;top:0;z-index:90;background:rgba(252,248,238,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.hdr.scrolled{border-color:var(--line);box-shadow:0 6px 20px rgba(27,32,53,.06)}
+.hdr .in{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:40px;height:40px;flex:0 0 auto}
+.brand .bn{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.brand .bn b{font-weight:900;font-size:1.06rem;color:var(--navy);white-space:nowrap}
+.brand .bn b .cy{color:var(--red);font-family:var(--en)}
+.brand .bn small{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--gold-d);font-size:.86rem}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:700;font-size:.92rem;color:var(--muted);padding:8px 12px;border-radius:10px;transition:background .15s,color .15s}
+.nav a:hover{background:var(--cream2);color:var(--navy)}
+@media(max-width:900px){.nav{display:none}}
+.hdr-r{display:flex;align-items:center;gap:8px;margin-left:auto}
+@media(min-width:901px){.hdr-r{margin-left:8px}}
+.lang{display:inline-flex;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:3px}
+.lang button{appearance:none;border:0;background:transparent;font:800 .76rem var(--en);color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer;min-height:30px}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:900;border:0;cursor:pointer;font-family:inherit;border-radius:16px;transition:transform .12s,box-shadow .12s,background .15s;-webkit-tap-highlight-color:transparent}
+.btn-p{background:var(--cta);color:#fff;box-shadow:0 4px 0 var(--cta-d),0 10px 24px rgba(199,54,42,.28);padding:16px 26px;font-size:1.08rem;min-height:56px}
+.btn-p:hover{background:#D23E31}
+.btn-p:active{transform:translateY(3px);box-shadow:0 1px 0 var(--cta-d),0 4px 12px rgba(199,54,42,.25)}
+.btn-s{background:#fff;color:var(--navy);box-shadow:0 4px 0 var(--line),var(--sh);padding:16px 24px;font-size:1.02rem;min-height:56px;border:1.5px solid var(--line)}
+.btn-s:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.btn-sm{padding:9px 14px;font-size:.86rem;min-height:40px;border-radius:12px;box-shadow:0 3px 0 var(--cta-d)}
+.btn-sm:active{transform:translateY(2px);box-shadow:0 1px 0 var(--cta-d)}
+@media(max-width:480px){.hdr .wrap{padding:0 12px}.hdr .in{gap:8px}.brand .bn b{font-size:.98rem}.lang button{padding:6px 8px}.hdr .btn-sm{padding:8px 11px;font-size:.8rem}}
+@media(max-width:374px){.hdr .btn-sm{display:none}}
+.btn small{display:block;font-weight:700;font-size:.78rem;opacity:.92}
+.btn .stack{display:flex;flex-direction:column;align-items:center;line-height:1.3}
+/* hero */
+.hero{padding:44px 0 56px;background:radial-gradient(900px 420px at 85% 10%,#F6E7C4 0%,rgba(246,231,196,0) 70%),var(--cream)}
+.hero .grid{display:grid;gap:28px;align-items:center}
+.hero .txt{text-align:center}
+@media(min-width:900px){.hero .grid{grid-template-columns:1.15fr .85fr}.hero h1{font-size:2.75rem}.hero .txt{text-align:left}.hero .lead2{margin-left:0}.hero .ctas,.hero .tbs{justify-content:flex-start}}
+.hero-brand{display:inline-flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.hero-brand b{font-weight:900;color:var(--navy);font-size:1rem}
+.hero-brand b .cy{color:var(--red);font-family:var(--en)}
+.hero-brand small{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--gold-d);font-size:1rem}
+.hero h1 .hl{color:var(--red)}
+.tagline{font-weight:800;color:var(--gold-d);font-size:1.06rem;margin:12px 0 10px}
+.lead2{color:var(--muted);font-size:1.05rem;max-width:560px;margin:0 auto 22px;text-wrap:pretty}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+@media(max-width:520px){.ctas .btn{width:100%}}
+.tbs{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin-top:20px}
+.tb{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:700;color:var(--navy)}
+.tb .ic{width:18px;height:18px;color:var(--hear)}
+.orbit{position:relative;width:min(88vw,400px);aspect-ratio:1;margin:0 auto}
+.orbit .ring{position:absolute;inset:9%;border-radius:50%;border:2px dashed #E6D7B4}
+.orbit .core{position:absolute;inset:24%;filter:drop-shadow(0 18px 30px rgba(27,32,53,.18))}
+.orbit .core svg{width:100%;height:100%}
+.ob{position:absolute;width:19%;aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:var(--sh2);display:flex;align-items:center;justify-content:center;color:var(--c);transform:translate(-50%,-50%);border:3px solid color-mix(in srgb,var(--c) 30%,#fff)}
+.ob .ic{width:46%;height:46%}
+@media (prefers-reduced-motion:no-preference){.ob{animation:fl 5s ease-in-out infinite}.ob:nth-child(odd){animation-duration:6s;animation-delay:-2s}
+@keyframes fl{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,-58%)}}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:880px;margin:-26px auto 0;position:relative;z-index:2;padding:0 20px}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:#fff;border-radius:18px;box-shadow:var(--sh);padding:16px 12px;text-align:center;border:1px solid var(--line)}
+.stat .n{font:900 2rem/1 var(--en);color:var(--red)}
+.stat .t{font-size:.84rem;color:var(--muted);font-weight:700;margin-top:6px}
+/* cards generic */
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
+@media(hover:hover){.card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}}
+.icb{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--c,var(--red)) 13%,#fff);color:var(--c,var(--red));flex:0 0 auto}
+/* audience */
+.aud{display:grid;gap:16px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.aud{grid-template-columns:1fr 1fr}}
+.aud .card{padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none}
+.aud .card p{color:var(--muted);flex:1}
+.aud .go{display:inline-flex;align-items:center;gap:6px;font-weight:900;color:var(--cta)}
+.aud .go .ic{width:18px;height:18px;transition:transform .2s}
+.aud .card:hover .go .ic{transform:translateX(4px)}
+/* reviews */
+.revs{display:grid;gap:16px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.revs{grid-template-columns:1fr 1fr}}
+.rev{padding:22px}
+.rev .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.rev .stars{display:flex;gap:2px;color:var(--gold)}
+.rev .stars .ic{width:18px;height:18px}
+.badge{background:var(--navy);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
+.rev q{display:block;font-weight:600;quotes:none;margin-bottom:14px}
+.rev .who{display:flex;align-items:center;gap:10px}
+.rev .av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cream2);color:var(--gold-d)}
+.rev .who b{display:block;color:var(--navy)}
+.rev .who span{font-size:.84rem;color:var(--muted)}
+.promise{background:var(--navy);color:#fff;text-align:center;padding:26px 20px}
+.promise p{font-weight:900;font-size:clamp(1.1rem,2.6vw,1.45rem);max-width:720px;margin:0 auto}
+.promise p::before,.promise p::after{content:"";display:inline-block;width:26px;height:3px;background:var(--gold);border-radius:3px;vertical-align:middle;margin:0 12px}
+/* pains */
+.pains{display:grid;gap:12px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.pains{grid-template-columns:1fr 1fr}}
+.pain{display:flex;gap:14px;align-items:flex-start;padding:18px}
+.pain b{color:var(--navy)}
+/* steps */
+.steps{display:grid;gap:14px;max-width:880px;margin:0 auto;counter-reset:s}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{padding:22px;text-align:center;position:relative}
+.step .icb{margin:0 auto 10px;width:58px;height:58px;border-radius:18px}
+.step .num{position:absolute;top:14px;left:16px;font:900 .8rem var(--en);color:var(--gold-d)}
+.step h3{margin-bottom:4px}
+.step p{color:var(--muted);font-size:.94rem}
+/* about */
+.about{display:grid;gap:26px;max-width:960px;margin:0 auto;align-items:start}
+@media(min-width:820px){.about{grid-template-columns:280px 1fr}}
+.photo{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--cream2),#fff);border:2px dashed #E2D3AE;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gold-d);font-weight:700;max-width:280px;width:100%;margin:0 auto}
+.photo svg{width:96px;height:96px}
+@media(max-width:819px){.photo{max-width:200px;aspect-ratio:1}}
+.about .role{font-weight:800;color:var(--red);margin-bottom:12px}
+.about p{margin-bottom:12px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.creds span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:700;font-size:.84rem;padding:7px 12px;border-radius:999px}
+.creds .ic{width:16px;height:16px;color:var(--gold-d)}
+.anums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.anums div{background:var(--cream2);border-radius:14px;padding:12px 8px;text-align:center}
+.anums b{display:block;font:900 1.5rem/1 var(--en);color:var(--navy)}
+.anums span{font-size:.78rem;color:var(--muted);font-weight:700}
+/* senses */
+.senses{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:960px;margin:0 auto}
+@media(min-width:760px){.senses{grid-template-columns:repeat(4,1fr)}}
+.sense{padding:18px 14px;text-align:center;border-top:5px solid var(--c)}
+.sense .icb{margin:0 auto 10px;width:56px;height:56px;border-radius:50%}
+.sense h3{font-size:1rem}
+.sense .sd{font-size:.84rem;color:var(--muted);margin-top:4px;line-height:1.5}
+.sense .sd i{font-style:normal;font-weight:800;color:var(--c);filter:brightness(.82)}
+.sense.wide{grid-column:1/-1}
+@media(min-width:760px){.sense.wide{grid-column:auto}}
+.note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:18px}
+/* features */
+.feat{display:grid;gap:12px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.feat{grid-template-columns:1fr 1fr}}
+.fi{display:flex;gap:14px;align-items:flex-start;padding:18px}
+.fi b{color:var(--navy)}
+/* carousel */
+.show{background:var(--navy);color:#fff;overflow:hidden}
+.show h2{color:#fff}.show .lead{color:#C9CEDF}
+.show .kicker{background:rgba(214,173,90,.18);color:var(--gold)}
+.track{display:flex;gap:16px;overflow-x:auto;padding:8px 20px 22px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:1120px;margin:0 auto}
+.track::-webkit-scrollbar{display:none}
+.pcard{flex:0 0 auto;width:min(72vw,250px);scroll-snap-align:center;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.35);color:var(--ink)}
+.pcard .sheet{aspect-ratio:3/4}.pcard .sheet svg{width:100%;height:100%;display:block}
+.pcard .cap{padding:12px 14px 16px;text-align:center}
+.pcard .cap b{display:block;color:var(--navy)}
+.pcard .cap span{display:inline-block;margin-top:6px;font-size:.74rem;font-weight:800;color:var(--navy);background:var(--gold);padding:4px 10px;border-radius:999px}
+.cnav{display:flex;align-items:center;justify-content:center;gap:14px}
+.carr{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.carr:hover{background:rgba(255,255,255,.18)}
+.carr .ic{width:20px;height:20px}
+.carr.prev .ic{transform:rotate(180deg)}
+.dots{display:flex;gap:7px}
+.dots i{display:block;width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.3);transition:all .3s}
+.dots i.on{width:24px;background:var(--gold)}
+.chint{text-align:center;font-size:.82rem;color:#A9B0C8;margin-top:10px}
+/* modules */
+.mods{display:grid;gap:10px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.mods{grid-template-columns:1fr 1fr}.mod:last-child{grid-column:1/-1}}
+.mod{display:flex;gap:14px;align-items:center;padding:14px 16px;border-left:5px solid var(--c)}
+.mod b{display:block;color:var(--navy)}
+.mod span{display:block;color:var(--muted);font-size:.88rem}
+.mod i{font-style:normal;font-weight:700;color:var(--red)}
+/* bonuses */
+.bons{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:960px;margin:0 auto}
+@media(min-width:820px){.bons{grid-template-columns:repeat(5,1fr)}}
+.bon{padding:18px 14px;text-align:center}
+.bon .icb{margin:0 auto 10px}
+.bon h3{font-size:.96rem}
+.bon p{font-size:.82rem;color:var(--muted);margin-top:4px}
+.bon .free{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:900;letter-spacing:.06em;color:var(--gold-d);background:var(--gold-s);padding:3px 10px;border-radius:999px}
+@media(max-width:819px){.bon:last-child{grid-column:1/-1}}
+/* pricing */
+.pricing{background:linear-gradient(180deg,var(--navy),#232A47);color:#fff}
+.pricing h2{color:#fff}.pricing .lead{color:#C9CEDF}
+.pricing .kicker{background:rgba(214,173,90,.18);color:var(--gold)}
+.plans{display:grid;gap:16px;max-width:1000px;margin:0 auto;align-items:stretch}
+@media(min-width:820px){.plans{grid-template-columns:repeat(3,1fr)}}
+.plan{background:#fff;color:var(--ink);border-radius:24px;padding:26px 22px;text-align:center;position:relative;display:flex;flex-direction:column}
+.plan.hot{box-shadow:0 0 0 3px var(--gold),0 20px 40px rgba(0,0,0,.25)}
+.plan .pi{margin:0 auto 8px}
+.plan .pn{font-weight:900;color:var(--navy);font-size:1.25rem}
+.plan .pf{color:var(--muted);font-size:.88rem}
+.plan .pp{font:900 2.4rem/1.1 var(--en);color:var(--red);margin:10px 0 6px}
+.plan .pe{align-self:center;background:var(--gold-s);color:var(--gold-d);font-weight:800;font-size:.78rem;padding:4px 12px;border-radius:999px}
+.plan.hot .pe{background:var(--gold);color:var(--navy)}
+.plan ul{list-style:none;text-align:left;margin-top:16px;display:grid;gap:8px;font-size:.92rem}
+.plan li{display:flex;gap:8px;align-items:flex-start}
+.plan li::before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:var(--hear) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/12px no-repeat}
+.soon{max-width:560px;margin:28px auto 0;text-align:center}
+.soon .sb{display:inline-flex;align-items:center;gap:8px;border:1.5px dashed rgba(214,173,90,.7);color:var(--gold);font-weight:900;padding:9px 16px;border-radius:14px}
+.soon .sb .ic{width:18px;height:18px}
+.soon .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.btn-g{background:var(--gold);color:var(--navy);box-shadow:0 4px 0 var(--gold-d);padding:15px 24px;font-size:1.04rem;min-height:54px}
+.btn-g:active{transform:translateY(3px);box-shadow:0 1px 0 var(--gold-d)}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 4px 0 #04913E;padding:15px 22px;font-size:1rem;min-height:54px}
+.btn-line:active{transform:translateY(3px);box-shadow:0 1px 0 #04913E}
+.soon small{display:block;color:#C9CEDF;font-size:.84rem;margin-top:10px}
+/* guarantee, uses, faq */
+.guar{max-width:640px;margin:0 auto;padding:24px;text-align:center}
+.guar .icb{margin:0 auto 10px;--c:var(--hear)}
+.guar p{color:var(--muted);margin-top:6px}
+.uses{display:grid;gap:12px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.uses{grid-template-columns:1fr 1fr}}
+.use{display:flex;gap:14px;align-items:flex-start;padding:18px}
+.use b{color:var(--navy)}
+.faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);padding:0 18px;transition:box-shadow .2s}
+.faq details[open]{box-shadow:var(--sh2)}
+.faq summary{list-style:none;cursor:pointer;font-weight:800;color:var(--navy);padding:16px 0;display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:0 0 24px;height:24px;border-radius:50%;background:var(--cream2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B02219' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 7v10M7 12h10'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);padding:0 0 16px}
+.final{text-align:center;background:radial-gradient(700px 300px at 50% 0%,#F6E7C4,rgba(246,231,196,0) 70%),var(--cream)}
+.final .core{width:96px;height:96px;margin:0 auto 14px}
+/* footer */
+.foot{background:var(--navy);color:#C9CEDF;padding:40px 0 110px;font-size:.88rem}
+.foot .in{display:grid;gap:18px;max-width:880px;margin:0 auto;padding:0 20px;text-align:center}
+.foot .brand{justify-content:center}
+.foot .brand .bn b{color:#fff}
+.foot .brand .bn b .cy{color:#F0A196}
+.foot .linelink{color:#7EE2A8;font-weight:800}
+.foot .gl{height:3px;width:60px;background:var(--gold);margin:0 auto;border-radius:3px}
+/* toast + chat */
+.toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,16px);background:var(--navy);color:#fff;font-weight:700;font-size:.9rem;padding:12px 18px;border-radius:14px;box-shadow:var(--sh2);opacity:0;pointer-events:none;transition:all .25s;z-index:130;max-width:88vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:120;display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:8px 18px 8px 8px;font:800 .92rem inherit;font-family:inherit;cursor:pointer;box-shadow:0 4px 0 #0E1120,0 12px 28px rgba(27,32,53,.35);transition:transform .12s}
+.fab:active{transform:translateY(3px)}
+.fab svg.m{width:38px;height:38px}
+.panel{position:fixed;right:16px;bottom:82px;z-index:125;width:min(370px,calc(100vw - 32px));max-height:min(580px,calc(100vh - 110px));background:#fff;border-radius:22px;box-shadow:0 24px 60px rgba(27,32,53,.35);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(12px) scale(.98);pointer-events:none;transition:opacity .2s,transform .2s;visibility:hidden}
+.panel.open{opacity:1;transform:none;pointer-events:auto;visibility:visible}
+.ph{background:var(--navy);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.ph svg.m{width:34px;height:34px}
+.ph b{flex:1}
+.ph button{background:rgba(255,255,255,.14);border:0;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.ph button .ic{width:18px;height:18px}
+.human{background:var(--gold-s);color:var(--navy);font-size:.8rem;font-weight:700;padding:8px 14px;display:flex;gap:6px;align-items:center}
+.human .ic{width:16px;height:16px;color:var(--gold-d)}
+.human a{color:#04913E;font-weight:800}
+.cb{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;background:var(--cream)}
+.msg{max-width:86%;padding:10px 13px;border-radius:16px;font-size:.9rem;line-height:1.55;animation:pop .2s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+.msg.me{align-self:flex-end;background:var(--cta);color:#fff;border-bottom-right-radius:4px}
+.qs{padding:10px 12px;display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid var(--line)}
+.qs button{background:var(--cream2);border:1px solid var(--line);color:var(--navy);font:700 .82rem inherit;font-family:inherit;padding:8px 12px;border-radius:999px;cursor:pointer;text-align:left;min-height:36px}
+.qs button:hover{background:var(--gold-s)}
+.cn{font-size:.74rem;color:var(--muted);padding:0 14px 12px}
+/* reveal */
+html.js .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+html.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}*{animation:none!important;scroll-behavior:auto!important}}
+.li{color:var(--red)}.nb{display:inline-block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+</style>
 </head>
-<body>
-  <div class="topbar">
-    <span class="top-msg" data-i18n-html="topbar">🎉 新課程籌備中 · 線上購買即將開放</span>
-    <div class="lang-toggle" role="group" aria-label="語言">
-      <button type="button" data-lang="zh" aria-pressed="true">中文</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+<body id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-touch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V6.5a1.5 1.5 0 0 1 3 0V11M11 11V4.5a1.5 1.5 0 0 1 3 0V11M14 11V5.5a1.5 1.5 0 0 1 3 0V12M17 12V8.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.8a6 6 0 0 1-5-2.7l-2.9-4.1a1.6 1.6 0 0 1 2.6-1.9L8 14"/></symbol><symbol id="i-sight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-hear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 3-2 4-3 5.5S14 18 12.5 19.5A2.5 2.5 0 0 1 8 18"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-1.5 3.5"/></symbol><symbol id="i-smell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3c0 4 1 7 4 10a2.6 2.6 0 0 1-1.8 4.5H13"/><path d="M13 17.5a1.6 1.6 0 0 1-3 0"/><path d="M3.5 9h4M2.5 13h5M4.5 17h3"/></symbol><symbol id="i-taste" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10h17c-1 5.5-4.8 8-8.5 8s-7.5-2.5-8.5-8z"/><path d="M9 13.5c0 3.2 6 3.2 6 0"/></symbol><symbol id="i-bal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a1.5 1.5 0 1 1 1.5-1.5 3 3 0 0 1-3 4.5 4.5 4.5 0 0 1-4.5-4.5 6 6 0 0 1 6-6 7.5 7.5 0 0 1 7.5 7.5"/></symbol><symbol id="i-body" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 7v10M17.5 7v10M3.5 9.5v5M20.5 9.5v5M6.5 12h11"/></symbol><symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="currentColor"/></symbol><symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.2v5.6l4.6-2.8z" fill="currentColor"/></symbol><symbol id="i-cards" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3.5" width="12" height="15" rx="2.5"/><path d="M5 7v11a2.5 2.5 0 0 0 2.5 2.5H15"/></symbol><symbol id="i-plan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1M8.5 10h7M8.5 14h7M8.5 18h4"/></symbol><symbol id="i-sheet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></symbol><symbol id="i-audio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4.5 4.5 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></symbol><symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 21H20"/></symbol><symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.5V16c3 2.5 7 2.5 10 0v-4.5"/><path d="M21 9v5"/></symbol><symbol id="i-rain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 1-4 0"/></symbol><symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4A2.5 2.5 0 0 1 4 13.5z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></symbol><symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8.5h14V12M12 8v12.5"/><path d="M12 8C10 4 6.5 4.5 7.5 7c.4 1 2.5 1 4.5 1zM12 8c2-4 5.5-3.5 4.5-1-.4 1-2.5 1-4.5 1z"/></symbol><symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol><symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></symbol><symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol><symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.8 4.5 2.5 6.2 7 7-4.5.8-6.2 2.5-7 7-.8-4.5-2.5-6.2-7-7 4.5-.8 6.2-2.5 7-7z"/><path d="M19 15.5c.3 1.7 1 2.4 2.5 2.7-1.5.3-2.2 1-2.5 2.6-.3-1.6-1-2.3-2.5-2.6 1.5-.3 2.2-1 2.5-2.7z"/></symbol><symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l8.5 4.5-8.5 4.5L3.5 8z"/><path d="M3.5 12l8.5 4.5 8.5-4.5M3.5 16l8.5 4.5 8.5-4.5"/></symbol><symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/></symbol><symbol id="i-quiet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4A2.5 2.5 0 0 1 4 13.5z"/><path d="M9 10h.01M12 10h.01M15 10h.01" stroke-width="3"/></symbol><symbol id="i-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol><symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6.5a1.5 1.5 0 0 1 3 0V11M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V11M16 11V8.5a1.5 1.5 0 0 1 3 0V13a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5.2-3L4 13"/><path d="M3 5c.6-1.2 1.4-2 2.6-2.6M20.5 3c1 .7 1.6 1.6 1.8 2.8"/></symbol><symbol id="i-party" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4.5-12 7.5 7.5z"/><path d="M14 4.5c.5 1.5 0 3-1.5 3.5M19.5 10c-1.5-.5-3 0-3.5 1.5M17 3.5v.01M20.5 6.5v.01M20 14v.01" /></symbol><symbol id="i-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1l-.5 2.7 3.7-2.7c4.2-.6 7.3-3.5 7.3-7.1C21 7.2 17 4 12 4z"/></symbol></defs></svg>
+<div class="announce"><svg class="ic" style="width:14px;height:14px;color:#D6AD5A;margin-right:6px" aria-hidden="true"><use href="#i-sparkle"/></svg><span data-i18n-html="topbar">新課程籌備中 · 線上購買即將開放</span></div>
+<header class="hdr" id="hdr"><div class="wrap in">
+  <a class="brand" href="#top" aria-label="CY 感官玩英文 CY Sense Play"><svg class="" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1B2035"/>
+<circle cx="8.98" cy="26.62" r="3.1" fill="#D9483B"/><circle cx="14.18" cy="18.19" r="3.1" fill="#2F9873"/><circle cx="22.30" cy="12.50" r="3.1" fill="#D9A21E"/><circle cx="32.00" cy="10.50" r="3.1" fill="#9C4FA3"/><circle cx="41.70" cy="12.50" r="3.1" fill="#E9822F"/><circle cx="49.82" cy="18.19" r="3.1" fill="#3576BA"/><circle cx="55.02" cy="26.62" r="3.1" fill="#5D58B0"/>
+<path d="M32 18.5c9.7 0 17.5 7.1 17.5 16.2S41.7 51 32 51c-2.4 0-4.6-.4-6.6-1.1L17.6 53l2.4-6.6c-3.4-3-5.5-7.1-5.5-11.7 0-9.1 7.8-16.2 17.5-16.2z" fill="#F9F2E0"/>
+<circle cx="26.3" cy="33" r="2.6" fill="#1B2035"/><circle cx="37.7" cy="33" r="2.6" fill="#1B2035"/>
+<path d="M25.5 39.2c3.6 4.2 9.4 4.2 13 0" fill="none" stroke="#B02219" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="22" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/><circle cx="42" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/></svg><span class="bn"><b><span class="cy">CY</span> <span data-i18n-html="brand.name.short">感官玩英文</span></b><small>by C.Y. Kids</small></span></a>
+  <nav class="nav" aria-label="main">
+    <a href="#senses" data-i18n-html="nav.senses">七大感官</a><a href="#modules" data-i18n-html="nav.mods">課程模組</a><a href="#about" data-i18n-html="nav.about">關於老師</a><a href="#pricing" data-i18n-html="nav.price">方案</a><a href="#faq" data-i18n-html="nav.faq">常見問題</a>
+  </nav>
+  <div class="hdr-r">
+    <div class="lang" role="group" aria-label="語言"><button type="button" data-lang="zh" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    <a class="btn btn-p btn-sm" href="#pricing" data-i18n-html="hdr.cta">查看方案</a>
+  </div>
+</div></header>
+
+<section class="hero"><div class="wrap grid">
+  <div class="txt">
+    <div class="hero-brand"><b><span class="cy">CY</span> <span data-i18n-html="brand.name.short">感官玩英文</span></b><small>by C.Y. Kids</small></div><br>
+    <span class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n-html="hero.pill">給 3–8 歲孩子的家長與兒童英語老師</span></span>
+    <h1 data-i18n-html="hero.h1">孩子不愛背單字？<br>那就<span class="li nb">摸一摸、聞一聞、跳一跳</span><br>英文自然說出口</h1>
+    <p class="tagline" data-i18n-html="tagline">摸摸看、聽聽看、動一動，英文笑著說出口</p>
+    <p class="lead2" data-i18n-html="hero.sub"><b>CY 感官玩英文</b> 用觸覺、視覺、聽覺、嗅覺、味覺、前庭覺、本體覺七大感官設計英文遊戲。先讓身體玩懂，再讓嘴巴說出來。家裡、教室都能用。</p>
+    <div class="ctas">
+      <a class="btn btn-p" href="#pricing"><span class="stack"><span data-i18n-html="cta.main">查看課程方案</span><small data-i18n-html="cta.sub">線上購買即將開放 · 可先加入候補名單</small></span></a>
+      <a class="btn btn-s" href="#senses"><span data-i18n-html="hero.cta2">認識七大感官</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="tbs">
+      <span class="tb"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n-html="tb1">英語教學博士設計</span></span><span class="tb"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n-html="tb2">3–8 歲適用</span></span><span class="tb"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n-html="tb3">簡單版＋挑戰版</span></span><span class="tb"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n-html="tb4">家裡、教室都能用</span></span>
     </div>
   </div>
-  <div class="rainbow-bar"></div>
+  <div class="orbit" aria-hidden="true"><div class="ring"></div><div class="core"><svg viewBox="0 0 200 200" aria-hidden="true">
+<path d="M40 112c-14-6-22-20-20-32" fill="none" stroke="#1B2035" stroke-width="9" stroke-linecap="round"/>
+<circle cx="20" cy="76" r="10" fill="#F9F2E0" stroke="#1B2035" stroke-width="5"/>
+<path d="M160 112c14-6 22-20 20-32" fill="none" stroke="#1B2035" stroke-width="9" stroke-linecap="round"/>
+<circle cx="180" cy="76" r="10" fill="#F9F2E0" stroke="#1B2035" stroke-width="5"/>
+<path d="M100 38c33 0 60 24 60 55s-27 55-60 55c-8 0-15.5-1.3-22.5-3.8L52 154l8.2-22.5C48.6 121.4 40 108 40 93c0-31 27-55 60-55z" fill="#F9F2E0" stroke="#1B2035" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="80" cy="88" r="8" fill="#1B2035"/><circle cx="120" cy="88" r="8" fill="#1B2035"/>
+<circle cx="83" cy="85" r="2.5" fill="#fff"/><circle cx="123" cy="85" r="2.5" fill="#fff"/>
+<path d="M77 108c12 14 34 14 46 0" fill="none" stroke="#B02219" stroke-width="7" stroke-linecap="round"/>
+<circle cx="64" cy="106" r="7" fill="#F2A79D" opacity=".8"/><circle cx="136" cy="106" r="7" fill="#F2A79D" opacity=".8"/>
+<path d="M100 38c0-10 6-17 14-19" fill="none" stroke="#1B2035" stroke-width="5" stroke-linecap="round"/><circle cx="117" cy="18" r="6" fill="#D6AD5A"/>
+</svg></div><div class="ob" style="--c:var(--touch);left:50.0%;top:9.0%"><svg class="ic" aria-hidden="true"><use href="#i-touch"/></svg></div><div class="ob" style="--c:var(--sight);left:82.1%;top:24.4%"><svg class="ic" aria-hidden="true"><use href="#i-sight"/></svg></div><div class="ob" style="--c:var(--hear);left:90.0%;top:59.1%"><svg class="ic" aria-hidden="true"><use href="#i-hear"/></svg></div><div class="ob" style="--c:var(--smell);left:67.8%;top:86.9%"><svg class="ic" aria-hidden="true"><use href="#i-smell"/></svg></div><div class="ob" style="--c:var(--taste);left:32.2%;top:86.9%"><svg class="ic" aria-hidden="true"><use href="#i-taste"/></svg></div><div class="ob" style="--c:var(--bal);left:10.0%;top:59.1%"><svg class="ic" aria-hidden="true"><use href="#i-bal"/></svg></div><div class="ob" style="--c:var(--body);left:17.9%;top:24.4%"><svg class="ic" aria-hidden="true"><use href="#i-body"/></svg></div></div>
+</div></section>
+<div class="stats">
+  <div class="stat rv"><div class="n">7</div><div class="t" data-i18n-html="hero.n1">大感官模組</div></div>
+  <div class="stat rv"><div class="n">30+</div><div class="t" data-i18n-html="hero.n2">張原創遊戲卡</div></div>
+  <div class="stat rv"><div class="n">30</div><div class="t" data-i18n-html="hero.n3">分鐘一堂</div></div>
+  <div class="stat rv"><div class="n">2009</div><div class="t" data-i18n-html="st4">年 CY 創校</div></div>
+</div>
 
-  <section class="hero">
-    <div class="wrap">
-      <span class="pill" data-i18n-html="hero.pill">給 3–8 歲孩子的家長與兒童英語老師</span>
-      <h1 data-i18n-html="hero.h1">孩子不愛背單字？<br>那就<span class="li nb">摸一摸、聞一聞、跳一跳</span><br>英文自然說出口</h1>
-      <p class="tagline" data-i18n-html="tagline">七大感官，玩出一道英語彩虹 🌈</p>
-      <p class="sub" data-i18n-html="hero.sub"><b>感官彩虹英語 Sense Rainbow English</b> 用觸覺、視覺、聽覺、嗅覺、味覺、前庭覺、本體覺七大感官設計英文遊戲。先讓身體玩懂，再讓嘴巴說出來。家裡、教室都能用。</p>
-      <div class="hero-art"><svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="rainbow of senses">
-<g fill="none" stroke-width="14" stroke-linecap="round">
-<path d="M40 230 A170 170 0 0 1 380 230" stroke="#E85D5D"/>
-<path d="M56 230 A154 154 0 0 1 364 230" stroke="#F39A3D"/>
-<path d="M72 230 A138 138 0 0 1 348 230" stroke="#E8B21E"/>
-<path d="M88 230 A122 122 0 0 1 332 230" stroke="#4FAE5A"/>
-<path d="M104 230 A106 106 0 0 1 316 230" stroke="#4A90D9"/>
-<path d="M120 230 A90 90 0 0 1 300 230" stroke="#5B5FC7"/>
-<path d="M136 230 A74 74 0 0 1 284 230" stroke="#9B59B6"/>
-</g>
-<g font-size="26" text-anchor="middle">
-<text x="30" y="150">✋</text><text x="80" y="62">👅</text><text x="160" y="22">👀</text><text x="260" y="22">👂</text><text x="340" y="62">👃</text><text x="392" y="150">🌀</text>
-</g>
-<circle cx="210" cy="206" r="34" fill="#fff" stroke="#F47C5E" stroke-width="3"/>
-<text x="210" y="218" text-anchor="middle" font-size="34">💪</text>
-<rect x="150" y="234" width="120" height="0" />
+<section><div class="wrap">
+  <h2 data-i18n-html="aud.h2">你是哪一位？</h2><p class="lead" data-i18n-html="aud.lead">同一套遊戲，家裡和教室都有對應的用法。</p>
+  <div class="aud">
+    <a class="card rv" href="#pricing" style="--c:var(--taste)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></div><h3 data-i18n-html="aud.pt">我是家長</h3><p data-i18n-html="aud.pd">每次 15–30 分鐘，用家裡現有的東西陪孩子玩英文。英文不熟也能跟著音檔念。</p><span class="go"><span data-i18n-html="aud.pc">看家庭版</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+    <a class="card rv" href="#pricing" style="--c:var(--smell)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-school"/></svg></div><h3 data-i18n-html="aud.tt">我是老師／補習班</h3><p data-i18n-html="aud.td">現成的 30 分鐘教案、分組方式與混齡調整，拿了就能上課。</p><span class="go"><span data-i18n-html="aud.tc">看老師版與機構版</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</div></section>
+
+<section class="bg-white"><div class="wrap">
+  <h2 data-i18n-html="t.h2">試玩家庭與老師怎麼說</h2><p class="lead" data-i18n-html="t.lead">以下為版面示範用的評價，並非真實留言。課程上線後會換成真正的回饋。</p>
+  <div class="revs">
+    <div class="card rev rv"><div class="top"><span class="stars"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="badge" data-i18n-html="t.badge">示範評價</span></div><q data-i18n-html="t.q1">「（示範）孩子在觸摸袋裡摸到海綿，自己說出 It feels soft! 那一刻我好驚喜。原來不用逼他背，玩著玩著就會了。」</q><div class="who"><span class="av"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></span><div><b data-i18n-html="t.w1">示範家長 A</b><span data-i18n-html="t.r1">4 歲孩子的媽媽（示範）</span></div></div></div>
+    <div class="card rev rv"><div class="top"><span class="stars"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="badge" data-i18n-html="t.badge">示範評價</span></div><q data-i18n-html="t.q2">「（示範）班上程度差很多，每張遊戲卡都有簡單版和挑戰版，同一個遊戲大家都玩得到，備課時間也省很多。」</q><div class="who"><span class="av"><svg class="ic" aria-hidden="true"><use href="#i-school"/></svg></span><div><b data-i18n-html="t.w2">示範老師 B</b><span data-i18n-html="t.r2">兒童美語班老師（示範）</span></div></div></div>
+  </div>
+</div></section>
+
+<div class="promise"><p data-i18n-html="p1">先讓身體玩懂，再讓英文說出口。</p></div>
+
+<section><div class="wrap">
+  <h2 data-i18n-html="pain.h2">帶孩子學英文，你是不是也遇過這些？</h2><p class="lead" data-i18n-html="pain.lead">不是孩子不聰明，也不是你不夠用心。很多英文活動只用到眼睛和嘴巴，孩子的身體閒不下來，注意力也就跑掉了。</p>
+  <div class="pains"><div class="card pain rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></div><span data-i18n-html="pain.1"><b>閃卡看三次就膩了</b>，孩子轉頭去玩別的，單字還是記不住。</span></div>
+<div class="card pain rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg></div><span data-i18n-html="pain.2"><b>孩子坐不住</b>，一直想跑想跳，上課變成一直在「請坐好」。</span></div>
+<div class="card pain rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-quiet"/></svg></div><span data-i18n-html="pain.3"><b>聽得懂卻不敢開口</b>，問他 What color? 只會笑著搖頭。</span></div>
+<div class="card pain rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></div><span data-i18n-html="pain.4"><b>家長英文不太好</b>，想在家陪玩又怕發音不標準、不知道要說什麼。</span></div></div>
+</div></section>
+
+<section class="bg-white"><div class="wrap">
+  <div class="center"><span class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg><span data-i18n-html="sol.pill">解決方法</span></span></div>
+  <h2 data-i18n-html="sol.h2">CY 感官玩英文</h2><p class="lead" data-i18n-html="sol.lead">每個遊戲都照這三步走，孩子一定會開口。</p>
+  <div class="steps">
+    <div class="card step rv" style="--c:var(--touch)"><span class="num">01</span><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-touch"/></svg></div><h3 data-i18n-html="sol.s1t">Feel 感受</h3><p data-i18n-html="sol.s1d">用一種感官先玩：摸、看、聽、聞、嚐、晃、推。</p></div>
+    <div class="card step rv" style="--c:var(--sight)"><span class="num">02</span><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-dice"/></svg></div><h3 data-i18n-html="sol.s2t">Play 遊戲</h3><p data-i18n-html="sol.s2d">照遊戲卡玩，規則簡單，有簡單版和挑戰版。</p></div>
+    <div class="card step rv" style="--c:var(--hear)"><span class="num">03</span><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></div><h3 data-i18n-html="sol.s3t">Say 開口</h3><p data-i18n-html="sol.s3d">遊戲裡設計「說出來才能下一關」，自然開口。</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="center"><span class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n-html="about.pill">關於課程設計者</span></span></div>
+  <h2 data-i18n-html="about.h2">嗨，我是 Kelly 老師</h2>
+  <div class="about" style="margin-top:24px">
+    <div class="photo rv"><svg class="" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1B2035"/>
+<circle cx="8.98" cy="26.62" r="3.1" fill="#D9483B"/><circle cx="14.18" cy="18.19" r="3.1" fill="#2F9873"/><circle cx="22.30" cy="12.50" r="3.1" fill="#D9A21E"/><circle cx="32.00" cy="10.50" r="3.1" fill="#9C4FA3"/><circle cx="41.70" cy="12.50" r="3.1" fill="#E9822F"/><circle cx="49.82" cy="18.19" r="3.1" fill="#3576BA"/><circle cx="55.02" cy="26.62" r="3.1" fill="#5D58B0"/>
+<path d="M32 18.5c9.7 0 17.5 7.1 17.5 16.2S41.7 51 32 51c-2.4 0-4.6-.4-6.6-1.1L17.6 53l2.4-6.6c-3.4-3-5.5-7.1-5.5-11.7 0-9.1 7.8-16.2 17.5-16.2z" fill="#F9F2E0"/>
+<circle cx="26.3" cy="33" r="2.6" fill="#1B2035"/><circle cx="37.7" cy="33" r="2.6" fill="#1B2035"/>
+<path d="M25.5 39.2c3.6 4.2 9.4 4.2 13 0" fill="none" stroke="#B02219" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="22" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/><circle cx="42" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/></svg><span data-i18n-html="about.photo">照片即將更新</span></div>
+    <div class="rv">
+      <div class="role" data-i18n-html="about.role">張正儀 Kelly Chang · CY Academy 簡誼教育領航中心創辦人</div>
+      <p data-i18n-html="about.p1">我在英國 Newcastle University 取得多媒體輔助英語教學碩士、博士，曾任大學應用外語系助理教授。2009 年在高雄小港創校，現在有 6 所直營校；簡誼英檢教材與全台 100+ 家補習班合作，2020 年開展簡誼 Kids & Baby 課程。</p>
+      <p data-i18n-html="about.p2">陪小小孩學英文的這些年，我發現孩子最投入的時候，是手在摸、身體在動的時候。所以我完成了感覺統合與遊戲教養專業培訓，取得 PARS Playwork（PPP1）出席證書，再把這些理解和英語教學結合，設計出這套原創課程。</p>
+      <div class="anums"><div><b>2009</b><span data-i18n-html="about.n1">年創校</span></div><div><b>6</b><span data-i18n-html="about.n2">所直營校</span></div><div><b>100+</b><span data-i18n-html="about.n3">家補習班採用教材</span></div></div>
+      <div class="creds"><span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><em style="font-style:normal" data-i18n-html="about.b1">Newcastle University 碩士、博士</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><em style="font-style:normal" data-i18n-html="about.b2">前大學應用外語系助理教授</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><em style="font-style:normal" data-i18n-html="about.b3">劍橋 CELTA</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><em style="font-style:normal" data-i18n-html="about.b4">新式多益 TOEIC 990</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><em style="font-style:normal" data-i18n-html="about.b5">劍橋英語考試口試官</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><em style="font-style:normal" data-i18n-html="about.b6">教育部國家英語教學教材設計獎</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><em style="font-style:normal" data-i18n-html="about.b7">感覺統合與遊戲教養專業培訓</em></span><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><em style="font-style:normal" data-i18n-html="about.b8">PARS Playwork PPP1 出席證書</em></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="bg-white" id="senses"><div class="wrap">
+  <h2 data-i18n-html="senses.h2">七大感官，七種玩英文的方式</h2><p class="lead" data-i18n-html="senses.lead">每個模組聚焦一種感官，句型也跟著感官設計。</p>
+  <div class="senses"><div class="card sense rv" style="--c:var(--touch)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-touch"/></svg></div><h3 data-i18n-html="s1t">觸覺 Touch</h3><div class="sd" data-i18n-html="s1d">soft, bumpy, sticky<br><i>It feels soft.</i></div></div>
+<div class="card sense rv" style="--c:var(--sight)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-sight"/></svg></div><h3 data-i18n-html="s2t">視覺 Sight</h3><div class="sd" data-i18n-html="s2d">顏色、形狀、位置<br><i>I spy something red.</i></div></div>
+<div class="card sense rv" style="--c:var(--hear)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-hear"/></svg></div><h3 data-i18n-html="s3t">聽覺 Hearing</h3><div class="sd" data-i18n-html="s3d">大小聲、動物叫聲<br><i>What's that sound?</i></div></div>
+<div class="card sense rv" style="--c:var(--smell)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-smell"/></svg></div><h3 data-i18n-html="s4t">嗅覺 Smell</h3><div class="sd" data-i18n-html="s4d">水果、香料<br><i>It smells like lemon.</i></div></div>
+<div class="card sense rv" style="--c:var(--taste)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-taste"/></svg></div><h3 data-i18n-html="s5t">味覺 Taste</h3><div class="sd" data-i18n-html="s5d">酸甜鹹、口感<br><i>It tastes sweet.</i></div></div>
+<div class="card sense rv" style="--c:var(--bal)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-bal"/></svg></div><h3 data-i18n-html="s6t">前庭覺 Balance</h3><div class="sd" data-i18n-html="s6d">轉圈、搖擺、方向<br><i>Spin around! Go left!</i></div></div>
+<div class="card sense rv wide" style="--c:var(--body)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-body"/></svg></div><h3 data-i18n-html="s7t">本體覺 Body</h3><div class="sd" data-i18n-html="s7d">推、拉、搬、重輕<br><i>Push! It's heavy.</i></div></div></div>
+  <p class="note" data-i18n-html="senses.rb">七種感官各有自己的代表色，遊戲卡和字卡都用同一套顏色，孩子一看就知道今天玩哪一種。</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2 data-i18n-html="get.h2">你會得到什麼</h2><p class="lead" data-i18n-html="get.lead">以下為規劃中的內容，正式上線時以實際內容為準。</p>
+  <div class="feat"><div class="card fi rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-video"/></svg></div><span data-i18n-html="get.1"><b>9 支教學示範影片</b> — 每個模組 8–12 分鐘，Kelly 老師示範怎麼帶、怎麼說。</span></div>
+<div class="card fi rv" style="--c:var(--taste)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-cards"/></svg></div><span data-i18n-html="get.2"><b>約 30 張原創遊戲卡</b> — 目標、材料、玩法、英文句、簡單版／挑戰版、安全提醒，一張就看完。</span></div>
+<div class="card fi rv" style="--c:var(--hear)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-plan"/></svg></div><span data-i18n-html="get.3"><b>9 份 30 分鐘教案</b> — 問候、暖身、主遊戲、開口時間、收心、回家任務都排好。</span></div>
+<div class="card fi rv" style="--c:var(--smell)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-sheet"/></svg></div><span data-i18n-html="get.4"><b>單字字卡＋句型條＋學習單</b> — 可列印，附中英對照。</span></div>
+<div class="card fi rv" style="--c:var(--bal)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-audio"/></svg></div><span data-i18n-html="get.5"><b>發音音檔</b> — 每個單字與句型都有 Kelly 老師親自錄音，家長英文不熟也能跟著念。</span></div>
+<div class="card fi rv" style="--c:var(--body)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></div><span data-i18n-html="get.6"><b>家長／老師使用手冊</b> — 安全總則、過敏確認、混齡調整法。</span></div></div>
+</div></section>
+
+<section class="show">
+  <div class="wrap center"><span class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-cards"/></svg><span data-i18n-html="prev.pill">遊戲卡長這樣</span></span><h2 data-i18n-html="prev.h2">遊戲卡預覽（示意圖）</h2><p class="lead" data-i18n-html="prev.lead">左右滑動看看幾張示意卡。每張卡都有感官、年齡、英文句和玩法。</p></div>
+  <div class="track" id="previewTrack" tabindex="0" aria-label="遊戲卡預覽"><div class="pcard"><div class="sheet"><svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mystery Touch Bag">
+<rect width="260" height="346" fill="#FFFDF8"/><rect width="260" height="62" fill="#D9483B"/>
+<text x="20" y="26" font-size="10" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">CY SENSE PLAY · GAME CARD</text>
+<text x="20" y="48" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Mystery Touch Bag</text>
+<circle cx="130" cy="126" r="44" fill="#D9483B" opacity=".12"/>
+<svg x="102" y="98" width="56" height="56" viewBox="0 0 24 24" color="#D9483B"><use href="#i-touch"/></svg>
+<text x="22" y="192" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text><rect x="22" y="200" width="70" height="30" rx="15" fill="#D9483B" opacity=".14"/><text x="57" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">soft</text><rect x="100" y="200" width="70" height="30" rx="15" fill="#D9483B" opacity=".14"/><text x="135" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">bumpy</text><rect x="178" y="200" width="70" height="30" rx="15" fill="#D9483B" opacity=".14"/><text x="213" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">hard</text>
+<text x="22" y="252" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="22" y="260" width="216" height="34" rx="10" fill="#F6E7C4"/>
+<text x="130" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">“It feels soft!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800"><rect x="22" y="306" width="102" height="26" rx="13" fill="#2F9873"/><text x="73" y="323" text-anchor="middle" fill="#fff">EASY</text>
+<rect x="136" y="306" width="102" height="26" rx="13" fill="#C7362A"/><text x="187" y="323" text-anchor="middle" fill="#fff">CHALLENGE</text></g></svg></div><div class="cap"><b data-i18n-html="prev.1t">神祕觸摸袋</b><span data-i18n-html="prev.1m">觸覺 · 3–8 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Color Mission">
+<rect width="260" height="346" fill="#FFFDF8"/><rect width="260" height="62" fill="#D9A21E"/>
+<text x="20" y="26" font-size="10" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">CY SENSE PLAY · GAME CARD</text>
+<text x="20" y="48" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Color Mission</text>
+<circle cx="130" cy="126" r="44" fill="#D9A21E" opacity=".12"/>
+<svg x="102" y="98" width="56" height="56" viewBox="0 0 24 24" color="#D9A21E"><use href="#i-sight"/></svg>
+<text x="22" y="192" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text><rect x="22" y="200" width="70" height="30" rx="15" fill="#D9A21E" opacity=".14"/><text x="57" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">red</text><rect x="100" y="200" width="70" height="30" rx="15" fill="#D9A21E" opacity=".14"/><text x="135" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">blue</text><rect x="178" y="200" width="70" height="30" rx="15" fill="#D9A21E" opacity=".14"/><text x="213" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">green</text>
+<text x="22" y="252" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="22" y="260" width="216" height="34" rx="10" fill="#F6E7C4"/>
+<text x="130" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">“I found a red cup!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800"><rect x="22" y="306" width="102" height="26" rx="13" fill="#2F9873"/><text x="73" y="323" text-anchor="middle" fill="#fff">EASY</text>
+<rect x="136" y="306" width="102" height="26" rx="13" fill="#C7362A"/><text x="187" y="323" text-anchor="middle" fill="#fff">CHALLENGE</text></g></svg></div><div class="cap"><b data-i18n-html="prev.2t">彩色偵探任務</b><span data-i18n-html="prev.2m">視覺 · 3–6 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shaker Band">
+<rect width="260" height="346" fill="#FFFDF8"/><rect width="260" height="62" fill="#2F9873"/>
+<text x="20" y="26" font-size="10" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">CY SENSE PLAY · GAME CARD</text>
+<text x="20" y="48" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Shaker Band</text>
+<circle cx="130" cy="126" r="44" fill="#2F9873" opacity=".12"/>
+<svg x="102" y="98" width="56" height="56" viewBox="0 0 24 24" color="#2F9873"><use href="#i-hear"/></svg>
+<text x="22" y="192" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text><rect x="22" y="200" width="70" height="30" rx="15" fill="#2F9873" opacity=".14"/><text x="57" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">loud</text><rect x="100" y="200" width="70" height="30" rx="15" fill="#2F9873" opacity=".14"/><text x="135" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">quiet</text><rect x="178" y="200" width="70" height="30" rx="15" fill="#2F9873" opacity=".14"/><text x="213" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">fast</text>
+<text x="22" y="252" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="22" y="260" width="216" height="34" rx="10" fill="#F6E7C4"/>
+<text x="130" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">“Shake it loud!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800"><rect x="22" y="306" width="102" height="26" rx="13" fill="#2F9873"/><text x="73" y="323" text-anchor="middle" fill="#fff">EASY</text>
+<rect x="136" y="306" width="102" height="26" rx="13" fill="#C7362A"/><text x="187" y="323" text-anchor="middle" fill="#fff">CHALLENGE</text></g></svg></div><div class="cap"><b data-i18n-html="prev.3t">自製沙鈴樂隊</b><span data-i18n-html="prev.3m">聽覺 · 3–7 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smell Jars">
+<rect width="260" height="346" fill="#FFFDF8"/><rect width="260" height="62" fill="#3576BA"/>
+<text x="20" y="26" font-size="10" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">CY SENSE PLAY · GAME CARD</text>
+<text x="20" y="48" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Smell Jars</text>
+<circle cx="130" cy="126" r="44" fill="#3576BA" opacity=".12"/>
+<svg x="102" y="98" width="56" height="56" viewBox="0 0 24 24" color="#3576BA"><use href="#i-smell"/></svg>
+<text x="22" y="192" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text><rect x="22" y="200" width="70" height="30" rx="15" fill="#3576BA" opacity=".14"/><text x="57" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">lemon</text><rect x="100" y="200" width="70" height="30" rx="15" fill="#3576BA" opacity=".14"/><text x="135" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">orange</text><rect x="178" y="200" width="70" height="30" rx="15" fill="#3576BA" opacity=".14"/><text x="213" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">nice</text>
+<text x="22" y="252" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="22" y="260" width="216" height="34" rx="10" fill="#F6E7C4"/>
+<text x="130" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">“It smells like lemon.”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800"><rect x="22" y="306" width="102" height="26" rx="13" fill="#2F9873"/><text x="73" y="323" text-anchor="middle" fill="#fff">EASY</text>
+<rect x="136" y="306" width="102" height="26" rx="13" fill="#C7362A"/><text x="187" y="323" text-anchor="middle" fill="#fff">CHALLENGE</text></g></svg></div><div class="cap"><b data-i18n-html="prev.4t">氣味小偵探</b><span data-i18n-html="prev.4m">嗅覺 · 4–8 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spin and Stop">
+<rect width="260" height="346" fill="#FFFDF8"/><rect width="260" height="62" fill="#5D58B0"/>
+<text x="20" y="26" font-size="10" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">CY SENSE PLAY · GAME CARD</text>
+<text x="20" y="48" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Spin and Stop</text>
+<circle cx="130" cy="126" r="44" fill="#5D58B0" opacity=".12"/>
+<svg x="102" y="98" width="56" height="56" viewBox="0 0 24 24" color="#5D58B0"><use href="#i-bal"/></svg>
+<text x="22" y="192" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text><rect x="22" y="200" width="70" height="30" rx="15" fill="#5D58B0" opacity=".14"/><text x="57" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">spin</text><rect x="100" y="200" width="70" height="30" rx="15" fill="#5D58B0" opacity=".14"/><text x="135" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">stop</text><rect x="178" y="200" width="70" height="30" rx="15" fill="#5D58B0" opacity=".14"/><text x="213" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">dizzy</text>
+<text x="22" y="252" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="22" y="260" width="216" height="34" rx="10" fill="#F6E7C4"/>
+<text x="130" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">“Spin around! Stop!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800"><rect x="22" y="306" width="102" height="26" rx="13" fill="#2F9873"/><text x="73" y="323" text-anchor="middle" fill="#fff">EASY</text>
+<rect x="136" y="306" width="102" height="26" rx="13" fill="#C7362A"/><text x="187" y="323" text-anchor="middle" fill="#fff">CHALLENGE</text></g></svg></div><div class="cap"><b data-i18n-html="prev.5t">陀螺暫停</b><span data-i18n-html="prev.5m">前庭覺 · 4–8 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animal Walk">
+<rect width="260" height="346" fill="#FFFDF8"/><rect width="260" height="62" fill="#9C4FA3"/>
+<text x="20" y="26" font-size="10" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">CY SENSE PLAY · GAME CARD</text>
+<text x="20" y="48" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Animal Walk</text>
+<circle cx="130" cy="126" r="44" fill="#9C4FA3" opacity=".12"/>
+<svg x="102" y="98" width="56" height="56" viewBox="0 0 24 24" color="#9C4FA3"><use href="#i-body"/></svg>
+<text x="22" y="192" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text><rect x="22" y="200" width="70" height="30" rx="15" fill="#9C4FA3" opacity=".14"/><text x="57" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">crawl</text><rect x="100" y="200" width="70" height="30" rx="15" fill="#9C4FA3" opacity=".14"/><text x="135" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">jump</text><rect x="178" y="200" width="70" height="30" rx="15" fill="#9C4FA3" opacity=".14"/><text x="213" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">push</text>
+<text x="22" y="252" font-size="10" font-weight="800" fill="#585D73" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="22" y="260" width="216" height="34" rx="10" fill="#F6E7C4"/>
+<text x="130" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#1B2035" font-family="Nunito,sans-serif">“I'm a bear. I crawl!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800"><rect x="22" y="306" width="102" height="26" rx="13" fill="#2F9873"/><text x="73" y="323" text-anchor="middle" fill="#fff">EASY</text>
+<rect x="136" y="306" width="102" height="26" rx="13" fill="#C7362A"/><text x="187" y="323" text-anchor="middle" fill="#fff">CHALLENGE</text></g></svg></div><div class="cap"><b data-i18n-html="prev.6t">動物大遊行</b><span data-i18n-html="prev.6m">本體覺 · 3–8 歲</span></div></div></div>
+  <div class="cnav"><button class="carr prev" id="prevBtn" type="button" aria-label="上一張"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button><div class="dots" id="previewDots"></div><button class="carr" id="nextBtn" type="button" aria-label="下一張"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+  <p class="chint" data-i18n-html="prev.hint">左右滑動查看更多</p>
+</section>
+
+<section class="bg-cream2" id="modules"><div class="wrap">
+  <h2 data-i18n-html="mod.h2">9 個模組，一步一步玩</h2><p class="lead" data-i18n-html="mod.lead">從認識感官開始，一個感官一個主題，最後來一場感官大派對。</p>
+  <div class="mods"><div class="card mod rv" style="--c:var(--gold-d)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-wave"/></svg></div><div data-i18n-html="m0"><b>M0 Hello, Senses! 感官出發</b><span>身體部位、感官動詞 · <i>I can see with my eyes.</i></span></div></div>
+<div class="card mod rv" style="--c:var(--touch)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-touch"/></svg></div><div data-i18n-html="m1"><b>M1 Touch Town 觸覺小鎮</b><span>質地形容詞 · <i>It feels bumpy.</i></span></div></div>
+<div class="card mod rv" style="--c:var(--sight)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-sight"/></svg></div><div data-i18n-html="m2"><b>M2 Color Detective 視覺偵探</b><span>顏色、形狀、介系詞 · <i>It's under the chair.</i></span></div></div>
+<div class="card mod rv" style="--c:var(--hear)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-hear"/></svg></div><div data-i18n-html="m3"><b>M3 Sound Safari 聲音探險</b><span>動物聲、大小聲 · <i>What's that sound?</i></span></div></div>
+<div class="card mod rv" style="--c:var(--smell)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-smell"/></svg></div><div data-i18n-html="m4"><b>M4 Sniff & Guess 鼻子猜猜樂</b><span>水果、香料 · <i>It smells like orange.</i></span></div></div>
+<div class="card mod rv" style="--c:var(--taste)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-taste"/></svg></div><div data-i18n-html="m5"><b>M5 Yummy Lab 味覺實驗室</b><span>酸甜鹹、喜好 · <i>Do you like it? Yes, I do.</i></span></div></div>
+<div class="card mod rv" style="--c:var(--bal)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-bal"/></svg></div><div data-i18n-html="m6"><b>M6 Wobble & Spin 平衡大冒險</b><span>動作、方向 · <i>Turn left! Stop!</i></span></div></div>
+<div class="card mod rv" style="--c:var(--body)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-body"/></svg></div><div data-i18n-html="m7"><b>M7 Strong Body Club 大力士俱樂部</b><span>推拉搬、重輕 · <i>Lift together!</i></span></div></div>
+<div class="card mod rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-party"/></svg></div><div data-i18n-html="m8"><b>M8 Sense Party 感官派對</b><span>七站闖關＋小老師上台</span></div></div></div>
+</div></section>
+
+<section class="bg-white"><div class="wrap">
+  <h2 data-i18n-html="bon.h2">加碼贈品（規劃中）</h2><p class="lead" data-i18n-html="bon.lead">讓你不只上課用得到，平常、雨天、節慶也用得到。</p>
+  <div class="bons"><div class="card bon rv" style="--c:var(--smell)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-rain"/></svg></div><h3 data-i18n-html="b1t">雨天室內 10 分鐘遊戲包</h3><p data-i18n-html="b1d">8 張卡，不用準備材料</p><span class="free" data-i18n-html="bfree">贈品</span></div>
+<div class="card bon rv" style="--c:var(--hear)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></div><h3 data-i18n-html="b2t">Classroom English 指令小卡</h3><p data-i18n-html="b2d">最常用的 50 句指令</p><span class="free" data-i18n-html="bfree">贈品</span></div>
+<div class="card bon rv" style="--c:var(--sight)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></div><h3 data-i18n-html="b3t">感官節慶月曆</h3><p data-i18n-html="b3d">12 個月，每月一個主題遊戲</p><span class="free" data-i18n-html="bfree">贈品</span></div>
+<div class="card bon rv" style="--c:var(--bal)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg></div><h3 data-i18n-html="b4t">自製教具食譜</h3><p data-i18n-html="b4d">雪花麵糰、沙鈴、氣味罐</p><span class="free" data-i18n-html="bfree">贈品</span></div>
+<div class="card bon rv" style="--c:var(--red)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></div><h3 data-i18n-html="b5t">家長溝通範本（老師版）</h3><p data-i18n-html="b5d">課後回饋句、活動同意書範本</p><span class="free" data-i18n-html="bfree">贈品</span></div></div>
+</div></section>
+
+<section class="pricing" id="pricing"><div class="wrap">
+  <div class="center"><span class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg><span data-i18n-html="price.pill">建議方案</span></span></div>
+  <h2 data-i18n-html="price.h2">選擇適合你的方案</h2><p class="lead" data-i18n-html="price.lead">以下價格為規劃中的建議價，正式開賣時公布最終價格。</p>
+  <div class="plans">
+    <div class="plan rv"><div class="icb pi" style="--c:var(--taste)"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></div><div class="pn" data-i18n-html="pl1n">家庭版</div><div class="pf" data-i18n-html="pl1f">給在家陪玩的家長</div><div class="pp" data-i18n-html="pl1p">NT$1,280</div><span class="pe" data-i18n-html="pl1e">早鳥建議價 NT$990</span><ul data-i18n-html="pl1l"><li>9 模組影片＋全部 PDF</li><li>發音音檔</li><li>贈品 1–4</li><li>1 個家庭使用</li></ul></div>
+    <div class="plan hot rv"><div class="icb pi" style="--c:var(--red)"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></div><div class="pn" data-i18n-html="pl2n">老師版</div><div class="pf" data-i18n-html="pl2f">給個人老師、家教</div><div class="pp" data-i18n-html="pl2p">NT$2,480</div><span class="pe" data-i18n-html="pl2e">最多人選（預計）</span><ul data-i18n-html="pl2l"><li>家庭版全部內容</li><li>教室版教案與分組說明</li><li>自己課堂使用授權</li><li>贈品 1–5</li></ul></div>
+    <div class="plan rv"><div class="icb pi" style="--c:var(--smell)"><svg class="ic" aria-hidden="true"><use href="#i-school"/></svg></div><div class="pn" data-i18n-html="pl3n">機構版</div><div class="pf" data-i18n-html="pl3f">給補習班、幼兒園</div><div class="pp" data-i18n-html="pl3p">NT$6,800 起</div><span class="pe" data-i18n-html="pl3e">可詢價</span><ul data-i18n-html="pl3l"><li>老師版全部內容</li><li>最多 5 位老師使用</li><li>1 次 60 分鐘線上師訓</li></ul></div>
+  </div>
+  <div class="soon">
+    <span class="sb"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span data-i18n-html="price.soon">線上購買即將開放</span></span>
+    <div class="row">
+      <button class="btn btn-g js-wait" type="button"><span data-i18n-html="price.wait">加入候補名單</span></button>
+      <a class="btn btn-line" href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-line"/></svg><span data-i18n-html="price.line">先用 LINE 問問看</span></a>
+    </div>
+    <small data-i18n-html="price.waitnote">開賣時優先通知你（候補功能建置中）</small>
+  </div>
+</div></section>
+
+<section class="bg-cream2"><div class="wrap">
+  <div class="card guar rv"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></div><h3 data-i18n-html="guar.h">滿意保證（條款待定）</h3><p data-i18n-html="guar.p">退款規則會在開賣前公布，並依消費者保護法清楚標示數位內容的退款方式。【退款條款待填】</p></div>
+</div></section>
+
+<section class="bg-white"><div class="wrap">
+  <h2 data-i18n-html="use.h2">什麼時候可以用？</h2><div class="uses" style="margin-top:24px"><div class="card use rv" style="--c:var(--taste)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></div><span data-i18n-html="u1"><b>週末親子時間</b>：一個遊戲 15 分鐘，玩完順便收心。</span></div>
+<div class="card use rv" style="--c:var(--smell)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-school"/></svg></div><span data-i18n-html="u2"><b>補習班主題課</b>：直接照 30 分鐘教案上，不用從零備課。</span></div>
+<div class="card use rv" style="--c:var(--hear)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg></div><span data-i18n-html="u3"><b>幼兒園美語時間</b>：混齡班用簡單版／挑戰版分組。</span></div>
+<div class="card use rv" style="--c:var(--bal)"><div class="icb"><svg class="ic" aria-hidden="true"><use href="#i-rain"/></svg></div><span data-i18n-html="u4"><b>下雨天在家</b>：用雨天遊戲包，在客廳也能動起來。</span></div></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2 data-i18n-html="faq.h2">常見問題</h2><div class="faq" style="margin-top:24px"><details class="rv"><summary data-i18n-html="fq1">適合幾歲的孩子？</summary><p data-i18n-html="fa1">主要設計給 3–8 歲。每個遊戲都分成 3–5 歲的簡單版與 6–8 歲的挑戰版，家裡有兩個不同年齡的孩子也能一起玩。</p></details>
+<details class="rv"><summary data-i18n-html="fq2">家長英文不好也可以用嗎？</summary><p data-i18n-html="fa2">可以。每張遊戲卡都有「家長照念句」，單字和句型都附 Kelly 老師的錄音，跟著念就好。</p></details>
+<details class="rv"><summary data-i18n-html="fq3">需要買很多教具嗎？</summary><p data-i18n-html="fa3">不用。大部分遊戲用家裡現有的東西就能玩，例如毛巾、杯子、水果、紙箱。另附自製教具食譜。</p></details>
+<details class="rv"><summary data-i18n-html="fq4">什麼時候可以買？怎麼付款？</summary><p data-i18n-html="fa4">課程正在製作中，線上購買即將開放。可以先加入候補名單，開賣時會優先通知你。付款方式會在開賣時公布。</p></details>
+<details class="rv"><summary data-i18n-html="fq5">安全嗎？味覺、轉圈的遊戲要注意什麼？</summary><p data-i18n-html="fa5">每張卡都有安全提醒。味覺遊戲一定要先確認過敏並取得家長同意，避免整顆葡萄、堅果等噎嗆風險食物；轉圈每輪不超過 3 圈，孩子頭暈就停。遊戲全程需要大人陪同。</p></details>
+<details class="rv"><summary data-i18n-html="fq6">這是感統治療課程嗎？</summary><p data-i18n-html="fa6">不是。這是用感官遊戲學英文的課程，不是醫療或治療。如果孩子有感覺處理或發展上的疑慮，請諮詢職能治療師或醫師。</p></details>
+<details class="rv"><summary data-i18n-html="fq7">補習班可以多位老師一起用嗎？</summary><p data-i18n-html="fa7">可以選擇機構版，預計最多 5 位老師使用，並含一次線上師訓。更多人數可以詢價。</p></details></div>
+</div></section>
+
+<section class="final"><div class="wrap narrow">
+  <div class="core"><svg viewBox="0 0 200 200" aria-hidden="true">
+<path d="M40 112c-14-6-22-20-20-32" fill="none" stroke="#1B2035" stroke-width="9" stroke-linecap="round"/>
+<circle cx="20" cy="76" r="10" fill="#F9F2E0" stroke="#1B2035" stroke-width="5"/>
+<path d="M160 112c14-6 22-20 20-32" fill="none" stroke="#1B2035" stroke-width="9" stroke-linecap="round"/>
+<circle cx="180" cy="76" r="10" fill="#F9F2E0" stroke="#1B2035" stroke-width="5"/>
+<path d="M100 38c33 0 60 24 60 55s-27 55-60 55c-8 0-15.5-1.3-22.5-3.8L52 154l8.2-22.5C48.6 121.4 40 108 40 93c0-31 27-55 60-55z" fill="#F9F2E0" stroke="#1B2035" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="80" cy="88" r="8" fill="#1B2035"/><circle cx="120" cy="88" r="8" fill="#1B2035"/>
+<circle cx="83" cy="85" r="2.5" fill="#fff"/><circle cx="123" cy="85" r="2.5" fill="#fff"/>
+<path d="M77 108c12 14 34 14 46 0" fill="none" stroke="#B02219" stroke-width="7" stroke-linecap="round"/>
+<circle cx="64" cy="106" r="7" fill="#F2A79D" opacity=".8"/><circle cx="136" cy="106" r="7" fill="#F2A79D" opacity=".8"/>
+<path d="M100 38c0-10 6-17 14-19" fill="none" stroke="#1B2035" stroke-width="5" stroke-linecap="round"/><circle cx="117" cy="18" r="6" fill="#D6AD5A"/>
 </svg></div>
-      <div class="nums">
-        <div class="num"><div class="n">7</div><div class="t" data-i18n-html="hero.n1">大感官模組</div></div>
-        <div class="num"><div class="n">30+</div><div class="t" data-i18n-html="hero.n2">張原創遊戲卡</div></div>
-        <div class="num"><div class="n">30</div><div class="t" data-i18n-html="hero.n3">分鐘一堂</div></div>
-      </div>
-      <a class="btn" href="#pricing"><span data-i18n-html="cta.main">查看課程方案</span><small data-i18n-html="cta.sub">線上購買即將開放 · 可先加入候補名單</small></a>
-      <p class="trust">🌈 <span data-i18n-html="hero.trust">每個遊戲都有簡單版／挑戰版，混齡也能玩</span></p>
-    </div>
-  </section>
+  <h2 data-i18n-html="final.h2">下一次英文時間，讓孩子用整個身體來學</h2><p class="lead" data-i18n-html="final.lead">CY 感官玩英文正在準備上線。先看看方案，開賣時第一時間通知你。</p>
+  <a class="btn btn-p" href="#pricing"><span class="stack"><span data-i18n-html="cta.final">查看方案＆加入候補</span><small data-i18n-html="cta.finalSub">線上購買即將開放</small></span></a>
+</div></section>
 
-  <section class="lil">
-    <div class="wrap">
-      <h2 data-i18n-html="t.h2">試玩家庭與老師怎麼說</h2>
-      <p class="lead" data-i18n-html="t.lead">以下為版面示範用的評價，並非真實留言。課程上線後會換成真正的回饋。</p>
-      <div class="rtesti">
-        <div class="rt"><div class="art"><span class="sample-badge" data-i18n-html="t.badge">示範評價</span><span style="font-size:5rem;margin-bottom:14px">🧽</span></div>
-          <div class="body"><div class="stars">★★★★★</div><p class="quote" data-i18n-html="t.q1">「（示範）孩子在觸摸袋裡摸到海綿，自己說出 It feels soft! 那一刻我好驚喜。原來不用逼他背，玩著玩著就會了。」</p><div class="who" data-i18n-html="t.w1">示範家長 A</div><div class="role" data-i18n-html="t.r1">4 歲孩子的媽媽（示範）</div></div></div>
-        <div class="rt"><div class="art"><span class="sample-badge" data-i18n-html="t.badge">示範評價</span><span style="font-size:5rem;margin-bottom:14px">🍎</span></div>
-          <div class="body"><div class="stars">★★★★★</div><p class="quote" data-i18n-html="t.q2">「（示範）班上程度差很多，每張遊戲卡都有簡單版和挑戰版，同一個遊戲大家都玩得到，備課時間也省很多。」</p><div class="who" data-i18n-html="t.w2">示範老師 B</div><div class="role" data-i18n-html="t.r2">兒童美語班老師（示範）</div></div></div>
-      </div>
-    </div>
-  </section>
+<footer class="foot"><div class="in">
+  <a class="brand" href="#top" aria-label="CY 感官玩英文 CY Sense Play"><svg class="" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1B2035"/>
+<circle cx="8.98" cy="26.62" r="3.1" fill="#D9483B"/><circle cx="14.18" cy="18.19" r="3.1" fill="#2F9873"/><circle cx="22.30" cy="12.50" r="3.1" fill="#D9A21E"/><circle cx="32.00" cy="10.50" r="3.1" fill="#9C4FA3"/><circle cx="41.70" cy="12.50" r="3.1" fill="#E9822F"/><circle cx="49.82" cy="18.19" r="3.1" fill="#3576BA"/><circle cx="55.02" cy="26.62" r="3.1" fill="#5D58B0"/>
+<path d="M32 18.5c9.7 0 17.5 7.1 17.5 16.2S41.7 51 32 51c-2.4 0-4.6-.4-6.6-1.1L17.6 53l2.4-6.6c-3.4-3-5.5-7.1-5.5-11.7 0-9.1 7.8-16.2 17.5-16.2z" fill="#F9F2E0"/>
+<circle cx="26.3" cy="33" r="2.6" fill="#1B2035"/><circle cx="37.7" cy="33" r="2.6" fill="#1B2035"/>
+<path d="M25.5 39.2c3.6 4.2 9.4 4.2 13 0" fill="none" stroke="#B02219" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="22" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/><circle cx="42" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/></svg><span class="bn"><b><span class="cy">CY</span> <span data-i18n-html="brand.name.short">感官玩英文</span></b><small>by C.Y. Kids</small></span></a>
+  <div class="gl"></div>
+  <p data-i18n-html="foot.tag">Kelly 老師原創的七大感官英文遊戲課程｜高雄</p>
+  <p data-i18n-html="foot.contact">聯絡我們：官方 <a class="linelink" href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">LINE「Kelly老師543」@255gvcyl</a></p>
+  <p data-i18n-html="foot.legal">本頁為課程預告頁，內容與價格以正式開賣為準；評價為示範。遊戲須在大人陪同下進行。本課程為英語學習課程，非醫療或治療服務。</p>
+  <p>© 2026 C.Y. Kids · CY Academy</p>
+</div></footer>
 
-  <div class="promise"><p data-i18n-html="p1">先讓身體玩懂，再讓英文說出口。</p></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="fab" id="chatFab" type="button" aria-expanded="false" aria-controls="chatPanel"><svg class="m" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1B2035"/>
+<circle cx="8.98" cy="26.62" r="3.1" fill="#D9483B"/><circle cx="14.18" cy="18.19" r="3.1" fill="#2F9873"/><circle cx="22.30" cy="12.50" r="3.1" fill="#D9A21E"/><circle cx="32.00" cy="10.50" r="3.1" fill="#9C4FA3"/><circle cx="41.70" cy="12.50" r="3.1" fill="#E9822F"/><circle cx="49.82" cy="18.19" r="3.1" fill="#3576BA"/><circle cx="55.02" cy="26.62" r="3.1" fill="#5D58B0"/>
+<path d="M32 18.5c9.7 0 17.5 7.1 17.5 16.2S41.7 51 32 51c-2.4 0-4.6-.4-6.6-1.1L17.6 53l2.4-6.6c-3.4-3-5.5-7.1-5.5-11.7 0-9.1 7.8-16.2 17.5-16.2z" fill="#F9F2E0"/>
+<circle cx="26.3" cy="33" r="2.6" fill="#1B2035"/><circle cx="37.7" cy="33" r="2.6" fill="#1B2035"/>
+<path d="M25.5 39.2c3.6 4.2 9.4 4.2 13 0" fill="none" stroke="#B02219" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="22" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/><circle cx="42" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/></svg><span data-i18n-html="chat.btn">AI 小助手</span></button>
+<div class="panel" id="chatPanel" role="dialog" aria-label="AI 小助手">
+  <div class="ph"><svg class="m" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1B2035"/>
+<circle cx="8.98" cy="26.62" r="3.1" fill="#D9483B"/><circle cx="14.18" cy="18.19" r="3.1" fill="#2F9873"/><circle cx="22.30" cy="12.50" r="3.1" fill="#D9A21E"/><circle cx="32.00" cy="10.50" r="3.1" fill="#9C4FA3"/><circle cx="41.70" cy="12.50" r="3.1" fill="#E9822F"/><circle cx="49.82" cy="18.19" r="3.1" fill="#3576BA"/><circle cx="55.02" cy="26.62" r="3.1" fill="#5D58B0"/>
+<path d="M32 18.5c9.7 0 17.5 7.1 17.5 16.2S41.7 51 32 51c-2.4 0-4.6-.4-6.6-1.1L17.6 53l2.4-6.6c-3.4-3-5.5-7.1-5.5-11.7 0-9.1 7.8-16.2 17.5-16.2z" fill="#F9F2E0"/>
+<circle cx="26.3" cy="33" r="2.6" fill="#1B2035"/><circle cx="37.7" cy="33" r="2.6" fill="#1B2035"/>
+<path d="M25.5 39.2c3.6 4.2 9.4 4.2 13 0" fill="none" stroke="#B02219" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="22" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/><circle cx="42" cy="38.6" r="2" fill="#F2A79D" opacity=".85"/></svg><b data-i18n-html="chat.title">AI 小助手</b><button type="button" id="chatClose" aria-label="關閉"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+  <div class="human"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n-html="chat.human">複雜問題會轉給真人老師 · <a href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">LINE @255gvcyl</a></span></div>
+  <div class="cb" id="chatBody"></div>
+  <div class="qs" id="chatQs"><button type="button" data-q="1" data-i18n-html="fq1">適合幾歲的孩子？</button><button type="button" data-q="2" data-i18n-html="fq2">家長英文不好也可以用嗎？</button><button type="button" data-q="3" data-i18n-html="fq3">需要買很多教具嗎？</button><button type="button" data-q="4" data-i18n-html="fq4">什麼時候可以買？怎麼付款？</button></div>
+  <div class="cn" data-i18n-html="chat.note">（示範版：目前只回答常見問題）</div>
+</div>
 
-  <section class="alt">
-    <div class="wrap">
-      <h2 data-i18n-html="pain.h2">帶孩子學英文，你是不是也遇過這些？</h2>
-      <p class="lead" data-i18n-html="pain.lead">不是孩子不聰明，也不是你不夠用心。很多英文活動只用到眼睛和嘴巴，孩子的身體閒不下來，注意力也就跑掉了。</p>
-      <div class="pains">
-        <div class="pain">🃏 <span data-i18n-html="pain.1"><b>閃卡看三次就膩了</b>，孩子轉頭去玩別的，單字還是記不住。</span></div>
-        <div class="pain">🏃 <span data-i18n-html="pain.2"><b>孩子坐不住</b>，一直想跑想跳，上課變成一直在「請坐好」。</span></div>
-        <div class="pain">🤐 <span data-i18n-html="pain.3"><b>聽得懂卻不敢開口</b>，問他 What color? 只會笑著搖頭。</span></div>
-        <div class="pain">🏠 <span data-i18n-html="pain.4"><b>家長英文不太好</b>，想在家陪玩又怕發音不標準、不知道要說什麼。</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="lil">
-    <div class="wrap">
-      <div style="text-align:center"><span class="pill" data-i18n-html="sol.pill">解決方法</span></div>
-      <h2 data-i18n-html="sol.h2">感官彩虹英語 Sense Rainbow</h2>
-      <p class="lead" data-i18n-html="sol.lead">每個遊戲都照這三步走，孩子一定會開口。</p>
-      <div class="steps">
-        <div class="step"><div class="si">✋</div><div class="sh" data-i18n-html="sol.s1t">Feel 感受</div><div class="sp" data-i18n-html="sol.s1d">用一種感官先玩：摸、看、聽、聞、嚐、晃、推。</div></div>
-        <div class="step"><div class="si">🎲</div><div class="sh" data-i18n-html="sol.s2t">Play 遊戲</div><div class="sp" data-i18n-html="sol.s2d">照遊戲卡玩，規則簡單，有簡單版和挑戰版。</div></div>
-        <div class="step"><div class="si">🗣️</div><div class="sh" data-i18n-html="sol.s3t">Say 開口</div><div class="sp" data-i18n-html="sol.s3d">遊戲裡設計「說出來才能下一關」，自然開口。</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt" id="about">
-    <div class="wrap">
-      <div style="text-align:center"><span class="pill" data-i18n-html="about.pill">關於課程設計者</span></div>
-      <h2 data-i18n-html="about.h2">嗨，我是 Kelly 老師</h2>
-      <div class="about">
-        <div class="ph"><span>👩‍🏫</span><span data-i18n-html="about.photo">照片待放</span></div>
-        <div>
-          <p data-i18n-html="about.p1">我是張正儀 Kelly，在高雄教兒童英語【年資待填】。我發現孩子最投入的時候，往往不是坐著看閃卡，而是手在摸、身體在動的時候。</p>
-          <p data-i18n-html="about.p2">所以我完成了感覺統合與遊戲化學習的專業培訓，也取得 PARS Playwork（PPP1）出席證書，再把這些理解和我的英語教學結合，重新設計出這套原創課程。</p>
-          <div class="badges"><span data-i18n-html="about.b1">兒童英語老師</span><span data-i18n-html="about.b2">感覺統合／遊戲化學習專業培訓</span><span data-i18n-html="about.b3">PARS Playwork PPP1 出席證書</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="lil" id="senses">
-    <div class="wrap">
-      <h2 data-i18n-html="senses.h2">七大感官，七種玩英文的方式</h2>
-      <p class="lead" data-i18n-html="senses.lead">每個模組聚焦一種感官，句型也跟著感官設計。</p>
-      <div class="senses">
-<div class="sense" style="--c:#E85D5D"><div class="ic">✋</div><div class="st" data-i18n-html="s1t">觸覺 Touch</div><div class="sd" data-i18n-html="s1d">soft, bumpy, sticky<br><i>It feels soft.</i></div></div>
-<div class="sense" style="--c:#E8B21E"><div class="ic">👀</div><div class="st" data-i18n-html="s2t">視覺 Sight</div><div class="sd" data-i18n-html="s2d">顏色、形狀、位置<br><i>I spy something red.</i></div></div>
-<div class="sense" style="--c:#4FAE5A"><div class="ic">👂</div><div class="st" data-i18n-html="s3t">聽覺 Hearing</div><div class="sd" data-i18n-html="s3d">大小聲、動物叫聲<br><i>What's that sound?</i></div></div>
-<div class="sense" style="--c:#4A90D9"><div class="ic">👃</div><div class="st" data-i18n-html="s4t">嗅覺 Smell</div><div class="sd" data-i18n-html="s4d">水果、香料<br><i>It smells like lemon.</i></div></div>
-<div class="sense" style="--c:#F39A3D"><div class="ic">👅</div><div class="st" data-i18n-html="s5t">味覺 Taste</div><div class="sd" data-i18n-html="s5d">酸甜鹹、口感<br><i>It tastes sweet.</i></div></div>
-<div class="sense" style="--c:#5B5FC7"><div class="ic">🌀</div><div class="st" data-i18n-html="s6t">前庭覺 Balance</div><div class="sd" data-i18n-html="s6d">轉圈、搖擺、方向<br><i>Spin around! Go left!</i></div></div>
-<div class="sense wide" style="--c:#9B59B6"><div class="ic">💪</div><div class="st" data-i18n-html="s7t">本體覺 Body</div><div class="sd" data-i18n-html="s7d">推、拉、搬、重輕<br><i>Push! It's heavy.</i></div></div>
-      </div>
-      <p class="rbnote">🌈 <span data-i18n-html="senses.rb">每種感官配一個彩虹色，遊戲卡和字卡都用同一套顏色。</span></p>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <h2 data-i18n-html="get.h2">你會得到什麼</h2>
-      <p class="lead" data-i18n-html="get.lead">以下為規劃中的內容，正式上線時以實際內容為準。</p>
-      <div class="feat">
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.1"><b>9 支教學示範影片</b> — 每個模組 8–12 分鐘，Kelly 老師示範怎麼帶、怎麼說。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.2"><b>約 30 張原創遊戲卡</b> — 目標、材料、玩法、英文句、簡單版／挑戰版、安全提醒，一張就看完。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.3"><b>9 份 30 分鐘教案</b> — 問候、暖身、主遊戲、開口時間、收心、回家任務都排好。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.4"><b>單字字卡＋句型條＋學習單</b> — 可列印，附中英對照。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.5"><b>發音音檔</b> — 每個單字與句型都有 Kelly 老師親自錄音，家長英文不熟也能跟著念。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.6"><b>家長／老師使用手冊</b> — 安全總則、過敏確認、混齡調整法。</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="show">
-    <div class="wrap">
-      <div style="text-align:center"><span class="pill" data-i18n-html="prev.pill">遊戲卡長這樣</span></div>
-      <h2 data-i18n-html="prev.h2">遊戲卡預覽（示意圖）</h2>
-      <p class="lead" data-i18n-html="prev.lead">左右滑動看看幾張示意卡。每張卡都有感官、年齡、英文句和玩法。</p>
-      <div class="carousel">
-        <div class="track" id="previewTrack" tabindex="0" aria-label="遊戲卡預覽">
-<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mystery Touch Bag">
-<rect width="270" height="360" fill="#FFFDF8"/>
-<rect width="270" height="64" fill="#E85D5D"/>
-<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
-<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Mystery Touch Bag</text>
-<circle cx="135" cy="126" r="46" fill="#E85D5D" opacity=".14"/>
-<text x="135" y="144" text-anchor="middle" font-size="48">✋</text>
-<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
-<rect x="24" y="196" width="72" height="30" rx="15" fill="#E85D5D" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">soft</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#E85D5D" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">bumpy</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#E85D5D" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">hard</text>
-<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
-<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
-<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“It feels soft!”</text>
-<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
-<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
-<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
-</g></svg></div><div class="cap"><b data-i18n-html="prev.1t">神祕觸摸袋</b><span data-i18n-html="prev.1m">觸覺 · 3–8 歲</span></div></div>
-<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Color Mission">
-<rect width="270" height="360" fill="#FFFDF8"/>
-<rect width="270" height="64" fill="#E8B21E"/>
-<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
-<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Color Mission</text>
-<circle cx="135" cy="126" r="46" fill="#E8B21E" opacity=".14"/>
-<text x="135" y="144" text-anchor="middle" font-size="48">🔍</text>
-<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
-<rect x="24" y="196" width="72" height="30" rx="15" fill="#E8B21E" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">red</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#E8B21E" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">blue</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#E8B21E" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">green</text>
-<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
-<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
-<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“I found a red cup!”</text>
-<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
-<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
-<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
-</g></svg></div><div class="cap"><b data-i18n-html="prev.2t">彩色偵探任務</b><span data-i18n-html="prev.2m">視覺 · 3–6 歲</span></div></div>
-<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shaker Band">
-<rect width="270" height="360" fill="#FFFDF8"/>
-<rect width="270" height="64" fill="#4FAE5A"/>
-<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
-<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Shaker Band</text>
-<circle cx="135" cy="126" r="46" fill="#4FAE5A" opacity=".14"/>
-<text x="135" y="144" text-anchor="middle" font-size="48">🥁</text>
-<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
-<rect x="24" y="196" width="72" height="30" rx="15" fill="#4FAE5A" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">loud</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#4FAE5A" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">quiet</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#4FAE5A" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">fast</text>
-<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
-<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
-<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“Shake it loud!”</text>
-<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
-<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
-<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
-</g></svg></div><div class="cap"><b data-i18n-html="prev.3t">自製沙鈴樂隊</b><span data-i18n-html="prev.3m">聽覺 · 3–7 歲</span></div></div>
-<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smell Jars">
-<rect width="270" height="360" fill="#FFFDF8"/>
-<rect width="270" height="64" fill="#4A90D9"/>
-<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
-<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Smell Jars</text>
-<circle cx="135" cy="126" r="46" fill="#4A90D9" opacity=".14"/>
-<text x="135" y="144" text-anchor="middle" font-size="48">🍋</text>
-<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
-<rect x="24" y="196" width="72" height="30" rx="15" fill="#4A90D9" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">lemon</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#4A90D9" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">orange</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#4A90D9" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">nice</text>
-<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
-<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
-<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“It smells like lemon.”</text>
-<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
-<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
-<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
-</g></svg></div><div class="cap"><b data-i18n-html="prev.4t">氣味小偵探</b><span data-i18n-html="prev.4m">嗅覺 · 4–8 歲</span></div></div>
-<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spin & Stop">
-<rect width="270" height="360" fill="#FFFDF8"/>
-<rect width="270" height="64" fill="#5B5FC7"/>
-<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
-<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Spin & Stop</text>
-<circle cx="135" cy="126" r="46" fill="#5B5FC7" opacity=".14"/>
-<text x="135" y="144" text-anchor="middle" font-size="48">🌀</text>
-<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
-<rect x="24" y="196" width="72" height="30" rx="15" fill="#5B5FC7" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">spin</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#5B5FC7" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">stop</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#5B5FC7" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">dizzy</text>
-<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
-<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
-<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“Spin around! Stop!”</text>
-<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
-<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
-<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
-</g></svg></div><div class="cap"><b data-i18n-html="prev.5t">陀螺暫停</b><span data-i18n-html="prev.5m">前庭覺 · 4–8 歲</span></div></div>
-<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animal Walk">
-<rect width="270" height="360" fill="#FFFDF8"/>
-<rect width="270" height="64" fill="#9B59B6"/>
-<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
-<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Animal Walk</text>
-<circle cx="135" cy="126" r="46" fill="#9B59B6" opacity=".14"/>
-<text x="135" y="144" text-anchor="middle" font-size="48">🐻</text>
-<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
-<rect x="24" y="196" width="72" height="30" rx="15" fill="#9B59B6" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">crawl</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#9B59B6" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">jump</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#9B59B6" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">push</text>
-<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
-<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
-<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“I'm a bear. I crawl!”</text>
-<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
-<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
-<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
-</g></svg></div><div class="cap"><b data-i18n-html="prev.6t">動物大遊行</b><span data-i18n-html="prev.6m">本體覺 · 3–8 歲</span></div></div>
-        </div>
-        <div class="cnav">
-          <button class="carr" id="prevBtn" type="button" aria-label="上一張">‹</button>
-          <div class="dots" id="previewDots"></div>
-          <button class="carr" id="nextBtn" type="button" aria-label="下一張">›</button>
-        </div>
-        <p class="chint" data-i18n-html="prev.hint">👆 左右滑動查看更多</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="lil" id="modules">
-    <div class="wrap">
-      <h2 data-i18n-html="mod.h2">9 個模組，一步一步玩</h2>
-      <p class="lead" data-i18n-html="mod.lead">從認識感官開始，一個感官一個主題，最後來一場感官大派對。</p>
-      <div class="mods">
-<div class="mod" style="--c:#F47C5E"><div class="mi">👋</div><div data-i18n-html="m0"><b>M0 Hello, Senses! 感官出發</b><span>身體部位、感官動詞 · <i>I can see with my eyes.</i></span></div></div>
-<div class="mod" style="--c:#E85D5D"><div class="mi">✋</div><div data-i18n-html="m1"><b>M1 Touch Town 觸覺小鎮</b><span>質地形容詞 · <i>It feels bumpy.</i></span></div></div>
-<div class="mod" style="--c:#E8B21E"><div class="mi">👀</div><div data-i18n-html="m2"><b>M2 Color Detective 視覺偵探</b><span>顏色、形狀、介系詞 · <i>It's under the chair.</i></span></div></div>
-<div class="mod" style="--c:#4FAE5A"><div class="mi">👂</div><div data-i18n-html="m3"><b>M3 Sound Safari 聲音探險</b><span>動物聲、大小聲 · <i>What's that sound?</i></span></div></div>
-<div class="mod" style="--c:#4A90D9"><div class="mi">👃</div><div data-i18n-html="m4"><b>M4 Sniff & Guess 鼻子猜猜樂</b><span>水果、香料 · <i>It smells like orange.</i></span></div></div>
-<div class="mod" style="--c:#F39A3D"><div class="mi">👅</div><div data-i18n-html="m5"><b>M5 Yummy Lab 味覺實驗室</b><span>酸甜鹹、喜好 · <i>Do you like it? Yes, I do.</i></span></div></div>
-<div class="mod" style="--c:#5B5FC7"><div class="mi">🌀</div><div data-i18n-html="m6"><b>M6 Wobble & Spin 平衡大冒險</b><span>動作、方向 · <i>Turn left! Stop!</i></span></div></div>
-<div class="mod" style="--c:#9B59B6"><div class="mi">💪</div><div data-i18n-html="m7"><b>M7 Strong Body Club 大力士俱樂部</b><span>推拉搬、重輕 · <i>Lift together!</i></span></div></div>
-<div class="mod" style="--c:#1F3A5F"><div class="mi">🌈</div><div data-i18n-html="m8"><b>M8 Rainbow Party 彩虹大派對</b><span>七站闖關＋小老師上台</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <h2 data-i18n-html="bon.h2">加碼贈品（規劃中）</h2>
-      <p class="lead" data-i18n-html="bon.lead">讓你不只上課用得到，平常、雨天、節慶也用得到。</p>
-      <div class="bonuses">
-<div class="bonus"><div class="bart" style="background:#FFE3D4"><span style="font-size:3rem">☔</span></div><div class="bt" data-i18n-html="b1t">雨天室內 10 分鐘遊戲包</div><div class="bd" data-i18n-html="b1d">8 張卡，不用準備材料</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
-<div class="bonus"><div class="bart" style="background:#D8F1EA"><span style="font-size:3rem">💬</span></div><div class="bt" data-i18n-html="b2t">Classroom English 指令小卡</div><div class="bd" data-i18n-html="b2d">最常用的 50 句指令</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
-<div class="bonus"><div class="bart" style="background:#FFF3D6"><span style="font-size:3rem">📅</span></div><div class="bt" data-i18n-html="b3t">感官節慶月曆</div><div class="bd" data-i18n-html="b3d">12 個月，每月一個主題遊戲</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
-<div class="bonus"><div class="bart" style="background:#E6E7FA"><span style="font-size:3rem">🧪</span></div><div class="bt" data-i18n-html="b4t">自製教具食譜</div><div class="bd" data-i18n-html="b4d">雪花麵糰、沙鈴、氣味罐</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
-<div class="bonus wide"><div class="bart" style="background:#F3E3F7"><span style="font-size:3rem">✉️</span></div><div class="bt" data-i18n-html="b5t">家長溝通範本（老師版）</div><div class="bd" data-i18n-html="b5d">課後回饋句、活動同意書範本</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="kduro" id="pricing">
-    <div class="wrap" style="max-width:960px">
-      <div style="text-align:center"><span class="pill" style="background:rgba(247,183,51,.2);color:#FFD27A" data-i18n-html="price.pill">建議方案</span></div>
-      <h2 data-i18n-html="price.h2">選擇適合你的方案</h2>
-      <p class="lead" data-i18n-html="price.lead">以下價格為規劃中的建議價，正式開賣時公布最終價格。</p>
-      <div class="plans">
-        <div class="plan"><div class="pn" data-i18n-html="pl1n">🏠 家庭版</div><div class="pf" data-i18n-html="pl1f">給在家陪玩的家長</div><div class="pp" data-i18n-html="pl1p">NT$1,280</div><span class="pe" data-i18n-html="pl1e">早鳥建議價 NT$990</span><ul data-i18n-html="pl1l"><li>9 模組影片＋全部 PDF</li><li>發音音檔</li><li>贈品 1–4</li><li>1 個家庭使用</li></ul></div>
-        <div class="plan hot"><div class="pn" data-i18n-html="pl2n">🍎 老師版</div><div class="pf" data-i18n-html="pl2f">給個人老師、家教</div><div class="pp" data-i18n-html="pl2p">NT$2,480</div><span class="pe" data-i18n-html="pl2e">最多人選（預計）</span><ul data-i18n-html="pl2l"><li>家庭版全部內容</li><li>教室版教案與分組說明</li><li>自己課堂使用授權</li><li>贈品 1–5</li></ul></div>
-        <div class="plan"><div class="pn" data-i18n-html="pl3n">🏫 機構版</div><div class="pf" data-i18n-html="pl3f">給補習班、幼兒園</div><div class="pp" data-i18n-html="pl3p">NT$6,800 起</div><span class="pe" data-i18n-html="pl3e">可詢價</span><ul data-i18n-html="pl3l"><li>老師版全部內容</li><li>最多 5 位老師使用</li><li>1 次 60 分鐘線上師訓</li></ul></div>
-      </div>
-      <div class="soon">
-        <span class="sb" data-i18n-html="price.soon">🛒 線上購買即將開放</span>
-        <button class="wbtn js-wait" type="button" data-i18n-html="price.wait">加入候補名單</button>
-        <small data-i18n-html="price.waitnote">開賣時優先通知你（候補功能建置中）</small>
-      </div>
-    </div>
-  </section>
-
-  <section class="lil">
-    <div class="wrap">
-      <div class="guar"><div class="g">🛡️</div><h3 data-i18n-html="guar.h">滿意保證（條款待定）</h3><p data-i18n-html="guar.p">退款規則會在開賣前公布，並依消費者保護法清楚標示數位內容的退款方式。【退款條款待填】</p></div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <h2 data-i18n-html="use.h2">什麼時候可以用？</h2>
-      <div class="uses">
-        <div class="use"><span class="ue">👨‍👩‍👧</span><span data-i18n-html="u1"><b>週末親子時間</b>：一個遊戲 15 分鐘，玩完順便收心。</span></div>
-        <div class="use"><span class="ue">🏫</span><span data-i18n-html="u2"><b>補習班主題課</b>：直接照 30 分鐘教案上，不用從零備課。</span></div>
-        <div class="use"><span class="ue">🧸</span><span data-i18n-html="u3"><b>幼兒園美語時間</b>：混齡班用簡單版／挑戰版分組。</span></div>
-        <div class="use"><span class="ue">☔</span><span data-i18n-html="u4"><b>下雨天在家</b>：用雨天遊戲包，在客廳也能動起來。</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="lil" id="faq">
-    <div class="wrap">
-      <h2 data-i18n-html="faq.h2">常見問題</h2>
-      <div class="faq">
-<details><summary data-i18n-html="fq1">適合幾歲的孩子？</summary><p data-i18n-html="fa1">主要設計給 3–8 歲。每個遊戲都分成 3–5 歲的簡單版與 6–8 歲的挑戰版，家裡有兩個不同年齡的孩子也能一起玩。</p></details>
-<details><summary data-i18n-html="fq2">家長英文不好也可以用嗎？</summary><p data-i18n-html="fa2">可以。每張遊戲卡都有「家長照念句」，單字和句型都附 Kelly 老師的錄音，跟著念就好。</p></details>
-<details><summary data-i18n-html="fq3">需要買很多教具嗎？</summary><p data-i18n-html="fa3">不用。大部分遊戲用家裡現有的東西就能玩，例如毛巾、杯子、水果、紙箱。另附自製教具食譜。</p></details>
-<details><summary data-i18n-html="fq4">什麼時候可以買？怎麼付款？</summary><p data-i18n-html="fa4">課程正在製作中，線上購買即將開放。可以先加入候補名單，開賣時會優先通知你。付款方式會在開賣時公布。</p></details>
-<details><summary data-i18n-html="fq5">安全嗎？味覺、轉圈的遊戲要注意什麼？</summary><p data-i18n-html="fa5">每張卡都有安全提醒。味覺遊戲一定要先確認過敏並取得家長同意，避免整顆葡萄、堅果等噎嗆風險食物；轉圈每輪不超過 3 圈，孩子頭暈就停。遊戲全程需要大人陪同。</p></details>
-<details><summary data-i18n-html="fq6">這是感統治療課程嗎？</summary><p data-i18n-html="fa6">不是。這是用感官遊戲學英文的課程，不是醫療或治療。如果孩子有感覺處理或發展上的疑慮，請諮詢職能治療師或醫師。</p></details>
-<details><summary data-i18n-html="fq7">補習班可以多位老師一起用嗎？</summary><p data-i18n-html="fa7">可以選擇機構版，預計最多 5 位老師使用，並含一次線上師訓。更多人數可以詢價。</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero" style="background:linear-gradient(180deg,var(--crema),#FFE9DC)">
-    <div class="wrap">
-      <h2 data-i18n-html="final.h2">下一次英文時間，讓孩子用整個身體來學</h2>
-      <p class="lead" data-i18n-html="final.lead">感官彩虹英語正在準備上線。先看看方案，開賣時第一時間通知你。</p>
-      <a class="btn" href="#pricing"><span data-i18n-html="cta.final">查看方案＆加入候補</span><small data-i18n-html="cta.finalSub">線上購買即將開放</small></a>
-    </div>
-  </section>
-
-  <div class="rainbow-bar"></div>
-  <footer class="foot">
-    <p><b data-i18n-html="foot.brand">感官彩虹英語 Sense Rainbow English</b></p>
-    <p data-i18n-html="foot.tag">Kelly 老師原創的七大感官英文遊戲課程｜高雄</p>
-    <p data-i18n-html="foot.legal">本頁為課程預告頁，內容與價格以正式開賣為準；評價為示範。遊戲須在大人陪同下進行。本課程為英語學習課程，非醫療或治療服務。聯絡方式【待填】</p>
-  </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <button class="chat-fab" id="chatFab" type="button" aria-expanded="false" aria-controls="chatPanel"><span class="dot">🤖</span><span data-i18n-html="chat.btn">AI 小助手</span></button>
-  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="AI 小助手">
-    <div class="chat-head"><span class="dot">🤖</span><b data-i18n-html="chat.title">AI 小助手</b><button type="button" id="chatClose" aria-label="關閉">×</button></div>
-    <div class="chat-human">👩‍🏫 <span data-i18n-html="chat.human">複雜問題會轉給真人老師</span></div>
-    <div class="chat-body" id="chatBody"></div>
-    <div class="chat-qs" id="chatQs">
-      <button type="button" data-q="1" data-i18n-html="fq1">適合幾歲的孩子？</button>
-      <button type="button" data-q="2" data-i18n-html="fq2">家長英文不好也可以用嗎？</button>
-      <button type="button" data-q="3" data-i18n-html="fq3">需要買很多教具嗎？</button>
-      <button type="button" data-q="4" data-i18n-html="fq4">什麼時候可以買？怎麼付款？</button>
-    </div>
-    <div class="chat-note" data-i18n-html="chat.note">（示範版：目前只回答常見問題）</div>
-  </div>
-
-  <script>
-    var EN = {"doc.title": "Sense Rainbow English | Seven-sense play that gets kids 3–8 speaking English", "topbar": "🎉 New course in the works · Online checkout coming soon", "hero.pill": "For parents and teachers of kids aged 3–8", "hero.h1": "Kids won't memorize words?<br>Let them <span class=\"li\">touch, sniff and jump</span> —<br>and the English comes out", "hero.sub": "<b>Sense Rainbow English</b> turns touch, sight, hearing, smell, taste, balance and body awareness into English games. Kids feel it with their bodies first, then say it out loud. Works at home and in the classroom.", "hero.n1": "sense modules", "hero.n2": "original game cards", "hero.n3": "minutes a session", "cta.main": "See course plans", "cta.sub": "Online checkout coming soon · join the waitlist", "hero.trust": "Every game has an easy and a challenge version — mixed ages welcome", "t.h2": "What families and teachers say", "t.lead": "These are layout placeholders, not real reviews. They will be replaced with genuine feedback after launch.", "t.badge": "Sample review", "t.q1": "“(Sample) My son reached into the mystery bag, felt the sponge and said ‘It feels soft!’ all by himself. No drilling — he just picked it up while playing.”", "t.w1": "Sample parent A", "t.r1": "Mom of a 4-year-old (sample)", "t.q2": "“(Sample) My class has very mixed levels. Each card has an easy and a challenge version, so everyone can join the same game — and prep takes far less time.”", "t.w2": "Sample teacher B", "t.r2": "Kids' English teacher (sample)", "p1": "Feel it first. Then say it.", "pain.h2": "Teaching kids English — sound familiar?", "pain.lead": "It's not that kids aren't smart or that you aren't trying. Most English activities only use eyes and mouths. Kids' bodies want to move, so their attention drifts.", "pain.1": "<b>Flashcards get boring after three rounds.</b> Kids wander off and the words don't stick.", "pain.2": "<b>Kids can't sit still.</b> They want to run and jump, and class turns into ‘please sit down’ on repeat.", "pain.3": "<b>They understand but won't speak.</b> Ask ‘What color?’ and they just smile and shake their heads.", "pain.4": "<b>Parents aren't confident in English.</b> They want to play at home but worry about pronunciation and what to say.", "sol.pill": "The solution", "sol.h2": "Sense Rainbow English", "sol.lead": "Every game follows three steps, so every child gets to speak.", "sol.s1t": "Feel", "sol.s1d": "Start with one sense: touch, look, listen, smell, taste, sway or push.", "sol.s2t": "Play", "sol.s2d": "Play from the game card. Simple rules, easy and challenge versions.", "sol.s3t": "Say", "sol.s3d": "Each game has a ‘say it to move on’ moment, so speaking feels natural.", "about.pill": "About your teacher", "about.h2": "Hi, I'm Teacher Kelly", "about.p1": "I'm Kelly Chang (張正儀), a children's English teacher in Kaohsiung, Taiwan [years of experience: TBD]. I noticed kids are most engaged not when they sit with flashcards, but when their hands are busy and their bodies are moving.", "about.p2": "So I completed professional training in sensory integration and play-based learning, and earned a PARS Playwork (PPP1) attendance certificate. Then I combined that with my English teaching to design this original course.", "about.b1": "Children's English teacher", "about.b2": "Training in sensory integration & play-based learning", "about.b3": "PARS Playwork PPP1 attendance certificate", "about.photo": "Photo coming", "senses.h2": "Seven senses, seven ways to play in English", "senses.lead": "Each module focuses on one sense, with sentence patterns built around it.", "s1t": "Touch", "s1d": "soft, bumpy, sticky<br><i>It feels soft.</i>", "s2t": "Sight", "s2d": "colors, shapes, places<br><i>I spy something red.</i>", "s3t": "Hearing", "s3d": "loud, quiet, animal sounds<br><i>What's that sound?</i>", "s4t": "Smell", "s4d": "fruit, spices<br><i>It smells like lemon.</i>", "s5t": "Taste", "s5d": "sweet, sour, salty<br><i>It tastes sweet.</i>", "s6t": "Balance", "s6d": "spin, rock, directions<br><i>Spin around! Go left!</i>", "s7t": "Body awareness", "s7d": "push, pull, carry<br><i>Push! It's heavy.</i>", "get.h2": "What you get", "get.lead": "Planned contents. Final materials will be confirmed at launch.", "get.1": "<b>9 demo video lessons</b> — 8–12 minutes per module, showing how to lead each game and what to say.", "get.2": "<b>About 30 original game cards</b> — goal, materials, steps, English phrases, easy/challenge versions and safety notes on one card.", "get.3": "<b>9 ready-made 30-minute lesson plans</b> — hello, warm-up, main game, speaking time, calm-down and home link.", "get.4": "<b>Word cards, sentence strips and worksheets</b> — printable, bilingual.", "get.5": "<b>Pronunciation audio</b> — every word and sentence recorded by Teacher Kelly, so parents can follow along.", "get.6": "<b>Parent & teacher guide</b> — safety basics, allergy checklist and tips for mixed ages.", "prev.pill": "Peek at the game cards", "prev.h2": "Game card previews (illustrations)", "prev.lead": "Swipe to see sample cards. Each one shows the sense, age, English phrases and how to play.", "prev.1t": "Mystery Touch Bag", "prev.1m": "Touch · ages 3–8", "prev.2t": "Color Mission", "prev.2m": "Sight · ages 3–6", "prev.3t": "Shaker Band", "prev.3m": "Hearing · ages 3–7", "prev.4t": "Smell Jars", "prev.4m": "Smell · ages 4–8", "prev.5t": "Spin & Stop", "prev.5m": "Balance · ages 4–8", "prev.6t": "Animal Walk Parade", "prev.6m": "Body · ages 3–8", "prev.hint": "👆 Swipe for more", "mod.h2": "9 modules, one step at a time", "mod.lead": "Start by meeting the senses, explore one sense per module, and finish with a Sense Party.", "m0": "<b>M0 Hello, Senses!</b><span>body parts, sense verbs · <i>I can see with my eyes.</i></span>", "m1": "<b>M1 Touch Town</b><span>texture words · <i>It feels bumpy.</i></span>", "m2": "<b>M2 Color Detective</b><span>colors, shapes, prepositions · <i>It's under the chair.</i></span>", "m3": "<b>M3 Sound Safari</b><span>animal sounds, loud/quiet · <i>What's that sound?</i></span>", "m4": "<b>M4 Sniff & Guess</b><span>fruit, spices · <i>It smells like orange.</i></span>", "m5": "<b>M5 Yummy Lab</b><span>tastes, likes · <i>Do you like it? Yes, I do.</i></span>", "m6": "<b>M6 Wobble & Spin</b><span>actions, directions · <i>Turn left! Stop!</i></span>", "m7": "<b>M7 Strong Body Club</b><span>push, pull, heavy/light · <i>Lift together!</i></span>", "m8": "<b>M8 Rainbow Party</b><span>seven-station quest + Little Teacher show</span>", "bon.h2": "Bonuses (planned)", "bon.lead": "Extras for rainy days, holidays and everyday moments.", "b1t": "Rainy-day 10-minute games", "b1d": "8 cards, no materials needed", "b2t": "Classroom English cards", "b2d": "The 50 most-used instructions", "b3t": "Sensory holiday calendar", "b3d": "12 months, one themed game each", "b4t": "DIY materials recipes", "b4d": "Cloud dough, shakers, smell jars", "b5t": "Parent letters (Teacher plan)", "b5d": "Feedback phrases and consent form templates", "bfree": "BONUS", "price.pill": "Suggested plans", "price.h2": "Choose your plan", "price.lead": "Prices below are proposed and will be confirmed at launch.", "pl1n": "🏠 Family", "pl1f": "For parents playing at home", "pl1p": "NT$1,280", "pl1e": "Proposed early-bird NT$990", "pl1l": "<li>9 video modules + all PDFs</li><li>Pronunciation audio</li><li>Bonuses 1–4</li><li>For one family</li>", "pl2n": "🍎 Teacher", "pl2f": "For individual teachers & tutors", "pl2p": "NT$2,480", "pl2e": "Expected favorite", "pl2l": "<li>Everything in Family</li><li>Classroom lesson plans & group setups</li><li>License for your own classes</li><li>Bonuses 1–5</li>", "pl3n": "🏫 Center", "pl3f": "For tutoring centers & preschools", "pl3p": "From NT$6,800", "pl3e": "Custom quotes available", "pl3l": "<li>Everything in Teacher</li><li>Up to 5 teachers</li><li>One 60-minute online training</li>", "price.soon": "🛒 Online checkout coming soon", "price.wait": "Join the waitlist", "price.waitnote": "Be the first to know when it opens (waitlist being set up)", "toast": "The waitlist is being set up — sign-ups open soon! Contact: [TBD]", "guar.h": "Satisfaction guarantee (terms TBD)", "guar.p": "Refund terms will be published before launch, with clear rules for digital content under Taiwan's consumer protection law. [Refund policy: TBD]", "use.h2": "When can you use it?", "u1": "<b>Weekend family time</b>: one 15-minute game, then a calm-down.", "u2": "<b>Tutoring-center theme class</b>: run the 30-minute plan as is — no prep from scratch.", "u3": "<b>Preschool English time</b>: split mixed ages with easy and challenge versions.", "u4": "<b>Rainy days at home</b>: use the rainy-day pack to get moving in the living room.", "faq.h2": "FAQ", "fq1": "What ages is it for?", "fa1": "It's designed for ages 3–8. Every game has an easy version for ages 3–5 and a challenge version for ages 6–8, so siblings of different ages can play together.", "fq2": "Can I use it if my English isn't great?", "fa2": "Yes. Each card has ‘read-aloud’ phrases for parents, and every word and sentence comes with Teacher Kelly's audio, so you can just follow along.", "fq3": "Do I need to buy lots of materials?", "fa3": "No. Most games use things you already have, like towels, cups, fruit and boxes. DIY recipes are included too.", "fq4": "When can I buy it, and how do I pay?", "fa4": "The course is being produced and online checkout opens soon. Join the waitlist to hear first. Payment options will be announced at launch.", "fq5": "Is it safe? What about the taste and spinning games?", "fa5": "Every card includes safety notes. For taste games, always check allergies and get parental consent first, and avoid choking hazards like whole grapes and nuts. For spinning, no more than 3 turns per round, and stop if a child feels dizzy. An adult should supervise at all times.", "fq6": "Is this sensory integration therapy?", "fa6": "No. This is an English course that uses sensory play — not medical treatment or therapy. If you have concerns about your child's sensory processing or development, please consult an occupational therapist or doctor.", "fq7": "Can several teachers at a center use it?", "fa7": "Yes — the Center plan is planned for up to 5 teachers and includes one online training session. Larger teams can ask for a quote.", "final.h2": "Next English time, let kids learn with their whole body", "final.lead": "Sense Rainbow English is getting ready to launch. Check the plans and be the first to know.", "cta.final": "See plans & join the waitlist", "cta.finalSub": "Online checkout coming soon", "foot.brand": "Sense Rainbow English 感官彩虹英語", "foot.tag": "An original seven-sense English play course by Teacher Kelly | Kaohsiung, Taiwan", "foot.legal": "This is a pre-launch page. Contents and prices may change at launch; reviews are samples. All games require adult supervision. This is an English-learning course, not a medical or therapy service. Contact: [TBD]", "chat.btn": "AI Assistant", "chat.title": "AI Assistant", "chat.hello": "Hi! I'm the Sense Rainbow AI assistant 👋 What would you like to know? Tap a question below.", "chat.human": "Complex questions go to a real teacher", "chat.note": "(Demo: answers common questions only)", "chat.close": "Close", "aria.lang": "Language", "aria.prev": "Previous", "aria.next": "Next", "tagline": "Seven senses. One rainbow of English. 🌈", "senses.rb": "Each sense has its own rainbow color, used on every game card and word card."};
-    var ZH = {};
-    var STORAGE_KEY = "senserainbow-lang";
-    var CUR = "zh";
-    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-      ZH[el.getAttribute("data-i18n-html")] = el.innerHTML;
-    });
-    var ZH_EXTRA = {"doc.title": "感官彩虹英語 Sense Rainbow English｜用七大感官遊戲帶 3–8 歲孩子開口說英文", "toast": "候補名單功能建置中，很快就能登記！聯絡方式【待填】", "chat.hello": "嗨！我是感官彩虹英語的 AI 小助手 👋 想知道什麼？點下面的問題試試看。", "chat.close": "關閉", "aria.lang": "語言", "aria.prev": "上一張", "aria.next": "下一張", "fa1": "主要設計給 3–8 歲。每個遊戲都分成 3–5 歲的簡單版與 6–8 歲的挑戰版，家裡有兩個不同年齡的孩子也能一起玩。", "fa2": "可以。每張遊戲卡都有「家長照念句」，單字和句型都附 Kelly 老師的錄音，跟著念就好。", "fa3": "不用。大部分遊戲用家裡現有的東西就能玩，例如毛巾、杯子、水果、紙箱。另附自製教具食譜。", "fa4": "課程正在製作中，線上購買即將開放。可以先加入候補名單，開賣時會優先通知你。付款方式會在開賣時公布。"};
-    for (var k in ZH_EXTRA) ZH[k] = ZH_EXTRA[k];
-    function t(key) { var d = CUR === "en" ? EN : ZH; return d[key] != null ? d[key] : (ZH[key] || ""); }
-    function applyLang(lang) {
-      CUR = lang === "en" ? "en" : "zh";
-      document.documentElement.lang = CUR === "en" ? "en" : "zh-TW";
-      document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-        var v = t(el.getAttribute("data-i18n-html")); if (v) el.innerHTML = v;
-      });
-      document.title = t("doc.title");
-      var g = document.querySelector(".lang-toggle"); g && g.setAttribute("aria-label", t("aria.lang"));
-      document.getElementById("prevBtn").setAttribute("aria-label", t("aria.prev"));
-      document.getElementById("nextBtn").setAttribute("aria-label", t("aria.next"));
-      document.getElementById("chatClose").setAttribute("aria-label", t("chat.close"));
-      document.getElementById("chatPanel").setAttribute("aria-label", t("chat.title"));
-      document.querySelectorAll(".lang-toggle button").forEach(function (b) {
-        b.setAttribute("aria-pressed", b.getAttribute("data-lang") === CUR ? "true" : "false");
-      });
-      try { localStorage.setItem(STORAGE_KEY, CUR); } catch (e) {}
-      resetChat();
-    }
-    document.querySelectorAll(".lang-toggle button").forEach(function (b) {
-      b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
-    });
-
-    var toastEl = document.getElementById("toast"), toastT;
-    document.querySelectorAll(".js-wait").forEach(function (b) {
-      b.addEventListener("click", function () {
-        toastEl.textContent = t("toast"); toastEl.classList.add("show");
-        clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove("show"); }, 3800);
-      });
-    });
-
-    var fab = document.getElementById("chatFab"), panel = document.getElementById("chatPanel"), body = document.getElementById("chatBody");
-    function addMsg(html, who) { var d = document.createElement("div"); d.className = "msg " + who; d.innerHTML = html; body.appendChild(d); body.scrollTop = body.scrollHeight; }
-    function resetChat() { body.innerHTML = ""; addMsg(t("chat.hello"), "bot"); }
-    function setOpen(o) { panel.classList.toggle("open", o); fab.setAttribute("aria-expanded", o ? "true" : "false"); }
-    fab.addEventListener("click", function () { setOpen(!panel.classList.contains("open")); });
-    document.getElementById("chatClose").addEventListener("click", function () { setOpen(false); });
-    document.querySelectorAll("#chatQs button").forEach(function (b) {
-      b.addEventListener("click", function () {
-        var q = b.getAttribute("data-q");
-        addMsg(t("fq" + q), "me");
-        setTimeout(function () { addMsg(t("fa" + q), "bot"); }, 350);
-      });
-    });
-
-    (function initLang() {
-      var saved = null; try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-      applyLang(saved === "en" ? "en" : "zh");
-    })();
-
-    (function carousel() {
-      var track = document.getElementById("previewTrack"), dotsWrap = document.getElementById("previewDots");
-      var prevBtn = document.getElementById("prevBtn"), nextBtn = document.getElementById("nextBtn");
-      var cards = Array.prototype.slice.call(track.querySelectorAll(".pcard"));
-      cards.forEach(function (_, i) { var d = document.createElement("i"); if (i === 0) d.className = "on"; dotsWrap.appendChild(d); });
-      var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll("i"));
-      function cur() { var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
-        cards.forEach(function (c, i) { var d = Math.abs((c.offsetLeft + c.offsetWidth / 2) - mid); if (d < bd) { bd = d; best = i; } }); return best; }
-      function upd() { var i = cur(); dots.forEach(function (d, j) { d.classList.toggle("on", j === i); }); }
-      function go(dir) { var i = Math.max(0, Math.min(cards.length - 1, cur() + dir)); var c = cards[i];
-        track.scrollTo({ left: c.offsetLeft - (track.clientWidth - c.offsetWidth) / 2, behavior: "smooth" }); }
-      prevBtn.addEventListener("click", function () { go(-1); });
-      nextBtn.addEventListener("click", function () { go(1); });
-      track.addEventListener("scroll", function () { clearTimeout(track._t); track._t = setTimeout(upd, 60); }, { passive: true });
-      upd();
-    })();
-  </script>
+<script>
+var EN = {"doc.title": "CY Sense Play | Seven-sense English play for kids 3–8, by C.Y. Kids", "topbar": "New course in the works · Online checkout coming soon", "hero.pill": "For parents and teachers of kids aged 3–8", "hero.h1": "Kids won't memorize words?<br>Let them <span class=\"li\">touch, sniff and jump</span> — and the English comes out", "hero.sub": "<b>CY Sense Play</b> turns touch, sight, hearing, smell, taste, balance and body awareness into English games. Kids feel it with their bodies first, then say it out loud. Works at home and in the classroom.", "hero.n1": "sense modules", "hero.n2": "original game cards", "hero.n3": "minutes a session", "cta.main": "See course plans", "cta.sub": "Online checkout coming soon · join the waitlist", "hero.trust": "Every game has an easy and a challenge version — mixed ages welcome", "t.h2": "What families and teachers say", "t.lead": "These are layout placeholders, not real reviews. They will be replaced with genuine feedback after launch.", "t.badge": "Sample review", "t.q1": "“(Sample) My son reached into the mystery bag, felt the sponge and said ‘It feels soft!’ all by himself. No drilling — he just picked it up while playing.”", "t.w1": "Sample parent A", "t.r1": "Mom of a 4-year-old (sample)", "t.q2": "“(Sample) My class has very mixed levels. Each card has an easy and a challenge version, so everyone can join the same game — and prep takes far less time.”", "t.w2": "Sample teacher B", "t.r2": "Kids' English teacher (sample)", "p1": "Feel it first. Then say it.", "pain.h2": "Teaching kids English — sound familiar?", "pain.lead": "It's not that kids aren't smart or that you aren't trying. Most English activities only use eyes and mouths. Kids' bodies want to move, so their attention drifts.", "pain.1": "<b>Flashcards get boring after three rounds.</b> Kids wander off and the words don't stick.", "pain.2": "<b>Kids can't sit still.</b> They want to run and jump, and class turns into ‘please sit down’ on repeat.", "pain.3": "<b>They understand but won't speak.</b> Ask ‘What color?’ and they just smile and shake their heads.", "pain.4": "<b>Parents aren't confident in English.</b> They want to play at home but worry about pronunciation and what to say.", "sol.pill": "The solution", "sol.h2": "CY Sense Play", "sol.lead": "Every game follows three steps, so every child gets to speak.", "sol.s1t": "Feel", "sol.s1d": "Start with one sense: touch, look, listen, smell, taste, sway or push.", "sol.s2t": "Play", "sol.s2d": "Play from the game card. Simple rules, easy and challenge versions.", "sol.s3t": "Say", "sol.s3d": "Each game has a ‘say it to move on’ moment, so speaking feels natural.", "about.pill": "About your teacher", "about.h2": "Hi, I'm Teacher Kelly", "about.p1": "I hold an MA and a PhD in multimedia-assisted English language teaching from Newcastle University (UK), and I was an assistant professor in a university department of applied foreign languages. In 2009 I founded my first school in Xiaogang, Kaohsiung; today there are 6 directly run schools. CY's English-test materials are used by 100+ cram schools across Taiwan, and in 2020 we launched CY Kids & Baby courses.", "about.p2": "Teaching young children, I noticed they are most engaged when their hands are busy and their bodies are moving. So I completed professional training in sensory integration and play-based parenting, earned a PARS Playwork (PPP1) attendance certificate, and combined it all with English teaching to design this original course.", "about.b1": "MA & PhD, Newcastle University", "about.b2": "Former university assistant professor, Applied Foreign Languages", "about.b3": "Cambridge CELTA", "about.photo": "Photo coming soon", "senses.h2": "Seven senses, seven ways to play in English", "senses.lead": "Each module focuses on one sense, with sentence patterns built around it.", "s1t": "Touch", "s1d": "soft, bumpy, sticky<br><i>It feels soft.</i>", "s2t": "Sight", "s2d": "colors, shapes, places<br><i>I spy something red.</i>", "s3t": "Hearing", "s3d": "loud, quiet, animal sounds<br><i>What's that sound?</i>", "s4t": "Smell", "s4d": "fruit, spices<br><i>It smells like lemon.</i>", "s5t": "Taste", "s5d": "sweet, sour, salty<br><i>It tastes sweet.</i>", "s6t": "Balance", "s6d": "spin, rock, directions<br><i>Spin around! Go left!</i>", "s7t": "Body awareness", "s7d": "push, pull, carry<br><i>Push! It's heavy.</i>", "get.h2": "What you get", "get.lead": "Planned contents. Final materials will be confirmed at launch.", "get.1": "<b>9 demo video lessons</b> — 8–12 minutes per module, showing how to lead each game and what to say.", "get.2": "<b>About 30 original game cards</b> — goal, materials, steps, English phrases, easy/challenge versions and safety notes on one card.", "get.3": "<b>9 ready-made 30-minute lesson plans</b> — hello, warm-up, main game, speaking time, calm-down and home link.", "get.4": "<b>Word cards, sentence strips and worksheets</b> — printable, bilingual.", "get.5": "<b>Pronunciation audio</b> — every word and sentence recorded by Teacher Kelly, so parents can follow along.", "get.6": "<b>Parent & teacher guide</b> — safety basics, allergy checklist and tips for mixed ages.", "prev.pill": "Peek at the game cards", "prev.h2": "Game card previews (illustrations)", "prev.lead": "Swipe to see sample cards. Each one shows the sense, age, English phrases and how to play.", "prev.1t": "Mystery Touch Bag", "prev.1m": "Touch · ages 3–8", "prev.2t": "Color Mission", "prev.2m": "Sight · ages 3–6", "prev.3t": "Shaker Band", "prev.3m": "Hearing · ages 3–7", "prev.4t": "Smell Jars", "prev.4m": "Smell · ages 4–8", "prev.5t": "Spin & Stop", "prev.5m": "Balance · ages 4–8", "prev.6t": "Animal Walk Parade", "prev.6m": "Body · ages 3–8", "prev.hint": "Swipe for more", "mod.h2": "9 modules, one step at a time", "mod.lead": "Start by meeting the senses, explore one sense per module, and finish with a Sense Party.", "m0": "<b>M0 Hello, Senses!</b><span>body parts, sense verbs · <i>I can see with my eyes.</i></span>", "m1": "<b>M1 Touch Town</b><span>texture words · <i>It feels bumpy.</i></span>", "m2": "<b>M2 Color Detective</b><span>colors, shapes, prepositions · <i>It's under the chair.</i></span>", "m3": "<b>M3 Sound Safari</b><span>animal sounds, loud/quiet · <i>What's that sound?</i></span>", "m4": "<b>M4 Sniff & Guess</b><span>fruit, spices · <i>It smells like orange.</i></span>", "m5": "<b>M5 Yummy Lab</b><span>tastes, likes · <i>Do you like it? Yes, I do.</i></span>", "m6": "<b>M6 Wobble & Spin</b><span>actions, directions · <i>Turn left! Stop!</i></span>", "m7": "<b>M7 Strong Body Club</b><span>push, pull, heavy/light · <i>Lift together!</i></span>", "m8": "<b>M8 Sense Party</b><span>seven-station quest + Little Teacher show</span>", "bon.h2": "Bonuses (planned)", "bon.lead": "Extras for rainy days, holidays and everyday moments.", "b1t": "Rainy-day 10-minute games", "b1d": "8 cards, no materials needed", "b2t": "Classroom English cards", "b2d": "The 50 most-used instructions", "b3t": "Sensory holiday calendar", "b3d": "12 months, one themed game each", "b4t": "DIY materials recipes", "b4d": "Cloud dough, shakers, smell jars", "b5t": "Parent letters (Teacher plan)", "b5d": "Feedback phrases and consent form templates", "bfree": "BONUS", "price.pill": "Suggested plans", "price.h2": "Choose your plan", "price.lead": "Prices below are proposed and will be confirmed at launch.", "pl1n": "Family", "pl1f": "For parents playing at home", "pl1p": "NT$1,280", "pl1e": "Proposed early-bird NT$990", "pl1l": "<li>9 video modules + all PDFs</li><li>Pronunciation audio</li><li>Bonuses 1–4</li><li>For one family</li>", "pl2n": "Teacher", "pl2f": "For individual teachers & tutors", "pl2p": "NT$2,480", "pl2e": "Expected favorite", "pl2l": "<li>Everything in Family</li><li>Classroom lesson plans & group setups</li><li>License for your own classes</li><li>Bonuses 1–5</li>", "pl3n": "Center", "pl3f": "For tutoring centers & preschools", "pl3p": "From NT$6,800", "pl3e": "Custom quotes available", "pl3l": "<li>Everything in Teacher</li><li>Up to 5 teachers</li><li>One 60-minute online training</li>", "price.soon": "Online checkout coming soon", "price.wait": "Join the waitlist", "price.waitnote": "Be the first to know when it opens (waitlist being set up)", "toast": "The waitlist is being set up! To sign up early, add our official LINE “Kelly老師543” @255gvcyl", "guar.h": "Satisfaction guarantee (terms TBD)", "guar.p": "Refund terms will be published before launch, with clear rules for digital content under Taiwan's consumer protection law. [Refund policy: TBD]", "use.h2": "When can you use it?", "u1": "<b>Weekend family time</b>: one 15-minute game, then a calm-down.", "u2": "<b>Tutoring-center theme class</b>: run the 30-minute plan as is — no prep from scratch.", "u3": "<b>Preschool English time</b>: split mixed ages with easy and challenge versions.", "u4": "<b>Rainy days at home</b>: use the rainy-day pack to get moving in the living room.", "faq.h2": "FAQ", "fq1": "What ages is it for?", "fa1": "It's designed for ages 3–8. Every game has an easy version for ages 3–5 and a challenge version for ages 6–8, so siblings of different ages can play together.", "fq2": "Can I use it if my English isn't great?", "fa2": "Yes. Each card has ‘read-aloud’ phrases for parents, and every word and sentence comes with Teacher Kelly's audio, so you can just follow along.", "fq3": "Do I need to buy lots of materials?", "fa3": "No. Most games use things you already have, like towels, cups, fruit and boxes. DIY recipes are included too.", "fq4": "When can I buy it, and how do I pay?", "fa4": "The course is being produced and online checkout opens soon. Join the waitlist to hear first. Payment options will be announced at launch.", "fq5": "Is it safe? What about the taste and spinning games?", "fa5": "Every card includes safety notes. For taste games, always check allergies and get parental consent first, and avoid choking hazards like whole grapes and nuts. For spinning, no more than 3 turns per round, and stop if a child feels dizzy. An adult should supervise at all times.", "fq6": "Is this sensory integration therapy?", "fa6": "No. This is an English course that uses sensory play — not medical treatment or therapy. If you have concerns about your child's sensory processing or development, please consult an occupational therapist or doctor.", "fq7": "Can several teachers at a center use it?", "fa7": "Yes — the Center plan is planned for up to 5 teachers and includes one online training session. Larger teams can ask for a quote.", "final.h2": "Next English time, let kids learn with their whole body", "final.lead": "CY Sense Play is getting ready to launch. Check the plans and be the first to know.", "cta.final": "See plans & join the waitlist", "cta.finalSub": "Online checkout coming soon", "foot.brand": "CY Sense Play", "foot.tag": "An original seven-sense English play course by Teacher Kelly | Kaohsiung, Taiwan", "foot.legal": "This is a pre-launch page. Contents and prices may change at launch; reviews are samples. All games require adult supervision. This is an English-learning course, not a medical or therapy service.", "chat.btn": "AI Assistant", "chat.title": "AI Assistant", "chat.hello": "Hi! I'm Little C, the CY Sense Play AI assistant. What would you like to know? Tap a question below.", "chat.human": "Complex questions go to a real teacher · <a href=\"https://lin.ee/U9rxbTw\" target=\"_blank\" rel=\"noopener\">LINE @255gvcyl</a>", "chat.note": "(Demo: answers common questions only)", "chat.close": "Close", "aria.lang": "Language", "aria.prev": "Previous", "aria.next": "Next", "tagline": "Touch it, hear it, move it — and say it with a smile", "senses.rb": "Each sense has its own color, used on every game card and word card, so kids know at a glance which sense they're playing with.", "foot.contact": "Contact us: official <a class=\"linelink\" href=\"https://lin.ee/U9rxbTw\" target=\"_blank\" rel=\"noopener\">LINE “Kelly老師543” @255gvcyl</a>", "price.line": "Ask us on LINE", "brand.sub": "by C.Y. Kids", "brand.name": "CY Sense Play", "about.role": "Kelly Chang (張正儀) · Founder, CY Academy (簡誼教育領航中心)", "about.b4": "TOEIC 990 (new format)", "about.b5": "Cambridge English Speaking Examiner", "about.b6": "Ministry of Education national award for English teaching materials design", "about.b7": "Training in sensory integration & play-based parenting", "about.b8": "PARS Playwork PPP1 attendance certificate", "about.n1": "school founded", "about.n2": "directly run schools", "about.n3": "cram schools use CY materials", "nav.senses": "Seven senses", "nav.mods": "Modules", "nav.about": "Teacher", "nav.price": "Plans", "nav.faq": "FAQ", "hdr.cta": "See plans", "hero.cta2": "Meet the seven senses", "tb1": "Designed by a PhD in English teaching", "tb2": "For ages 3–8", "tb3": "Easy + challenge versions", "tb4": "Home or classroom", "st4": "CY founded", "aud.h2": "Who are you playing with?", "aud.lead": "The same games, with a version for home and for the classroom.", "aud.pt": "I'm a parent", "aud.pd": "15–30 minutes at a time, with things you already have at home. Not confident in English? Follow the audio.", "aud.pc": "See the Family plan", "aud.tt": "I'm a teacher or center", "aud.td": "Ready 30-minute lesson plans, group setups and mixed-age tips — ready to teach.", "aud.tc": "See Teacher & Center plans", "brand.name.short": "Sense Play"};
+var ZH = {};
+var STORAGE_KEY = "cysenseplay-lang", CUR = "zh";
+document.querySelectorAll("[data-i18n-html]").forEach(function (el) { ZH[el.getAttribute("data-i18n-html")] = el.innerHTML; });
+var ZX = {"doc.title": "CY 感官玩英文 CY Sense Play｜用七大感官遊戲帶 3–8 歲孩子開口說英文 by C.Y. Kids", "toast": "候補名單功能建置中！想先登記，請加官方 LINE「Kelly老師543」@255gvcyl", "chat.hello": "嗨！我是 CY 感官玩英文的 AI 小助手「小 C」。想知道什麼？點下面的問題試試看。", "chat.close": "關閉", "aria.lang": "語言", "aria.prev": "上一張", "aria.next": "下一張", "fa1": "主要設計給 3–8 歲。每個遊戲都分成 3–5 歲的簡單版與 6–8 歲的挑戰版，家裡有兩個不同年齡的孩子也能一起玩。", "fa2": "可以。每張遊戲卡都有「家長照念句」，單字和句型都附 Kelly 老師的錄音，跟著念就好。", "fa3": "不用。大部分遊戲用家裡現有的東西就能玩，例如毛巾、杯子、水果、紙箱。另附自製教具食譜。", "fa4": "課程正在製作中，線上購買即將開放。可以先加入候補名單，開賣時會優先通知你。付款方式會在開賣時公布。"}; for (var k in ZX) ZH[k] = ZX[k];
+function t(key) { var d = CUR === "en" ? EN : ZH; return d[key] != null ? d[key] : (ZH[key] || ""); }
+function applyLang(lang) {
+  CUR = lang === "en" ? "en" : "zh";
+  document.documentElement.lang = CUR === "en" ? "en" : "zh-TW";
+  document.querySelectorAll("[data-i18n-html]").forEach(function (el) { var v = t(el.getAttribute("data-i18n-html")); if (v) el.innerHTML = v; });
+  document.title = t("doc.title");
+  document.querySelector(".lang").setAttribute("aria-label", t("aria.lang"));
+  document.getElementById("prevBtn").setAttribute("aria-label", t("aria.prev"));
+  document.getElementById("nextBtn").setAttribute("aria-label", t("aria.next"));
+  document.getElementById("chatClose").setAttribute("aria-label", t("chat.close"));
+  document.getElementById("chatPanel").setAttribute("aria-label", t("chat.title"));
+  document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-lang") === CUR ? "true" : "false"); });
+  try { localStorage.setItem(STORAGE_KEY, CUR); } catch (e) {}
+  resetChat();
+}
+document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); }); });
+var hdr = document.getElementById("hdr");
+window.addEventListener("scroll", function () { hdr.classList.toggle("scrolled", window.scrollY > 8); }, { passive: true });
+var toastEl = document.getElementById("toast"), toastT;
+document.querySelectorAll(".js-wait").forEach(function (b) { b.addEventListener("click", function () {
+  toastEl.textContent = t("toast"); toastEl.classList.add("show"); clearTimeout(toastT);
+  toastT = setTimeout(function () { toastEl.classList.remove("show"); }, 4200); }); });
+var fab = document.getElementById("chatFab"), panel = document.getElementById("chatPanel"), body = document.getElementById("chatBody");
+function addMsg(h, who) { var d = document.createElement("div"); d.className = "msg " + who; d.innerHTML = h; body.appendChild(d); body.scrollTop = body.scrollHeight; }
+function resetChat() { body.innerHTML = ""; addMsg(t("chat.hello"), "bot"); }
+function setOpen(o) { panel.classList.toggle("open", o); fab.setAttribute("aria-expanded", o ? "true" : "false"); }
+fab.addEventListener("click", function () { setOpen(!panel.classList.contains("open")); });
+document.getElementById("chatClose").addEventListener("click", function () { setOpen(false); });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+document.querySelectorAll("#chatQs button").forEach(function (b) { b.addEventListener("click", function () {
+  var q = b.getAttribute("data-q"); addMsg(t("fq" + q), "me"); setTimeout(function () { addMsg(t("fa" + q), "bot"); }, 380); }); });
+(function () { var s = null; try { s = localStorage.getItem(STORAGE_KEY); } catch (e) {} applyLang(s === "en" ? "en" : "zh"); })();
+(function () {
+  var els = document.querySelectorAll(".rv");
+  if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function (e) { io.observe(e); });
+})();
+(function () {
+  var track = document.getElementById("previewTrack"), dw = document.getElementById("previewDots");
+  var cards = Array.prototype.slice.call(track.querySelectorAll(".pcard"));
+  cards.forEach(function (_, i) { var d = document.createElement("i"); if (!i) d.className = "on"; dw.appendChild(d); });
+  var dots = Array.prototype.slice.call(dw.querySelectorAll("i"));
+  function cur() { var mid = track.scrollLeft + track.clientWidth / 2, b = 0, bd = Infinity; cards.forEach(function (c, i) { var d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (d < bd) { bd = d; b = i; } }); return b; }
+  function upd() { var i = cur(); dots.forEach(function (d, j) { d.classList.toggle("on", j === i); }); }
+  function go(dir) { var i = Math.max(0, Math.min(cards.length - 1, cur() + dir)), c = cards[i]; track.scrollTo({ left: c.offsetLeft - (track.clientWidth - c.offsetWidth) / 2, behavior: "smooth" }); }
+  document.getElementById("prevBtn").addEventListener("click", function () { go(-1); });
+  document.getElementById("nextBtn").addEventListener("click", function () { go(1); });
+  track.addEventListener("scroll", function () { clearTimeout(track._t); track._t = setTimeout(upd, 60); }, { passive: true });
+  upd();
+})();
+</script>
 </body>
 </html>
