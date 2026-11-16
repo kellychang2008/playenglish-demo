@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="玩美英語 PlayEnglish 示範頁：給兒童美語老師的圖解遊戲與現成教案（示範內容，非正式商品）。">
-  <title>玩美英語 PlayEnglish｜兒童英文遊戲與教案（示範頁）</title>
+  <meta name="description" content="感官彩虹英語 Sense Rainbow English：Kelly 老師原創，用觸覺、視覺、聽覺、嗅覺、味覺、前庭覺、本體覺七大感官遊戲，帶 3–8 歲孩子開口說英文。給家長與兒童英語老師。線上購買即將開放。">
+  <meta property="og:title" content="感官彩虹英語 Sense Rainbow English">
+  <meta property="og:description" content="七大感官，玩出一道英語彩虹。給 3–8 歲孩子的原創英文遊戲課程，線上購買即將開放。">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1F3A5F">
+  <title>感官彩虹英語 Sense Rainbow English｜用七大感官遊戲帶 3–8 歲孩子開口說英文</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -587,861 +590,522 @@
       .price .now { font-size: 2.8rem; }
       .topbar .top-msg { font-size: .7rem; text-align: left; }
     }
+  
+    .rainbow-bar{height:6px;background:linear-gradient(90deg,#E85D5D,#F39A3D,#E8B21E,#4FAE5A,#4A90D9,#5B5FC7,#9B59B6)}
+    .tagline{font-weight:800;color:var(--navy);font-size:1rem;margin:-2px 0 12px}
+    .about{display:grid;gap:18px;max-width:640px;margin:0 auto;align-items:center}
+    @media(min-width:641px){.about{grid-template-columns:180px 1fr}}
+    .about .ph{width:170px;height:170px;margin:0 auto;border-radius:50%;background:linear-gradient(160deg,#FFE3D4,#D8F1EA);border:4px solid #fff;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--grey);font-weight:700;font-size:.82rem;gap:4px}
+    .about .ph span:first-child{font-size:3rem}
+    .about p{color:var(--ink);margin-bottom:10px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .badges span{background:var(--crema2);border:1px solid #CFE9E0;color:var(--navy);font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px}
+    .senses{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:640px;margin:0 auto}
+    @media(min-width:641px){.senses{grid-template-columns:repeat(4,1fr)}}
+    .sense{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:14px 12px 14px;text-align:center;border-top:6px solid var(--c)}
+    .sense .ic{width:56px;height:56px;margin:0 auto 6px;border-radius:50%;background:color-mix(in srgb,var(--c) 16%,#fff);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+    .sense .st{font-weight:800;color:var(--navy);font-size:.98rem}
+    .sense .sd{font-size:.8rem;color:var(--grey);margin-top:4px;line-height:1.45}
+    .sense .sd i{color:var(--c);font-style:normal;font-weight:800;filter:brightness(.85)}
+    .sense.wide{grid-column:1/-1}
+    @media(min-width:641px){.sense.wide{grid-column:auto}}
+    .rbnote{text-align:center;color:var(--grey);font-size:.85rem;margin-top:14px}
+    .mods{max-width:560px;margin:0 auto;display:grid;gap:10px;counter-reset:m}
+    .mod{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:12px 14px;border-left:6px solid var(--c)}
+    .mod .mi{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--c) 18%,#fff);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .mod b{display:block;color:var(--navy);font-size:.98rem}
+    .mod span{display:block;color:var(--grey);font-size:.84rem}
+    .mod i{font-style:normal;font-weight:700;color:var(--coral2)}
+    .plans{display:grid;gap:14px;max-width:900px;margin:0 auto}
+    @media(min-width:760px){.plans{grid-template-columns:repeat(3,1fr)}}
+    .plan{background:#fff;color:var(--ink);border-radius:20px;padding:22px 20px;text-align:center;box-shadow:0 16px 40px rgba(0,0,0,.18);position:relative}
+    .plan.hot{border:3px solid var(--amar)}
+    .plan .pn{font-weight:800;color:var(--navy);font-size:1.2rem}
+    .plan .pf{color:var(--grey);font-size:.85rem}
+    .plan .pp{color:var(--coral2);font-weight:900;font-size:2.3rem;font-family:Nunito,"Noto Sans TC",sans-serif;margin:8px 0 2px;line-height:1.1}
+    .plan .pe{display:inline-block;background:rgba(244,124,94,.14);color:var(--coral2);font-weight:800;font-size:.78rem;padding:4px 12px;border-radius:999px}
+    .plan.hot .pe{background:var(--amar);color:var(--navy)}
+    .plan ul{list-style:none;text-align:left;margin:14px 0 0;display:grid;gap:7px;font-size:.9rem}
+    .plan li{padding-left:24px;position:relative}
+    .plan li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--menta);color:#fff;font-size:.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+    .soon{max-width:520px;margin:22px auto 0;text-align:center}
+    .soon .sb{display:inline-block;background:rgba(255,255,255,.14);border:1.5px dashed rgba(255,255,255,.5);color:#fff;font-weight:800;padding:10px 18px;border-radius:14px;font-size:1.02rem}
+    .wbtn{display:block;width:100%;max-width:420px;margin:14px auto 0;background:var(--amar);color:var(--navy);font-weight:900;font-size:1.1rem;border:0;border-radius:15px;padding:16px;cursor:pointer;font-family:inherit;box-shadow:0 10px 24px rgba(247,183,51,.4)}
+    .soon small{display:block;color:#DCE7F3;font-size:.8rem;margin-top:8px}
+    .uses{display:grid;gap:12px;max-width:560px;margin:0 auto}
+    @media(min-width:641px){.uses{grid-template-columns:1fr 1fr}}
+    .use{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:14px 16px;font-size:.95rem;display:flex;gap:10px}
+    .use .ue{font-size:1.5rem}
+    .use b{color:var(--navy)}
+    .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;font-weight:700;font-size:.9rem;padding:12px 18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:all .3s;z-index:120;max-width:88vw;text-align:center}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .chat-fab{position:fixed;right:16px;bottom:16px;z-index:110;display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:12px 16px 12px 12px;font-family:inherit;font-weight:800;font-size:.92rem;cursor:pointer;box-shadow:0 10px 28px rgba(31,58,95,.4)}
+    .chat-fab .dot{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#E85D5D,#E8B21E,#4FAE5A,#4A90D9,#9B59B6);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .chat-panel{position:fixed;right:16px;bottom:80px;z-index:115;width:min(360px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 110px));background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(31,58,95,.35);display:none;flex-direction:column;overflow:hidden}
+    .chat-panel.open{display:flex}
+    .chat-head{background:var(--navy);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
+    .chat-head .dot{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#E85D5D,#E8B21E,#4FAE5A,#4A90D9,#9B59B6);display:flex;align-items:center;justify-content:center}
+    .chat-head b{flex:1;font-size:1rem}
+    .chat-head button{background:rgba(255,255,255,.15);border:0;color:#fff;width:30px;height:30px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+    .chat-human{background:#FFF3D6;color:var(--navy);font-size:.78rem;font-weight:700;padding:7px 14px}
+    .chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;background:var(--crema)}
+    .msg{max-width:86%;padding:9px 12px;border-radius:14px;font-size:.88rem;line-height:1.5}
+    .msg.bot{background:#fff;color:var(--ink);border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(31,58,95,.08)}
+    .msg.me{align-self:flex-end;background:var(--coral);color:#fff;border-bottom-right-radius:4px}
+    .chat-qs{padding:10px 12px 12px;display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid #F1E6DA;background:#fff}
+    .chat-qs button{background:var(--crema2);border:1px solid #CFE9E0;color:var(--navy);font-family:inherit;font-weight:700;font-size:.8rem;padding:7px 11px;border-radius:999px;cursor:pointer;text-align:left}
+    .chat-note{font-size:.72rem;color:var(--grey);padding:0 14px 10px;background:#fff}
+    .foot{padding-bottom:90px}
+    @media(max-width:520px){
+      .hero h1{font-size:1.6rem}
+      .nums{gap:8px;flex-wrap:nowrap}
+      .num{min-width:0;flex:1;padding:12px 6px}
+      .num .n{font-size:1.8rem}
+      .num .t{font-size:.74rem}
+      .bonuses{grid-template-columns:1fr 1fr;gap:10px}
+      .bonus.wide{grid-column:1/-1}
+      .bonus .bart{height:80px}
+      .bonus .bart span{font-size:2.2rem!important}
+      .steps{grid-template-columns:repeat(3,1fr);gap:8px}
+      .step{padding:14px 6px}
+      .step .sp{font-size:.74rem}
+    }
   </style>
 </head>
-
 <body>
   <div class="topbar">
-    <span class="top-msg" data-i18n="topbar">示範網站 · 內容僅供預覽，非正式販售</span>
-    <div class="lang-toggle" role="group" aria-label="語言切換">
+    <span class="top-msg" data-i18n-html="topbar">🎉 新課程籌備中 · 線上購買即將開放</span>
+    <div class="lang-toggle" role="group" aria-label="語言">
       <button type="button" data-lang="zh" aria-pressed="true">中文</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
   </div>
+  <div class="rainbow-bar"></div>
 
   <section class="hero">
     <div class="wrap">
-      <span class="pill" data-i18n="hero.pill">給兒童美語老師的遊戲教案包　示範內容</span>
-      <h1 data-i18n-html="hero.h1">「今天的英文課，要帶小朋友<span class="li">玩什麼</span>？」<br>打開玩美英語，<span class="li">選一個就好</span></h1>
-      <p class="sub" data-i18n-html="hero.sub"><b>360 個全彩圖解英文遊戲</b>＋<b>80 堂現成的 30 分鐘教案</b>。程度、人數、目標句型、老師可以說的話，全都寫好了。打開、選一個、帶孩子開口說英語。</p>
-
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" role="img">
-          <rect x="0" y="20" width="420" height="200" rx="24" fill="#FFF8EE"/>
-          <rect x="24" y="0" width="170" height="200" rx="14" fill="#1F3A5F"/>
-          <rect x="34" y="12" width="150" height="22" rx="11" fill="#F7B733"/>
-          <text x="109" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#1F3A5F" font-family="Nunito, sans-serif">PLAYENGLISH</text>
-          <circle cx="80" cy="80" r="22" fill="#F47C5E"/>
-          <text x="80" y="86" text-anchor="middle" font-size="20" font-weight="800" fill="#fff" font-family="Nunito, sans-serif">Aa</text>
-          <circle cx="128" cy="80" r="18" fill="#4FB39A"/>
-          <text x="128" y="86" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="Nunito, sans-serif">Bb</text>
-          <rect x="48" y="116" width="122" height="8" rx="4" fill="#DCE7F3"/>
-          <rect x="48" y="132" width="98" height="8" rx="4" fill="#DCE7F3"/>
-          <rect x="48" y="148" width="110" height="8" rx="4" fill="#DCE7F3"/>
-          <rect x="48" y="168" width="70" height="18" rx="9" fill="#F47C5E"/>
-          <rect x="206" y="18" width="190" height="172" rx="16" fill="#fff" stroke="#F6D9CC" stroke-width="3"/>
-          <rect x="222" y="36" width="70" height="48" rx="10" fill="#FFE3D4"/>
-          <rect x="300" y="36" width="76" height="48" rx="10" fill="#D8F1EA"/>
-          <rect x="222" y="96" width="154" height="10" rx="5" fill="#EEF0F3"/>
-          <rect x="222" y="114" width="132" height="10" rx="5" fill="#EEF0F3"/>
-          <rect x="222" y="132" width="146" height="10" rx="5" fill="#EEF0F3"/>
-          <rect x="222" y="156" width="90" height="16" rx="8" fill="#F7B733"/>
-        </svg>
-      </div>
-
+      <span class="pill" data-i18n-html="hero.pill">給 3–8 歲孩子的家長與兒童英語老師</span>
+      <h1 data-i18n-html="hero.h1">孩子不愛背單字？<br>那就<span class="li nb">摸一摸、聞一聞、跳一跳</span><br>英文自然說出口</h1>
+      <p class="tagline" data-i18n-html="tagline">七大感官，玩出一道英語彩虹 🌈</p>
+      <p class="sub" data-i18n-html="hero.sub"><b>感官彩虹英語 Sense Rainbow English</b> 用觸覺、視覺、聽覺、嗅覺、味覺、前庭覺、本體覺七大感官設計英文遊戲。先讓身體玩懂，再讓嘴巴說出來。家裡、教室都能用。</p>
+      <div class="hero-art"><svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="rainbow of senses">
+<g fill="none" stroke-width="14" stroke-linecap="round">
+<path d="M40 230 A170 170 0 0 1 380 230" stroke="#E85D5D"/>
+<path d="M56 230 A154 154 0 0 1 364 230" stroke="#F39A3D"/>
+<path d="M72 230 A138 138 0 0 1 348 230" stroke="#E8B21E"/>
+<path d="M88 230 A122 122 0 0 1 332 230" stroke="#4FAE5A"/>
+<path d="M104 230 A106 106 0 0 1 316 230" stroke="#4A90D9"/>
+<path d="M120 230 A90 90 0 0 1 300 230" stroke="#5B5FC7"/>
+<path d="M136 230 A74 74 0 0 1 284 230" stroke="#9B59B6"/>
+</g>
+<g font-size="26" text-anchor="middle">
+<text x="30" y="150">✋</text><text x="80" y="62">👅</text><text x="160" y="22">👀</text><text x="260" y="22">👂</text><text x="340" y="62">👃</text><text x="392" y="150">🌀</text>
+</g>
+<circle cx="210" cy="206" r="34" fill="#fff" stroke="#F47C5E" stroke-width="3"/>
+<text x="210" y="218" text-anchor="middle" font-size="34">💪</text>
+<rect x="150" y="234" width="120" height="0" />
+</svg></div>
       <div class="nums">
-        <div class="num"><div class="n">360</div><div class="t" data-i18n="hero.n1">圖解英文遊戲</div></div>
-        <div class="num"><div class="n">80</div><div class="t" data-i18n="hero.n2">現成 30 分鐘教案</div></div>
-        <div class="num"><div class="n">3–12</div><div class="t" data-i18n="hero.n3">歲都能用</div></div>
+        <div class="num"><div class="n">7</div><div class="t" data-i18n-html="hero.n1">大感官模組</div></div>
+        <div class="num"><div class="n">30+</div><div class="t" data-i18n-html="hero.n2">張原創遊戲卡</div></div>
+        <div class="num"><div class="n">30</div><div class="t" data-i18n-html="hero.n3">分鐘一堂</div></div>
       </div>
-
-      <a class="btn" href="#pricing"><span data-i18n="cta.main">取得玩美英語（示範）</span><small data-i18n="cta.sub">一次買斷 NT$990 · 此頁無實際結帳</small></a>
-      <p class="trust"><span class="stars">★★★★★</span> <span data-i18n="hero.trust">備課前，先打開這一本（示範評價綜述）</span></p>
+      <a class="btn" href="#pricing"><span data-i18n-html="cta.main">查看課程方案</span><small data-i18n-html="cta.sub">線上購買即將開放 · 可先加入候補名單</small></a>
+      <p class="trust">🌈 <span data-i18n-html="hero.trust">每個遊戲都有簡單版／挑戰版，混齡也能玩</span></p>
     </div>
   </section>
 
   <section class="lil">
     <div class="wrap">
-      <h2 data-i18n="t.h2">老師怎麼說</h2>
-      <p class="lead" data-i18n="t.lead">以下兩則為示範評價，不是真實客戶留言。正式上線時會換成你自己收集的回饋。</p>
+      <h2 data-i18n-html="t.h2">試玩家庭與老師怎麼說</h2>
+      <p class="lead" data-i18n-html="t.lead">以下為版面示範用的評價，並非真實留言。課程上線後會換成真正的回饋。</p>
       <div class="rtesti">
-        <div class="rt">
-          <div class="art">
-            <span class="sample-badge" data-i18n="t.badge">示範評價</span>
-            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <ellipse cx="100" cy="128" rx="70" ry="10" fill="#E8D4C4"/>
-              <rect x="70" y="86" width="60" height="44" rx="12" fill="#4FB39A"/>
-              <circle cx="100" cy="62" r="28" fill="#F3C7A8"/>
-              <path d="M74 58c0-22 12-34 26-34s26 12 26 34" fill="#3A2A22"/>
-              <circle cx="90" cy="64" r="3" fill="#1F3A5F"/>
-              <circle cx="110" cy="64" r="3" fill="#1F3A5F"/>
-              <path d="M92 76c5 5 11 5 16 0" fill="none" stroke="#E2603F" stroke-width="2" stroke-linecap="round"/>
-              <rect x="40" y="100" width="36" height="26" rx="4" fill="#FFF8EE" stroke="#1F3A5F" stroke-width="2"/>
-              <text x="58" y="118" text-anchor="middle" font-size="10" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">ABC</text>
-            </svg>
-          </div>
-          <div class="body">
-            <div class="stars">★★★★★</div>
-            <p class="quote" data-i18n="t.q1">「以前每週備課都要東拼西湊閃卡和遊戲。現在翻開就有主題、句型和活動流程，孩子很快就跟著唸、跟著做。雨天改室內版也寫好了，真的省很多時間。」</p>
-            <div class="who" data-i18n="t.w1">王老師（示範）</div>
-            <div class="role" data-i18n="t.r1">兒童美語班．教學年資 8 年</div>
-          </div>
-        </div>
-        <div class="rt">
-          <div class="art">
-            <span class="sample-badge" data-i18n="t.badge">示範評價</span>
-            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <ellipse cx="100" cy="128" rx="70" ry="10" fill="#E8D4C4"/>
-              <rect x="68" y="86" width="64" height="44" rx="12" fill="#F47C5E"/>
-              <circle cx="100" cy="62" r="28" fill="#E8B896"/>
-              <path d="M72 70c2-28 14-38 28-38s26 10 28 38" fill="#1A1210"/>
-              <circle cx="90" cy="64" r="3" fill="#1F3A5F"/>
-              <circle cx="110" cy="64" r="3" fill="#1F3A5F"/>
-              <path d="M93 76c4 4 10 4 14 0" fill="none" stroke="#1F3A5F" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="154" cy="92" r="22" fill="#F7B733"/>
-              <text x="154" y="98" text-anchor="middle" font-size="16" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">Hi</text>
-            </svg>
-          </div>
-          <div class="body">
-            <div class="stars">★★★★★</div>
-            <p class="quote" data-i18n="t.q2">「原本擔心遊戲只有熱鬧、英文不夠。結果每個活動都標了目標單字和句型，結束還有簡單的口說回顧。孩子比較敢開口，備課也不再從零開始。」</p>
-            <div class="who" data-i18n="t.w2">張老師（示範）</div>
-            <div class="role" data-i18n="t.r2">補習班美語老師</div>
-          </div>
-        </div>
+        <div class="rt"><div class="art"><span class="sample-badge" data-i18n-html="t.badge">示範評價</span><span style="font-size:5rem;margin-bottom:14px">🧽</span></div>
+          <div class="body"><div class="stars">★★★★★</div><p class="quote" data-i18n-html="t.q1">「（示範）孩子在觸摸袋裡摸到海綿，自己說出 It feels soft! 那一刻我好驚喜。原來不用逼他背，玩著玩著就會了。」</p><div class="who" data-i18n-html="t.w1">示範家長 A</div><div class="role" data-i18n-html="t.r1">4 歲孩子的媽媽（示範）</div></div></div>
+        <div class="rt"><div class="art"><span class="sample-badge" data-i18n-html="t.badge">示範評價</span><span style="font-size:5rem;margin-bottom:14px">🍎</span></div>
+          <div class="body"><div class="stars">★★★★★</div><p class="quote" data-i18n-html="t.q2">「（示範）班上程度差很多，每張遊戲卡都有簡單版和挑戰版，同一個遊戲大家都玩得到，備課時間也省很多。」</p><div class="who" data-i18n-html="t.w2">示範老師 B</div><div class="role" data-i18n-html="t.r2">兒童美語班老師（示範）</div></div></div>
       </div>
     </div>
   </section>
 
-  <div class="promise"><p data-i18n="p1">不必每天從零想英文遊戲。打開、選一個、直接帶。</p></div>
+  <div class="promise"><p data-i18n-html="p1">先讓身體玩懂，再讓英文說出口。</p></div>
 
   <section class="alt">
     <div class="wrap">
-      <h2 data-i18n="pain.h2">每天帶孩子學英文的老師，都懂這種感覺…</h2>
-      <p class="lead" data-i18n="pain.lead">不是你不夠用心。教材很多，卻很少有人幫你準備「今天這一堂要怎麼玩、怎麼讓孩子開口」。</p>
+      <h2 data-i18n-html="pain.h2">帶孩子學英文，你是不是也遇過這些？</h2>
+      <p class="lead" data-i18n-html="pain.lead">不是孩子不聰明，也不是你不夠用心。很多英文活動只用到眼睛和嘴巴，孩子的身體閒不下來，注意力也就跑掉了。</p>
       <div class="pains">
-        <div class="pain">📅 <span data-i18n-html="pain.1"><b>每週都要排新活動</b>，時間表寫得清清楚楚，但真正能練到英文、孩子又願意參加的遊戲，還是得自己想。</span></div>
-        <div class="pain">🌧️ <span data-i18n-html="pain.2">一下雨或場地不夠，<b>原本的跑跳遊戲就用不了</b>。教室裡的精力沒地方放，開口練習也跟著中斷。</span></div>
-        <div class="pain">🔁 <span data-i18n-html="pain.3"><b>老是用同一套閃卡和兒歌。</b>孩子先玩膩了，就不想再跟著說。</span></div>
-        <div class="pain">🧩 <span data-i18n-html="pain.4">班上程度差很多，<b>同一個遊戲不知道怎麼調難易</b>，初學的跟不上，程度好的又覺得太簡單。</span></div>
+        <div class="pain">🃏 <span data-i18n-html="pain.1"><b>閃卡看三次就膩了</b>，孩子轉頭去玩別的，單字還是記不住。</span></div>
+        <div class="pain">🏃 <span data-i18n-html="pain.2"><b>孩子坐不住</b>，一直想跑想跳，上課變成一直在「請坐好」。</span></div>
+        <div class="pain">🤐 <span data-i18n-html="pain.3"><b>聽得懂卻不敢開口</b>，問他 What color? 只會笑著搖頭。</span></div>
+        <div class="pain">🏠 <span data-i18n-html="pain.4"><b>家長英文不太好</b>，想在家陪玩又怕發音不標準、不知道要說什麼。</span></div>
       </div>
     </div>
   </section>
 
   <section class="lil">
-    <div class="wrap" style="text-align:center">
-      <span class="pill" data-i18n="sol.pill">解決方案</span>
-      <h2 data-i18n="sol.h2">玩美英語 PlayEnglish</h2>
-      <p class="lead" data-i18n="sol.lead">三個步驟，今天的英文活動就排好了。不用再從零開始。</p>
+    <div class="wrap">
+      <div style="text-align:center"><span class="pill" data-i18n-html="sol.pill">解決方法</span></div>
+      <h2 data-i18n-html="sol.h2">感官彩虹英語 Sense Rainbow</h2>
+      <p class="lead" data-i18n-html="sol.lead">每個遊戲都照這三步走，孩子一定會開口。</p>
       <div class="steps">
-        <div class="step">
-          <div class="si">📂</div>
-          <div class="sh" data-i18n="sol.s1t">打開</div>
-          <div class="sp" data-i18n="sol.s1d">用手機、平板打開 PDF，或先列印當堂要用的頁面。</div>
-        </div>
-        <div class="step">
-          <div class="si">👆</div>
-          <div class="sh" data-i18n="sol.s2t">選擇</div>
-          <div class="sp" data-i18n="sol.s2d">依主題、程度、場地和時間挑選，選一個活動就好。</div>
-        </div>
-        <div class="step">
-          <div class="si">🗣️</div>
-          <div class="sh" data-i18n="sol.s3t">開始玩</div>
-          <div class="sp" data-i18n="sol.s3d">照著流程帶。規則、配置和老師可以說的話都寫好了。</div>
+        <div class="step"><div class="si">✋</div><div class="sh" data-i18n-html="sol.s1t">Feel 感受</div><div class="sp" data-i18n-html="sol.s1d">用一種感官先玩：摸、看、聽、聞、嚐、晃、推。</div></div>
+        <div class="step"><div class="si">🎲</div><div class="sh" data-i18n-html="sol.s2t">Play 遊戲</div><div class="sp" data-i18n-html="sol.s2d">照遊戲卡玩，規則簡單，有簡單版和挑戰版。</div></div>
+        <div class="step"><div class="si">🗣️</div><div class="sh" data-i18n-html="sol.s3t">Say 開口</div><div class="sp" data-i18n-html="sol.s3d">遊戲裡設計「說出來才能下一關」，自然開口。</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="about">
+    <div class="wrap">
+      <div style="text-align:center"><span class="pill" data-i18n-html="about.pill">關於課程設計者</span></div>
+      <h2 data-i18n-html="about.h2">嗨，我是 Kelly 老師</h2>
+      <div class="about">
+        <div class="ph"><span>👩‍🏫</span><span data-i18n-html="about.photo">照片待放</span></div>
+        <div>
+          <p data-i18n-html="about.p1">我是張正儀 Kelly，在高雄教兒童英語【年資待填】。我發現孩子最投入的時候，往往不是坐著看閃卡，而是手在摸、身體在動的時候。</p>
+          <p data-i18n-html="about.p2">所以我完成了感覺統合與遊戲化學習的專業培訓，也取得 PARS Playwork（PPP1）出席證書，再把這些理解和我的英語教學結合，重新設計出這套原創課程。</p>
+          <div class="badges"><span data-i18n-html="about.b1">兒童英語老師</span><span data-i18n-html="about.b2">感覺統合／遊戲化學習專業培訓</span><span data-i18n-html="about.b3">PARS Playwork PPP1 出席證書</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="promise"><p data-i18n="p2">從 3 歲到 12 歲，教室、小組、雨天都有對應的英文活動。</p></div>
+  <section class="lil" id="senses">
+    <div class="wrap">
+      <h2 data-i18n-html="senses.h2">七大感官，七種玩英文的方式</h2>
+      <p class="lead" data-i18n-html="senses.lead">每個模組聚焦一種感官，句型也跟著感官設計。</p>
+      <div class="senses">
+<div class="sense" style="--c:#E85D5D"><div class="ic">✋</div><div class="st" data-i18n-html="s1t">觸覺 Touch</div><div class="sd" data-i18n-html="s1d">soft, bumpy, sticky<br><i>It feels soft.</i></div></div>
+<div class="sense" style="--c:#E8B21E"><div class="ic">👀</div><div class="st" data-i18n-html="s2t">視覺 Sight</div><div class="sd" data-i18n-html="s2d">顏色、形狀、位置<br><i>I spy something red.</i></div></div>
+<div class="sense" style="--c:#4FAE5A"><div class="ic">👂</div><div class="st" data-i18n-html="s3t">聽覺 Hearing</div><div class="sd" data-i18n-html="s3d">大小聲、動物叫聲<br><i>What's that sound?</i></div></div>
+<div class="sense" style="--c:#4A90D9"><div class="ic">👃</div><div class="st" data-i18n-html="s4t">嗅覺 Smell</div><div class="sd" data-i18n-html="s4d">水果、香料<br><i>It smells like lemon.</i></div></div>
+<div class="sense" style="--c:#F39A3D"><div class="ic">👅</div><div class="st" data-i18n-html="s5t">味覺 Taste</div><div class="sd" data-i18n-html="s5d">酸甜鹹、口感<br><i>It tastes sweet.</i></div></div>
+<div class="sense" style="--c:#5B5FC7"><div class="ic">🌀</div><div class="st" data-i18n-html="s6t">前庭覺 Balance</div><div class="sd" data-i18n-html="s6d">轉圈、搖擺、方向<br><i>Spin around! Go left!</i></div></div>
+<div class="sense wide" style="--c:#9B59B6"><div class="ic">💪</div><div class="st" data-i18n-html="s7t">本體覺 Body</div><div class="sd" data-i18n-html="s7d">推、拉、搬、重輕<br><i>Push! It's heavy.</i></div></div>
+      </div>
+      <p class="rbnote">🌈 <span data-i18n-html="senses.rb">每種感官配一個彩虹色，遊戲卡和字卡都用同一套顏色。</span></p>
+    </div>
+  </section>
 
   <section class="alt">
     <div class="wrap">
-      <h2 data-i18n="get.h2">你會收到什麼</h2>
-      <p class="lead" data-i18n="get.lead">不是空白範本。活動流程、句型和指示語都寫好，可以直接拿來帶。</p>
+      <h2 data-i18n-html="get.h2">你會得到什麼</h2>
+      <p class="lead" data-i18n-html="get.lead">以下為規劃中的內容，正式上線時以實際內容為準。</p>
       <div class="feat">
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.1"><b>360 個圖解英文遊戲</b> — 一頁一個活動，附簡單插圖。含開口句型、單字、角色扮演、律動、室內安靜遊戲等分類。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.2"><b>80 堂現成的 30 分鐘教案</b> — 從暖身、主要活動到口說回顧都排好了，可依課堂延長到 40–45 分鐘。分成 3–6 歲與 7–12 歲。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.3"><b>每個遊戲都寫好細節</b> — 適合年齡、人數、時間、目標單字與句型、準備材料、進行方式，一頁就看完。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.4"><b>老師可以說的話＋場地配置示意</b> — 帶活動時能直接說出口的英語指示語都寫好了，不用再現想。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.5"><b>簡單版／挑戰版＋可列印學習單</b> — 同一個遊戲能依程度調整；部分活動附學習單，下課後也能複習。</span></div>
-        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.6"><b>PDF 一次取得</b> — 示範流程為付款後寄到 Email，手機、平板、電腦都能打開，也可以印出來。<b>一次買斷，永久使用。</b></span></div>
+        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.1"><b>9 支教學示範影片</b> — 每個模組 8–12 分鐘，Kelly 老師示範怎麼帶、怎麼說。</span></div>
+        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.2"><b>約 30 張原創遊戲卡</b> — 目標、材料、玩法、英文句、簡單版／挑戰版、安全提醒，一張就看完。</span></div>
+        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.3"><b>9 份 30 分鐘教案</b> — 問候、暖身、主遊戲、開口時間、收心、回家任務都排好。</span></div>
+        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.4"><b>單字字卡＋句型條＋學習單</b> — 可列印，附中英對照。</span></div>
+        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.5"><b>發音音檔</b> — 每個單字與句型都有 Kelly 老師親自錄音，家長英文不熟也能跟著念。</span></div>
+        <div class="fitem"><span class="ck">✓</span><span data-i18n-html="get.6"><b>家長／老師使用手冊</b> — 安全總則、過敏確認、混齡調整法。</span></div>
       </div>
     </div>
   </section>
 
   <section class="show">
     <div class="wrap">
-      <div style="text-align:center"><span class="pill" data-i18n="prev.pill">看看內容長怎樣</span></div>
-      <h2 data-i18n="prev.h2">內頁預覽（示範插圖）</h2>
-      <p class="lead" data-i18n="prev.lead">以下是示意卡片，用來想像活動頁的版面：主題、年齡、目標句型和進行步驟會排在同一頁。</p>
+      <div style="text-align:center"><span class="pill" data-i18n-html="prev.pill">遊戲卡長這樣</span></div>
+      <h2 data-i18n-html="prev.h2">遊戲卡預覽（示意圖）</h2>
+      <p class="lead" data-i18n-html="prev.lead">左右滑動看看幾張示意卡。每張卡都有感官、年齡、英文句和玩法。</p>
       <div class="carousel">
-        <div class="track" id="previewTrack" tabindex="0" aria-label="內頁預覽">
-          <article class="pcard">
-            <div class="sheet">
-              <svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="260" height="346" fill="#FFF8EE"/>
-                <rect width="260" height="64" fill="#F47C5E"/>
-                <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Nunito,Noto Sans TC,sans-serif">Color Hunt</text>
-                <text x="130" y="50" text-anchor="middle" font-size="11" fill="#FFE9DC" font-family="Noto Sans TC,sans-serif">顏色尋寶</text>
-                <circle cx="58" cy="120" r="24" fill="#E2603F"/>
-                <circle cx="130" cy="112" r="20" fill="#F7B733"/>
-                <circle cx="200" cy="124" r="22" fill="#4FB39A"/>
-                <rect x="36" y="168" width="188" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="188" width="160" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="216" width="70" height="20" rx="10" fill="#1F3A5F"/>
-                <text x="71" y="230" text-anchor="middle" font-size="9" font-weight="800" fill="#fff" font-family="Nunito,sans-serif">red / blue</text>
-                <rect x="36" y="250" width="188" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="266" width="172" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="282" width="150" height="8" rx="4" fill="#F0E6DA"/>
-                <text x="36" y="322" font-size="10" font-weight="700" fill="#5E6A78" font-family="Nunito,sans-serif">I spy something…</text>
-              </svg>
-            </div>
-            <div class="cap"><b data-i18n="prev.1t">顏色尋寶</b><span data-i18n="prev.1m">4–6 歲・單字遊戲</span></div>
-          </article>
-          <article class="pcard">
-            <div class="sheet">
-              <svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="260" height="346" fill="#FFF8EE"/>
-                <rect width="260" height="64" fill="#4FB39A"/>
-                <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Nunito,Noto Sans TC,sans-serif">Market Day</text>
-                <text x="130" y="50" text-anchor="middle" font-size="11" fill="#EEF8F4" font-family="Noto Sans TC,sans-serif">小小市集</text>
-                <rect x="48" y="92" width="164" height="70" rx="10" fill="#F7B733"/>
-                <rect x="70" y="112" width="36" height="36" rx="6" fill="#E2603F"/>
-                <rect x="116" y="112" width="36" height="36" rx="6" fill="#1F3A5F"/>
-                <rect x="162" y="112" width="36" height="36" rx="6" fill="#F47C5E"/>
-                <text x="130" y="186" text-anchor="middle" font-size="11" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">How much is it?</text>
-                <rect x="36" y="206" width="188" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="226" width="160" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="256" width="188" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="272" width="170" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="288" width="140" height="8" rx="4" fill="#F0E6DA"/>
-                <text x="36" y="322" font-size="10" font-weight="700" fill="#5E6A78" font-family="Nunito,sans-serif">Role-play · 6–8 yrs</text>
-              </svg>
-            </div>
-            <div class="cap"><b data-i18n="prev.2t">小小市集</b><span data-i18n="prev.2m">6–8 歲・角色扮演</span></div>
-          </article>
-          <article class="pcard">
-            <div class="sheet">
-              <svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="260" height="346" fill="#FFF8EE"/>
-                <rect width="260" height="64" fill="#F7B733"/>
-                <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#1F3A5F" font-family="Nunito,Noto Sans TC,sans-serif">Jump and Say</text>
-                <text x="130" y="50" text-anchor="middle" font-size="11" fill="#1F3A5F" font-family="Noto Sans TC,sans-serif">跳一跳說出來</text>
-                <circle cx="80" cy="126" r="28" fill="#F47C5E"/>
-                <circle cx="180" cy="126" r="28" fill="#4FB39A"/>
-                <path d="M70 170c20-28 40-28 60 0" fill="none" stroke="#1F3A5F" stroke-width="4" stroke-linecap="round"/>
-                <path d="M130 170c20-28 40-28 60 0" fill="none" stroke="#1F3A5F" stroke-width="4" stroke-linecap="round"/>
-                <text x="130" y="206" text-anchor="middle" font-size="12" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">Jump! It’s a cat!</text>
-                <rect x="36" y="226" width="188" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="246" width="150" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="272" width="188" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="288" width="160" height="8" rx="4" fill="#F0E6DA"/>
-                <text x="36" y="322" font-size="10" font-weight="700" fill="#5E6A78" font-family="Nunito,sans-serif">TPR · 5–7 yrs</text>
-              </svg>
-            </div>
-            <div class="cap"><b data-i18n="prev.3t">跳一跳說出來</b><span data-i18n="prev.3m">5–7 歲・動作英語</span></div>
-          </article>
-          <article class="pcard">
-            <div class="sheet">
-              <svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="260" height="346" fill="#FFF8EE"/>
-                <rect width="260" height="64" fill="#1F3A5F"/>
-                <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Nunito,Noto Sans TC,sans-serif">Story Train</text>
-                <text x="130" y="50" text-anchor="middle" font-size="11" fill="#FFD27A" font-family="Noto Sans TC,sans-serif">故事小火車</text>
-                <rect x="30" y="96" width="58" height="44" rx="8" fill="#F47C5E"/>
-                <rect x="96" y="96" width="58" height="44" rx="8" fill="#F7B733"/>
-                <rect x="162" y="96" width="58" height="44" rx="8" fill="#4FB39A"/>
-                <circle cx="48" cy="148" r="7" fill="#2B3440"/>
-                <circle cx="70" cy="148" r="7" fill="#2B3440"/>
-                <circle cx="114" cy="148" r="7" fill="#2B3440"/>
-                <circle cx="136" cy="148" r="7" fill="#2B3440"/>
-                <circle cx="180" cy="148" r="7" fill="#2B3440"/>
-                <circle cx="202" cy="148" r="7" fill="#2B3440"/>
-                <text x="130" y="184" text-anchor="middle" font-size="11" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">First… Then… Finally…</text>
-                <rect x="36" y="206" width="188" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="226" width="166" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="256" width="188" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="272" width="150" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="288" width="170" height="8" rx="4" fill="#F0E6DA"/>
-                <text x="36" y="322" font-size="10" font-weight="700" fill="#5E6A78" font-family="Nunito,sans-serif">Sentences · 7–9 yrs</text>
-              </svg>
-            </div>
-            <div class="cap"><b data-i18n="prev.4t">故事小火車</b><span data-i18n="prev.4m">7–9 歲・句型練習</span></div>
-          </article>
-          <article class="pcard">
-            <div class="sheet">
-              <svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="260" height="346" fill="#FFF8EE"/>
-                <rect width="260" height="64" fill="#7E9EC8"/>
-                <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Nunito,Noto Sans TC,sans-serif">Quiet Corner</text>
-                <text x="130" y="50" text-anchor="middle" font-size="11" fill="#EEF4FB" font-family="Noto Sans TC,sans-serif">安靜角落</text>
-                <circle cx="130" cy="130" r="40" fill="#D8F1EA"/>
-                <text x="130" y="138" text-anchor="middle" font-size="28" font-family="Nunito,sans-serif">shh</text>
-                <text x="130" y="192" text-anchor="middle" font-size="11" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">Listen and point.</text>
-                <rect x="36" y="214" width="188" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="234" width="154" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="262" width="188" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="278" width="140" height="8" rx="4" fill="#F0E6DA"/>
-                <text x="36" y="322" font-size="10" font-weight="700" fill="#5E6A78" font-family="Nunito,sans-serif">Indoor · 3–5 yrs</text>
-              </svg>
-            </div>
-            <div class="cap"><b data-i18n="prev.5t">安靜角落</b><span data-i18n="prev.5m">3–5 歲・聽說遊戲</span></div>
-          </article>
-          <article class="pcard">
-            <div class="sheet">
-              <svg viewBox="0 0 260 346" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="260" height="346" fill="#FFF8EE"/>
-                <rect width="260" height="64" fill="#E2603F"/>
-                <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Nunito,Noto Sans TC,sans-serif">Weather Walk</text>
-                <text x="130" y="50" text-anchor="middle" font-size="11" fill="#FFE9DC" font-family="Noto Sans TC,sans-serif">天氣散步</text>
-                <circle cx="88" cy="120" r="26" fill="#F7B733"/>
-                <path d="M130 128c8-22 50-20 54 6 18 2 28 20 8 32H128c-22 0-28-18-2-38z" fill="#D6E8F5"/>
-                <text x="130" y="192" text-anchor="middle" font-size="11" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">It’s sunny today!</text>
-                <rect x="36" y="214" width="188" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="234" width="160" height="10" rx="5" fill="#E8E0D6"/>
-                <rect x="36" y="262" width="188" height="8" rx="4" fill="#F0E6DA"/>
-                <rect x="36" y="278" width="152" height="8" rx="4" fill="#F0E6DA"/>
-                <text x="36" y="322" font-size="10" font-weight="700" fill="#5E6A78" font-family="Nunito,sans-serif">Theme · 4–8 yrs</text>
-              </svg>
-            </div>
-            <div class="cap"><b data-i18n="prev.6t">天氣散步</b><span data-i18n="prev.6m">4–8 歲・主題活動</span></div>
-          </article>
+        <div class="track" id="previewTrack" tabindex="0" aria-label="遊戲卡預覽">
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mystery Touch Bag">
+<rect width="270" height="360" fill="#FFFDF8"/>
+<rect width="270" height="64" fill="#E85D5D"/>
+<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
+<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Mystery Touch Bag</text>
+<circle cx="135" cy="126" r="46" fill="#E85D5D" opacity=".14"/>
+<text x="135" y="144" text-anchor="middle" font-size="48">✋</text>
+<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
+<rect x="24" y="196" width="72" height="30" rx="15" fill="#E85D5D" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">soft</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#E85D5D" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">bumpy</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#E85D5D" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">hard</text>
+<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
+<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“It feels soft!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
+<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
+</g></svg></div><div class="cap"><b data-i18n-html="prev.1t">神祕觸摸袋</b><span data-i18n-html="prev.1m">觸覺 · 3–8 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Color Mission">
+<rect width="270" height="360" fill="#FFFDF8"/>
+<rect width="270" height="64" fill="#E8B21E"/>
+<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
+<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Color Mission</text>
+<circle cx="135" cy="126" r="46" fill="#E8B21E" opacity=".14"/>
+<text x="135" y="144" text-anchor="middle" font-size="48">🔍</text>
+<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
+<rect x="24" y="196" width="72" height="30" rx="15" fill="#E8B21E" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">red</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#E8B21E" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">blue</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#E8B21E" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">green</text>
+<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
+<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“I found a red cup!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
+<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
+</g></svg></div><div class="cap"><b data-i18n-html="prev.2t">彩色偵探任務</b><span data-i18n-html="prev.2m">視覺 · 3–6 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shaker Band">
+<rect width="270" height="360" fill="#FFFDF8"/>
+<rect width="270" height="64" fill="#4FAE5A"/>
+<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
+<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Shaker Band</text>
+<circle cx="135" cy="126" r="46" fill="#4FAE5A" opacity=".14"/>
+<text x="135" y="144" text-anchor="middle" font-size="48">🥁</text>
+<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
+<rect x="24" y="196" width="72" height="30" rx="15" fill="#4FAE5A" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">loud</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#4FAE5A" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">quiet</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#4FAE5A" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">fast</text>
+<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
+<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“Shake it loud!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
+<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
+</g></svg></div><div class="cap"><b data-i18n-html="prev.3t">自製沙鈴樂隊</b><span data-i18n-html="prev.3m">聽覺 · 3–7 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smell Jars">
+<rect width="270" height="360" fill="#FFFDF8"/>
+<rect width="270" height="64" fill="#4A90D9"/>
+<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
+<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Smell Jars</text>
+<circle cx="135" cy="126" r="46" fill="#4A90D9" opacity=".14"/>
+<text x="135" y="144" text-anchor="middle" font-size="48">🍋</text>
+<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
+<rect x="24" y="196" width="72" height="30" rx="15" fill="#4A90D9" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">lemon</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#4A90D9" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">orange</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#4A90D9" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">nice</text>
+<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
+<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“It smells like lemon.”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
+<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
+</g></svg></div><div class="cap"><b data-i18n-html="prev.4t">氣味小偵探</b><span data-i18n-html="prev.4m">嗅覺 · 4–8 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spin & Stop">
+<rect width="270" height="360" fill="#FFFDF8"/>
+<rect width="270" height="64" fill="#5B5FC7"/>
+<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
+<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Spin & Stop</text>
+<circle cx="135" cy="126" r="46" fill="#5B5FC7" opacity=".14"/>
+<text x="135" y="144" text-anchor="middle" font-size="48">🌀</text>
+<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
+<rect x="24" y="196" width="72" height="30" rx="15" fill="#5B5FC7" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">spin</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#5B5FC7" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">stop</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#5B5FC7" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">dizzy</text>
+<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
+<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“Spin around! Stop!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
+<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
+</g></svg></div><div class="cap"><b data-i18n-html="prev.5t">陀螺暫停</b><span data-i18n-html="prev.5m">前庭覺 · 4–8 歲</span></div></div>
+<div class="pcard"><div class="sheet"><svg viewBox="0 0 270 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animal Walk">
+<rect width="270" height="360" fill="#FFFDF8"/>
+<rect width="270" height="64" fill="#9B59B6"/>
+<text x="20" y="28" font-size="11" font-weight="800" fill="#fff" opacity=".9" font-family="Nunito,sans-serif" letter-spacing="1.5">SENSE RAINBOW · GAME CARD</text>
+<text x="20" y="50" font-size="18" font-weight="900" fill="#fff" font-family="Nunito,sans-serif">Animal Walk</text>
+<circle cx="135" cy="126" r="46" fill="#9B59B6" opacity=".14"/>
+<text x="135" y="144" text-anchor="middle" font-size="48">🐻</text>
+<text x="24" y="188" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">WORDS</text>
+<rect x="24" y="196" width="72" height="30" rx="15" fill="#9B59B6" opacity=".16"/><text x="60" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">crawl</text><rect x="104" y="196" width="72" height="30" rx="15" fill="#9B59B6" opacity=".16"/><text x="140" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">jump</text><rect x="184" y="196" width="72" height="30" rx="15" fill="#9B59B6" opacity=".16"/><text x="220" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">push</text>
+<text x="24" y="250" font-size="10" font-weight="800" fill="#5E6A78" font-family="Nunito,sans-serif" letter-spacing="1">SAY IT!</text>
+<rect x="24" y="258" width="222" height="34" rx="10" fill="#FFF3D6"/>
+<text x="135" y="280" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">“I'm a bear. I crawl!”</text>
+<g font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+<rect x="24" y="306" width="104" height="26" rx="13" fill="#4FB39A"/><text x="76" y="323" text-anchor="middle" fill="#fff">⬇ EASY</text>
+<rect x="142" y="306" width="104" height="26" rx="13" fill="#F47C5E"/><text x="194" y="323" text-anchor="middle" fill="#fff">⬆ CHALLENGE</text>
+</g></svg></div><div class="cap"><b data-i18n-html="prev.6t">動物大遊行</b><span data-i18n-html="prev.6m">本體覺 · 3–8 歲</span></div></div>
         </div>
         <div class="cnav">
-          <button class="carr" type="button" id="prevBtn" aria-label="上一張">‹</button>
+          <button class="carr" id="prevBtn" type="button" aria-label="上一張">‹</button>
           <div class="dots" id="previewDots"></div>
-          <button class="carr" type="button" id="nextBtn" aria-label="下一張">›</button>
+          <button class="carr" id="nextBtn" type="button" aria-label="下一張">›</button>
         </div>
-        <p class="chint" data-i18n="prev.hint">👆 左右滑動查看示範內頁</p>
+        <p class="chint" data-i18n-html="prev.hint">👆 左右滑動查看更多</p>
       </div>
     </div>
   </section>
 
-  <section class="lil">
+  <section class="lil" id="modules">
     <div class="wrap">
-      <h2 data-i18n="cat.h2">九大分類，依今天的課堂選</h2>
-      <p class="lead" data-i18n="cat.lead">不只有閃卡。主題、程度和上課方式都分開整理，備課時比較好找。</p>
-      <div class="chips">
-        <span class="chip" data-i18n="cat.1">🗣️ 開口句型遊戲</span>
-        <span class="chip" data-i18n="cat.2">🃏 單字與閃卡活動</span>
-        <span class="chip" data-i18n="cat.3">🎭 角色扮演與情境</span>
-        <span class="chip" data-i18n="cat.4">🤸 肢體與律動英語</span>
-        <span class="chip" data-i18n="cat.5">🌧️ 室內安靜遊戲</span>
-        <span class="chip" data-i18n="cat.6">🎵 歌謠與節奏</span>
-        <span class="chip" data-i18n="cat.7">📖 繪本延伸活動</span>
-        <span class="chip" data-i18n="cat.8">🧠 聽說與記憶</span>
-        <span class="chip" data-i18n="cat.9">🎉 節慶主題課程</span>
+      <h2 data-i18n-html="mod.h2">9 個模組，一步一步玩</h2>
+      <p class="lead" data-i18n-html="mod.lead">從認識感官開始，一個感官一個主題，最後來一場感官大派對。</p>
+      <div class="mods">
+<div class="mod" style="--c:#F47C5E"><div class="mi">👋</div><div data-i18n-html="m0"><b>M0 Hello, Senses! 感官出發</b><span>身體部位、感官動詞 · <i>I can see with my eyes.</i></span></div></div>
+<div class="mod" style="--c:#E85D5D"><div class="mi">✋</div><div data-i18n-html="m1"><b>M1 Touch Town 觸覺小鎮</b><span>質地形容詞 · <i>It feels bumpy.</i></span></div></div>
+<div class="mod" style="--c:#E8B21E"><div class="mi">👀</div><div data-i18n-html="m2"><b>M2 Color Detective 視覺偵探</b><span>顏色、形狀、介系詞 · <i>It's under the chair.</i></span></div></div>
+<div class="mod" style="--c:#4FAE5A"><div class="mi">👂</div><div data-i18n-html="m3"><b>M3 Sound Safari 聲音探險</b><span>動物聲、大小聲 · <i>What's that sound?</i></span></div></div>
+<div class="mod" style="--c:#4A90D9"><div class="mi">👃</div><div data-i18n-html="m4"><b>M4 Sniff & Guess 鼻子猜猜樂</b><span>水果、香料 · <i>It smells like orange.</i></span></div></div>
+<div class="mod" style="--c:#F39A3D"><div class="mi">👅</div><div data-i18n-html="m5"><b>M5 Yummy Lab 味覺實驗室</b><span>酸甜鹹、喜好 · <i>Do you like it? Yes, I do.</i></span></div></div>
+<div class="mod" style="--c:#5B5FC7"><div class="mi">🌀</div><div data-i18n-html="m6"><b>M6 Wobble & Spin 平衡大冒險</b><span>動作、方向 · <i>Turn left! Stop!</i></span></div></div>
+<div class="mod" style="--c:#9B59B6"><div class="mi">💪</div><div data-i18n-html="m7"><b>M7 Strong Body Club 大力士俱樂部</b><span>推拉搬、重輕 · <i>Lift together!</i></span></div></div>
+<div class="mod" style="--c:#1F3A5F"><div class="mi">🌈</div><div data-i18n-html="m8"><b>M8 Rainbow Party 彩虹大派對</b><span>七站闖關＋小老師上台</span></div></div>
       </div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap">
-      <h2 data-i18n="bon.h2">5 份免費贈品 🎁</h2>
-      <p class="lead" data-i18n="bon.lead">已經整理好的備課小工具，讓一整學期的英文課都輕鬆一點。（示範項目）</p>
+      <h2 data-i18n-html="bon.h2">加碼贈品（規劃中）</h2>
+      <p class="lead" data-i18n-html="bon.lead">讓你不只上課用得到，平常、雨天、節慶也用得到。</p>
       <div class="bonuses">
-        <div class="bonus">
-          <div class="bart" style="background:#FFE3D4">
-            <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="10" y="8" width="52" height="56" rx="8" fill="#fff"/><rect x="18" y="16" width="36" height="8" rx="4" fill="#F47C5E"/><rect x="18" y="30" width="28" height="6" rx="3" fill="#F6D9CC"/><rect x="18" y="42" width="32" height="6" rx="3" fill="#F6D9CC"/><rect x="18" y="54" width="20" height="6" rx="3" fill="#F7B733"/></svg>
-          </div>
-          <div class="bt" data-i18n="bon.1t">12 週主題備課表</div>
-          <div class="bd" data-i18n="bon.1d">週週對得上進度的主題節奏，不用再自己排整學期。</div>
-          <span class="bfree" data-i18n="bon.free">示範贈送</span>
-        </div>
-        <div class="bonus">
-          <div class="bart" style="background:#D8F1EA">
-            <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="14" y="14" width="28" height="36" rx="5" fill="#4FB39A" transform="rotate(-8 28 32)"/><rect x="28" y="18" width="28" height="36" rx="5" fill="#F7B733"/><text x="42" y="42" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A5F" font-family="Nunito,sans-serif">Aa</text></svg>
-          </div>
-          <div class="bt" data-i18n="bon.2t">可列印閃卡包</div>
-          <div class="bd" data-i18n="bon.2d">200 張主題閃卡，直接列印就能用。</div>
-          <span class="bfree" data-i18n="bon.free">示範贈送</span>
-        </div>
-        <div class="bonus">
-          <div class="bart" style="background:#FFF0C8">
-            <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="10" width="48" height="52" rx="6" fill="#fff" stroke="#F7B733" stroke-width="3"/><rect x="20" y="20" width="32" height="8" rx="4" fill="#1F3A5F"/><rect x="20" y="34" width="24" height="6" rx="3" fill="#F47C5E"/><rect x="20" y="46" width="28" height="6" rx="3" fill="#4FB39A"/></svg>
-          </div>
-          <div class="bt" data-i18n="bon.3t">教室英語指示語海報</div>
-          <div class="bd" data-i18n="bon.3d">常用指令中英對照，貼在教室隨時能指著說。</div>
-          <span class="bfree" data-i18n="bon.free">示範贈送</span>
-        </div>
-        <div class="bonus">
-          <div class="bart" style="background:#FDE4DC">
-            <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="16" y="16" width="40" height="40" rx="8" fill="#fff"/><circle cx="36" cy="32" r="8" fill="#F47C5E"/><rect x="24" y="44" width="24" height="6" rx="3" fill="#1F3A5F"/></svg>
-          </div>
-          <div class="bt" data-i18n="bon.4t">家長回饋小卡</div>
-          <div class="bd" data-i18n="bon.4d">下課可以帶回家的開口紀錄，讓家長知道今天練了什麼。</div>
-          <span class="bfree" data-i18n="bon.free">示範贈送</span>
-        </div>
-        <div class="bonus wide">
-          <div class="bart" style="background:#E8EEF6">
-            <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="28" cy="36" r="16" fill="#D8F1EA"/><circle cx="46" cy="36" r="16" fill="#FFE3D4"/><path d="M28 36h18" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/></svg>
-          </div>
-          <div class="bt" data-i18n="bon.5t">程度調整指南</div>
-          <div class="bd" data-i18n="bon.5d">同一個活動，怎麼給初學與進階的孩子用，步驟都寫清楚。</div>
-          <span class="bfree" data-i18n="bon.free">示範贈送</span>
-        </div>
+<div class="bonus"><div class="bart" style="background:#FFE3D4"><span style="font-size:3rem">☔</span></div><div class="bt" data-i18n-html="b1t">雨天室內 10 分鐘遊戲包</div><div class="bd" data-i18n-html="b1d">8 張卡，不用準備材料</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
+<div class="bonus"><div class="bart" style="background:#D8F1EA"><span style="font-size:3rem">💬</span></div><div class="bt" data-i18n-html="b2t">Classroom English 指令小卡</div><div class="bd" data-i18n-html="b2d">最常用的 50 句指令</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
+<div class="bonus"><div class="bart" style="background:#FFF3D6"><span style="font-size:3rem">📅</span></div><div class="bt" data-i18n-html="b3t">感官節慶月曆</div><div class="bd" data-i18n-html="b3d">12 個月，每月一個主題遊戲</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
+<div class="bonus"><div class="bart" style="background:#E6E7FA"><span style="font-size:3rem">🧪</span></div><div class="bt" data-i18n-html="b4t">自製教具食譜</div><div class="bd" data-i18n-html="b4d">雪花麵糰、沙鈴、氣味罐</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
+<div class="bonus wide"><div class="bart" style="background:#F3E3F7"><span style="font-size:3rem">✉️</span></div><div class="bt" data-i18n-html="b5t">家長溝通範本（老師版）</div><div class="bd" data-i18n-html="b5d">課後回饋句、活動同意書範本</div><span class="bfree" data-i18n-html="bfree">贈品</span></div>
       </div>
     </div>
   </section>
-
-  <div class="promise"><p data-i18n="p3">360 個遊戲＋80 堂教案＋5 份贈品，一次帶回家。（示範價格）</p></div>
 
   <section class="kduro" id="pricing">
-    <div class="wrap" style="text-align:center">
-      <h2 data-i18n="price.h2">今天你會得到</h2>
-      <div class="valuestack">
-        <div class="vr"><span data-i18n="price.v1">360 個圖解英文遊戲</span><b>NT$1,800</b></div>
-        <div class="vr"><span data-i18n="price.v2">80 堂 30 分鐘現成教案</span><b>NT$1,200</b></div>
-        <div class="vr"><span data-i18n="price.v3">🎁 贈品 1・12 週主題備課表</span><b>NT$290</b></div>
-        <div class="vr"><span data-i18n="price.v4">🎁 贈品 2・可列印閃卡包</span><b>NT$250</b></div>
-        <div class="vr"><span data-i18n="price.v5">🎁 贈品 3・教室英語指示語海報</span><b>NT$150</b></div>
-        <div class="vr"><span data-i18n="price.v6">🎁 贈品 4・家長回饋小卡</span><b>NT$150</b></div>
-        <div class="vr"><span data-i18n="price.v7">🎁 贈品 5・程度調整指南</span><b>NT$150</b></div>
-        <div class="vr tot"><span data-i18n="price.tot">合計價值</span><b>NT$3,990</b></div>
+    <div class="wrap" style="max-width:960px">
+      <div style="text-align:center"><span class="pill" style="background:rgba(247,183,51,.2);color:#FFD27A" data-i18n-html="price.pill">建議方案</span></div>
+      <h2 data-i18n-html="price.h2">選擇適合你的方案</h2>
+      <p class="lead" data-i18n-html="price.lead">以下價格為規劃中的建議價，正式開賣時公布最終價格。</p>
+      <div class="plans">
+        <div class="plan"><div class="pn" data-i18n-html="pl1n">🏠 家庭版</div><div class="pf" data-i18n-html="pl1f">給在家陪玩的家長</div><div class="pp" data-i18n-html="pl1p">NT$1,280</div><span class="pe" data-i18n-html="pl1e">早鳥建議價 NT$990</span><ul data-i18n-html="pl1l"><li>9 模組影片＋全部 PDF</li><li>發音音檔</li><li>贈品 1–4</li><li>1 個家庭使用</li></ul></div>
+        <div class="plan hot"><div class="pn" data-i18n-html="pl2n">🍎 老師版</div><div class="pf" data-i18n-html="pl2f">給個人老師、家教</div><div class="pp" data-i18n-html="pl2p">NT$2,480</div><span class="pe" data-i18n-html="pl2e">最多人選（預計）</span><ul data-i18n-html="pl2l"><li>家庭版全部內容</li><li>教室版教案與分組說明</li><li>自己課堂使用授權</li><li>贈品 1–5</li></ul></div>
+        <div class="plan"><div class="pn" data-i18n-html="pl3n">🏫 機構版</div><div class="pf" data-i18n-html="pl3f">給補習班、幼兒園</div><div class="pp" data-i18n-html="pl3p">NT$6,800 起</div><span class="pe" data-i18n-html="pl3e">可詢價</span><ul data-i18n-html="pl3l"><li>老師版全部內容</li><li>最多 5 位老師使用</li><li>1 次 60 分鐘線上師訓</li></ul></div>
       </div>
-      <div class="price">
-        <div class="val" data-i18n="price.today">示範售價</div>
-        <span class="now">NT$990</span>
-        <span class="save" data-i18n="price.save">一次買斷・沒有訂閱費用</span>
-        <div class="cap" data-i18n="price.cap">一次付款，不是月費。平均每個活動不到 NT$3。此為示範頁，按鈕不會進入真實結帳。</div>
-        <a class="btn" href="#pricing"><span data-i18n="cta.price">取得玩美英語（示範）</span><small data-i18n="cta.priceSub">NT$990 · 一次買斷 · 無實際結帳</small></a>
-        <div class="demo-note" data-i18n="price.demo">示範頁面 · 之後可替換成正式內容與結帳連結</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <div class="guar">
-        <div class="g">🛡️</div>
-        <h3 style="margin:6px 0" data-i18n="guar.h">7 天退款保證</h3>
-        <p data-i18n-html="guar.p">取得之後，先在課堂上實際用用看。如果覺得對你的孩子或課程沒有幫助，<b>7 天內全額退款</b>，不必說明理由。（示範條款，正式銷售時再確認）</p>
+      <div class="soon">
+        <span class="sb" data-i18n-html="price.soon">🛒 線上購買即將開放</span>
+        <button class="wbtn js-wait" type="button" data-i18n-html="price.wait">加入候補名單</button>
+        <small data-i18n-html="price.waitnote">開賣時優先通知你（候補功能建置中）</small>
       </div>
     </div>
   </section>
 
   <section class="lil">
     <div class="wrap">
-      <h2 data-i18n="use.h2">用玩美英語帶一堂課</h2>
-      <p class="lead" data-i18n="use.lead">不管是晨圈、雨天改室內，還是下課前十分鐘，都有對應的用法。</p>
-      <div class="tcards">
-        <div class="tcard">
-          <div class="av">☀️</div>
-          <div>
-            <div class="tt" data-i18n="use.1d">打開 5 分鐘暖身遊戲，用今天的主題單字讓孩子先動起來、先開口，再進入主要活動。</div>
-            <div class="tn" data-i18n="use.1t">使用情境：課前暖身</div>
-          </div>
-        </div>
-        <div class="tcard">
-          <div class="av">🌧️</div>
-          <div>
-            <div class="tt" data-i18n="use.2d">戶外或律動課臨時取消了？改選室內安靜版，一樣能練聽與說，教室也不會大亂。</div>
-            <div class="tn" data-i18n="use.2t">使用情境：雨天備案</div>
-          </div>
-        </div>
-        <div class="tcard">
-          <div class="av">🧩</div>
-          <div>
-            <div class="tt" data-i18n="use.3d">同一個遊戲有簡單版和挑戰版。初學的孩子跟著核心句型，程度較好的可以加長句或自己提問。</div>
-            <div class="tn" data-i18n="use.3t">使用情境：程度調整</div>
-          </div>
-        </div>
-        <div class="tcard">
-          <div class="av">⏰</div>
-          <div>
-            <div class="tt" data-i18n="use.4d">下課前十分鐘不想放影片？選一個短活動做口說回顧，讓孩子把今天學會的句子再說一次。</div>
-            <div class="tn" data-i18n="use.4t">使用情境：收尾十分鐘</div>
-          </div>
-        </div>
-      </div>
+      <div class="guar"><div class="g">🛡️</div><h3 data-i18n-html="guar.h">滿意保證（條款待定）</h3><p data-i18n-html="guar.p">退款規則會在開賣前公布，並依消費者保護法清楚標示數位內容的退款方式。【退款條款待填】</p></div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap">
-      <h2 data-i18n="faq.h2">常見問題</h2>
+      <h2 data-i18n-html="use.h2">什麼時候可以用？</h2>
+      <div class="uses">
+        <div class="use"><span class="ue">👨‍👩‍👧</span><span data-i18n-html="u1"><b>週末親子時間</b>：一個遊戲 15 分鐘，玩完順便收心。</span></div>
+        <div class="use"><span class="ue">🏫</span><span data-i18n-html="u2"><b>補習班主題課</b>：直接照 30 分鐘教案上，不用從零備課。</span></div>
+        <div class="use"><span class="ue">🧸</span><span data-i18n-html="u3"><b>幼兒園美語時間</b>：混齡班用簡單版／挑戰版分組。</span></div>
+        <div class="use"><span class="ue">☔</span><span data-i18n-html="u4"><b>下雨天在家</b>：用雨天遊戲包，在客廳也能動起來。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lil" id="faq">
+    <div class="wrap">
+      <h2 data-i18n-html="faq.h2">常見問題</h2>
       <div class="faq">
-        <details>
-          <summary data-i18n="faq.q1">要怎麼收到內容？</summary>
-          <p data-i18n="faq.a1">這是電子教材（PDF）。正式銷售時，付款後會寄到你的 Email，手機、平板、電腦都能打開，也可以印出來，永久屬於你。本頁為示範，沒有實際寄送。</p>
-        </details>
-        <details>
-          <summary data-i18n="faq.q2">什麼老師適合用？</summary>
-          <p data-i18n="faq.a2">兒童美語老師、補習班與安親班老師、幼兒園英語課、家教和才藝班都可以用。內容以 3 到 12 歲為主，每個活動都標了建議年齡與程度。</p>
-        </details>
-        <details>
-          <summary data-i18n="faq.q3">需要準備很多教具嗎？</summary>
-          <p data-i18n="faq.a3">不一定。很多遊戲只需閃卡、色紙或教室裡既有的物品。需要準備時，「準備材料」會寫清楚。贈品裡也有可列印閃卡。</p>
-        </details>
-        <details>
-          <summary data-i18n="faq.q4">只要付款一次嗎？</summary>
-          <p data-i18n="faq.a4">對，示範售價是一次買斷 NT$990，沒有訂閱，也不會每月扣款。本頁按鈕不會進入真實結帳。</p>
-        </details>
-        <details>
-          <summary data-i18n="faq.q5">可以照著寫的直接帶嗎？</summary>
-          <p data-i18n="faq.a5">可以。每個遊戲都有進行方式、目標句型和老師可以說的話，教案的時間分配也排好了。打開，照著帶就好，再依自己班上的情況微調。</p>
-        </details>
-        <details open>
-          <summary data-i18n="faq.q6">這是正式商品嗎？</summary>
-          <p data-i18n="faq.a6">不是。這是網站示範頁，品牌、評價、遊戲名稱和插圖都是為了預覽版面而虛構的。之後可以把文案、圖片和結帳換成你的正式內容。</p>
-        </details>
+<details><summary data-i18n-html="fq1">適合幾歲的孩子？</summary><p data-i18n-html="fa1">主要設計給 3–8 歲。每個遊戲都分成 3–5 歲的簡單版與 6–8 歲的挑戰版，家裡有兩個不同年齡的孩子也能一起玩。</p></details>
+<details><summary data-i18n-html="fq2">家長英文不好也可以用嗎？</summary><p data-i18n-html="fa2">可以。每張遊戲卡都有「家長照念句」，單字和句型都附 Kelly 老師的錄音，跟著念就好。</p></details>
+<details><summary data-i18n-html="fq3">需要買很多教具嗎？</summary><p data-i18n-html="fa3">不用。大部分遊戲用家裡現有的東西就能玩，例如毛巾、杯子、水果、紙箱。另附自製教具食譜。</p></details>
+<details><summary data-i18n-html="fq4">什麼時候可以買？怎麼付款？</summary><p data-i18n-html="fa4">課程正在製作中，線上購買即將開放。可以先加入候補名單，開賣時會優先通知你。付款方式會在開賣時公布。</p></details>
+<details><summary data-i18n-html="fq5">安全嗎？味覺、轉圈的遊戲要注意什麼？</summary><p data-i18n-html="fa5">每張卡都有安全提醒。味覺遊戲一定要先確認過敏並取得家長同意，避免整顆葡萄、堅果等噎嗆風險食物；轉圈每輪不超過 3 圈，孩子頭暈就停。遊戲全程需要大人陪同。</p></details>
+<details><summary data-i18n-html="fq6">這是感統治療課程嗎？</summary><p data-i18n-html="fa6">不是。這是用感官遊戲學英文的課程，不是醫療或治療。如果孩子有感覺處理或發展上的疑慮，請諮詢職能治療師或醫師。</p></details>
+<details><summary data-i18n-html="fq7">補習班可以多位老師一起用嗎？</summary><p data-i18n-html="fa7">可以選擇機構版，預計最多 5 位老師使用，並含一次線上師訓。更多人數可以詢價。</p></details>
       </div>
     </div>
   </section>
 
-  <section class="lil">
-    <div class="wrap" style="text-align:center">
-      <h2 data-i18n="final.h2">「今天玩什麼？」從這一堂開始就不用再煩惱</h2>
-      <p class="lead" data-i18n="final.lead">讓玩美英語成為你的活動庫。下一堂英文課，打開就能帶。</p>
-      <a class="btn" href="#pricing"><span data-i18n="cta.final">立即查看示範方案 — NT$990</span><small data-i18n="cta.finalSub">一次買斷 · 此頁無實際結帳</small></a>
+  <section class="hero" style="background:linear-gradient(180deg,var(--crema),#FFE9DC)">
+    <div class="wrap">
+      <h2 data-i18n-html="final.h2">下一次英文時間，讓孩子用整個身體來學</h2>
+      <p class="lead" data-i18n-html="final.lead">感官彩虹英語正在準備上線。先看看方案，開賣時第一時間通知你。</p>
+      <a class="btn" href="#pricing"><span data-i18n-html="cta.final">查看方案＆加入候補</span><small data-i18n-html="cta.finalSub">線上購買即將開放</small></a>
     </div>
   </section>
 
+  <div class="rainbow-bar"></div>
   <footer class="foot">
-    <p><b data-i18n="foot.brand">玩美英語 PlayEnglish</b></p>
-    <p data-i18n="foot.tag">給兒童美語老師的遊戲與教案包（示範）</p>
-    <p data-i18n="foot.legal">本頁所有內容皆為示範用途，不是真實商品或客戶評價。進行活動時，請依現場環境與孩子的狀況注意安全。</p>
+    <p><b data-i18n-html="foot.brand">感官彩虹英語 Sense Rainbow English</b></p>
+    <p data-i18n-html="foot.tag">Kelly 老師原創的七大感官英文遊戲課程｜高雄</p>
+    <p data-i18n-html="foot.legal">本頁為課程預告頁，內容與價格以正式開賣為準；評價為示範。遊戲須在大人陪同下進行。本課程為英語學習課程，非醫療或治療服務。聯絡方式【待填】</p>
   </footer>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="chat-fab" id="chatFab" type="button" aria-expanded="false" aria-controls="chatPanel"><span class="dot">🤖</span><span data-i18n-html="chat.btn">AI 小助手</span></button>
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="AI 小助手">
+    <div class="chat-head"><span class="dot">🤖</span><b data-i18n-html="chat.title">AI 小助手</b><button type="button" id="chatClose" aria-label="關閉">×</button></div>
+    <div class="chat-human">👩‍🏫 <span data-i18n-html="chat.human">複雜問題會轉給真人老師</span></div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-qs" id="chatQs">
+      <button type="button" data-q="1" data-i18n-html="fq1">適合幾歲的孩子？</button>
+      <button type="button" data-q="2" data-i18n-html="fq2">家長英文不好也可以用嗎？</button>
+      <button type="button" data-q="3" data-i18n-html="fq3">需要買很多教具嗎？</button>
+      <button type="button" data-q="4" data-i18n-html="fq4">什麼時候可以買？怎麼付款？</button>
+    </div>
+    <div class="chat-note" data-i18n-html="chat.note">（示範版：目前只回答常見問題）</div>
+  </div>
+
   <script>
-    const I18N = {
-      zh: {
-  "topbar": "示範網站 · 內容僅供預覽，非正式販售",
-  "hero.pill": "給兒童美語老師的遊戲教案包　示範內容",
-  "hero.h1": "「今天的英文課，要帶小朋友<span class=\"li\">玩什麼</span>？」<br>打開玩美英語，<span class=\"li\">選一個就好</span>",
-  "hero.sub": "<b>360 個全彩圖解英文遊戲</b>＋<b>80 堂現成的 30 分鐘教案</b>。程度、人數、目標句型、老師可以說的話，全都寫好了。打開、選一個、帶孩子開口說英語。",
-  "hero.n1": "圖解英文遊戲",
-  "hero.n2": "現成 30 分鐘教案",
-  "hero.n3": "歲都能用",
-  "cta.main": "取得玩美英語（示範）",
-  "cta.sub": "一次買斷 NT$990 · 此頁無實際結帳",
-  "hero.trust": "備課前，先打開這一本（示範評價綜述）",
-  "t.h2": "老師怎麼說",
-  "t.lead": "以下兩則為示範評價，不是真實客戶留言。正式上線時會換成你自己收集的回饋。",
-  "t.badge": "示範評價",
-  "t.q1": "「以前每週備課都要東拼西湊閃卡和遊戲。現在翻開就有主題、句型和活動流程，孩子很快就跟著唸、跟著做。雨天改室內版也寫好了，真的省很多時間。」",
-  "t.w1": "王老師（示範）",
-  "t.r1": "兒童美語班．教學年資 8 年",
-  "t.q2": "「原本擔心遊戲只有熱鬧、英文不夠。結果每個活動都標了目標單字和句型，結束還有簡單的口說回顧。孩子比較敢開口，備課也不再從零開始。」",
-  "t.w2": "張老師（示範）",
-  "t.r2": "補習班美語老師",
-  "p1": "不必每天從零想英文遊戲。打開、選一個、直接帶。",
-  "pain.h2": "每天帶孩子學英文的老師，都懂這種感覺…",
-  "pain.lead": "不是你不夠用心。教材很多，卻很少有人幫你準備「今天這一堂要怎麼玩、怎麼讓孩子開口」。",
-  "pain.1": "<b>每週都要排新活動</b>，時間表寫得清清楚楚，但真正能練到英文、孩子又願意參加的遊戲，還是得自己想。",
-  "pain.2": "一下雨或場地不夠，<b>原本的跑跳遊戲就用不了</b>。教室裡的精力沒地方放，開口練習也跟著中斷。",
-  "pain.3": "<b>老是用同一套閃卡和兒歌。</b>孩子先玩膩了，就不想再跟著說。",
-  "pain.4": "班上程度差很多，<b>同一個遊戲不知道怎麼調難易</b>，初學的跟不上，程度好的又覺得太簡單。",
-  "sol.pill": "解決方案",
-  "sol.h2": "玩美英語 PlayEnglish",
-  "sol.lead": "三個步驟，今天的英文活動就排好了。不用再從零開始。",
-  "sol.s1t": "打開",
-  "sol.s1d": "用手機、平板打開 PDF，或先列印當堂要用的頁面。",
-  "sol.s2t": "選擇",
-  "sol.s2d": "依主題、程度、場地和時間挑選，選一個活動就好。",
-  "sol.s3t": "開始玩",
-  "sol.s3d": "照著流程帶。規則、配置和老師可以說的話都寫好了。",
-  "p2": "從 3 歲到 12 歲，教室、小組、雨天都有對應的英文活動。",
-  "get.h2": "你會收到什麼",
-  "get.lead": "不是空白範本。活動流程、句型和指示語都寫好，可以直接拿來帶。",
-  "get.1": "<b>360 個圖解英文遊戲</b> — 一頁一個活動，附簡單插圖。含開口句型、單字、角色扮演、律動、室內安靜遊戲等分類。",
-  "get.2": "<b>80 堂現成的 30 分鐘教案</b> — 從暖身、主要活動到口說回顧都排好了，可依課堂延長到 40–45 分鐘。分成 3–6 歲與 7–12 歲。",
-  "get.3": "<b>每個遊戲都寫好細節</b> — 適合年齡、人數、時間、目標單字與句型、準備材料、進行方式，一頁就看完。",
-  "get.4": "<b>老師可以說的話＋場地配置示意</b> — 帶活動時能直接說出口的英語指示語都寫好了，不用再現想。",
-  "get.5": "<b>簡單版／挑戰版＋可列印學習單</b> — 同一個遊戲能依程度調整；部分活動附學習單，下課後也能複習。",
-  "get.6": "<b>PDF 一次取得</b> — 示範流程為付款後寄到 Email，手機、平板、電腦都能打開，也可以印出來。<b>一次買斷，永久使用。</b>",
-  "prev.pill": "看看內容長怎樣",
-  "prev.h2": "內頁預覽（示範插圖）",
-  "prev.lead": "以下是示意卡片，用來想像活動頁的版面：主題、年齡、目標句型和進行步驟會排在同一頁。",
-  "prev.1t": "顏色尋寶",
-  "prev.1m": "4–6 歲・單字遊戲",
-  "prev.2t": "小小市集",
-  "prev.2m": "6–8 歲・角色扮演",
-  "prev.3t": "跳一跳說出來",
-  "prev.3m": "5–7 歲・動作英語",
-  "prev.4t": "故事小火車",
-  "prev.4m": "7–9 歲・句型練習",
-  "prev.5t": "安靜角落",
-  "prev.5m": "3–5 歲・聽說遊戲",
-  "prev.6t": "天氣散步",
-  "prev.6m": "4–8 歲・主題活動",
-  "prev.hint": "👆 左右滑動查看示範內頁",
-  "cat.h2": "九大分類，依今天的課堂選",
-  "cat.lead": "不只有閃卡。主題、程度和上課方式都分開整理，備課時比較好找。",
-  "cat.1": "🗣️ 開口句型遊戲",
-  "cat.2": "🃏 單字與閃卡活動",
-  "cat.3": "🎭 角色扮演與情境",
-  "cat.4": "🤸 肢體與律動英語",
-  "cat.5": "🌧️ 室內安靜遊戲",
-  "cat.6": "🎵 歌謠與節奏",
-  "cat.7": "📖 繪本延伸活動",
-  "cat.8": "🧠 聽說與記憶",
-  "cat.9": "🎉 節慶主題課程",
-  "bon.h2": "5 份免費贈品 🎁",
-  "bon.lead": "已經整理好的備課小工具，讓一整學期的英文課都輕鬆一點。（示範項目）",
-  "bon.1t": "12 週主題備課表",
-  "bon.1d": "週週對得上進度的主題節奏，不用再自己排整學期。",
-  "bon.2t": "可列印閃卡包",
-  "bon.2d": "200 張主題閃卡，直接列印就能用。",
-  "bon.3t": "教室英語指示語海報",
-  "bon.3d": "常用指令中英對照，貼在教室隨時能指著說。",
-  "bon.4t": "家長回饋小卡",
-  "bon.4d": "下課可以帶回家的開口紀錄，讓家長知道今天練了什麼。",
-  "bon.5t": "程度調整指南",
-  "bon.5d": "同一個活動，怎麼給初學與進階的孩子用，步驟都寫清楚。",
-  "bon.free": "示範贈送",
-  "p3": "360 個遊戲＋80 堂教案＋5 份贈品，一次帶回家。（示範價格）",
-  "price.h2": "今天你會得到",
-  "price.v1": "360 個圖解英文遊戲",
-  "price.v2": "80 堂 30 分鐘現成教案",
-  "price.v3": "🎁 贈品 1・12 週主題備課表",
-  "price.v4": "🎁 贈品 2・可列印閃卡包",
-  "price.v5": "🎁 贈品 3・教室英語指示語海報",
-  "price.v6": "🎁 贈品 4・家長回饋小卡",
-  "price.v7": "🎁 贈品 5・程度調整指南",
-  "price.tot": "合計價值",
-  "price.today": "示範售價",
-  "price.save": "一次買斷・沒有訂閱費用",
-  "price.cap": "一次付款，不是月費。平均每個活動不到 NT$3。此為示範頁，按鈕不會進入真實結帳。",
-  "cta.price": "取得玩美英語（示範）",
-  "cta.priceSub": "NT$990 · 一次買斷 · 無實際結帳",
-  "price.demo": "示範頁面 · 之後可替換成正式內容與結帳連結",
-  "guar.h": "7 天退款保證",
-  "guar.p": "取得之後，先在課堂上實際用用看。如果覺得對你的孩子或課程沒有幫助，<b>7 天內全額退款</b>，不必說明理由。（示範條款，正式銷售時再確認）",
-  "use.h2": "用玩美英語帶一堂課",
-  "use.lead": "不管是晨圈、雨天改室內，還是下課前十分鐘，都有對應的用法。",
-  "use.1d": "打開 5 分鐘暖身遊戲，用今天的主題單字讓孩子先動起來、先開口，再進入主要活動。",
-  "use.1t": "使用情境：課前暖身",
-  "use.2d": "戶外或律動課臨時取消了？改選室內安靜版，一樣能練聽與說，教室也不會大亂。",
-  "use.2t": "使用情境：雨天備案",
-  "use.3d": "同一個遊戲有簡單版和挑戰版。初學的孩子跟著核心句型，程度較好的可以加長句或自己提問。",
-  "use.3t": "使用情境：程度調整",
-  "use.4d": "下課前十分鐘不想放影片？選一個短活動做口說回顧，讓孩子把今天學會的句子再說一次。",
-  "use.4t": "使用情境：收尾十分鐘",
-  "faq.h2": "常見問題",
-  "faq.q1": "要怎麼收到內容？",
-  "faq.a1": "這是電子教材（PDF）。正式銷售時，付款後會寄到你的 Email，手機、平板、電腦都能打開，也可以印出來，永久屬於你。本頁為示範，沒有實際寄送。",
-  "faq.q2": "什麼老師適合用？",
-  "faq.a2": "兒童美語老師、補習班與安親班老師、幼兒園英語課、家教和才藝班都可以用。內容以 3 到 12 歲為主，每個活動都標了建議年齡與程度。",
-  "faq.q3": "需要準備很多教具嗎？",
-  "faq.a3": "不一定。很多遊戲只需閃卡、色紙或教室裡既有的物品。需要準備時，「準備材料」會寫清楚。贈品裡也有可列印閃卡。",
-  "faq.q4": "只要付款一次嗎？",
-  "faq.a4": "對，示範售價是一次買斷 NT$990，沒有訂閱，也不會每月扣款。本頁按鈕不會進入真實結帳。",
-  "faq.q5": "可以照著寫的直接帶嗎？",
-  "faq.a5": "可以。每個遊戲都有進行方式、目標句型和老師可以說的話，教案的時間分配也排好了。打開，照著帶就好，再依自己班上的情況微調。",
-  "faq.q6": "這是正式商品嗎？",
-  "faq.a6": "不是。這是網站示範頁，品牌、評價、遊戲名稱和插圖都是為了預覽版面而虛構的。之後可以把文案、圖片和結帳換成你的正式內容。",
-  "final.h2": "「今天玩什麼？」從這一堂開始就不用再煩惱",
-  "final.lead": "讓玩美英語成為你的活動庫。下一堂英文課，打開就能帶。",
-  "cta.final": "立即查看示範方案 — NT$990",
-  "cta.finalSub": "一次買斷 · 此頁無實際結帳",
-  "foot.brand": "玩美英語 PlayEnglish",
-  "foot.tag": "給兒童美語老師的遊戲與教案包（示範）",
-  "foot.legal": "本頁所有內容皆為示範用途，不是真實商品或客戶評價。進行活動時，請依現場環境與孩子的狀況注意安全。",
-  "aria.lang": "語言切換",
-  "aria.prev": "上一張",
-  "aria.next": "下一張",
-  "aria.track": "內頁預覽",
-  "doc.title": "玩美英語 PlayEnglish｜兒童英文遊戲與教案（示範頁）"
-},
-      en: {
-  "topbar": "Demo site · Preview only, not a live offer",
-  "hero.pill": "A game and lesson pack for children’s English teachers  ·  Demo",
-  "hero.h1": "“What should we <span class=\"li\">play</span> in English class today?”<br>Open PlayEnglish and <span class=\"li\">just pick one</span>",
-  "hero.sub": "<b>360 illustrated English games</b> plus <b>80 ready-made 30-minute lesson plans</b>. Levels, group size, target sentences, and teacher talk are all written out. Open it, choose one, and get kids speaking English.",
-  "hero.n1": "Illustrated English games",
-  "hero.n2": "Ready-made 30-min lessons",
-  "hero.n3": "Designed for ages 3–12",
-  "cta.main": "Get PlayEnglish (demo)",
-  "cta.sub": "One-time NT$990 · No real checkout on this page",
-  "hero.trust": "Open this first when you plan a lesson (sample reviews below)",
-  "t.h2": "What teachers say",
-  "t.lead": "These two quotes are sample reviews, not real customer comments. You’ll replace them with your own feedback later.",
-  "t.badge": "Sample review",
-  "t.q1": "“I used to piece together flashcards and games every week. Now I open a theme and the sentences and activity flow are already there — the kids start speaking and joining in right away. Indoor versions for rainy days are included too. It saves me so much time.”",
-  "t.w1": "Ms. Wang (sample)",
-  "t.r1": "Children’s English class · 8 years’ teaching",
-  "t.q2": "“I worried the games would just be noisy and light on English. Every activity lists target words and sentences, and there’s a short speaking wrap-up at the end. The kids are more willing to speak up, and I don’t plan from scratch anymore.”",
-  "t.w2": "Ms. Chang (sample)",
-  "t.r2": "Cram-school English teacher",
-  "p1": "Stop inventing a new English game every day. Open it, pick one, and start.",
-  "pain.h2": "If you teach English to children, you know this feeling…",
-  "pain.lead": "It’s not that you aren’t trying. There are plenty of materials, but almost no one helps you plan how today’s class will actually be played — and how kids will speak.",
-  "pain.1": "<b>You have to plan a new activity every week.</b> It’s on the timetable, but a game that really practices English and that kids want to join still has to come from you.",
-  "pain.2": "When it rains or the space is tight, <b>the running-around games fall apart</b>. Energy has nowhere to go, and speaking practice stops with it.",
-  "pain.3": "<b>It’s the same flashcards and songs again.</b> Once kids get bored, they stop chiming in.",
-  "pain.4": "Levels in the same class vary a lot, and <b>you’re not sure how to make one game easier or harder</b> — beginners get lost, stronger kids get restless.",
-  "sol.pill": "The solution",
-  "sol.h2": "PlayEnglish 玩美英語",
-  "sol.lead": "Three steps and today’s English activity is planned. No more starting from zero.",
-  "sol.s1t": "Open",
-  "sol.s1d": "Open the PDF on your phone or tablet, or print the pages you need for class.",
-  "sol.s2t": "Choose",
-  "sol.s2d": "Filter by theme, level, space, and time — then just pick one activity.",
-  "sol.s3t": "Play",
-  "sol.s3d": "Follow the flow. The rules, setup, and what you can say are already written.",
-  "p2": "From ages 3 to 12, there are English activities for the classroom, small groups, and rainy days.",
-  "get.h2": "What you’ll get",
-  "get.lead": "Not blank templates. The flow, target sentences, and teacher language are written so you can use them right away.",
-  "get.1": "<b>360 illustrated English games</b> — one activity per page, with a simple illustration. Includes speaking frames, vocabulary, role-play, movement, and quiet indoor games.",
-  "get.2": "<b>80 ready-made 30-minute lesson plans</b> — warm-up, main activity, and a speaking wrap-up, with the option to stretch to 40–45 minutes. Split into ages 3–6 and 7–12.",
-  "get.3": "<b>The details are filled in</b> — suggested age, group size, time, target words and sentences, materials, and how to run it, all on one page.",
-  "get.4": "<b>Teacher talk plus a simple setup sketch</b> — English instructions you can say out loud are already written, so you don’t have to invent them on the spot.",
-  "get.5": "<b>Easier / more challenging versions + printables</b> — adjust the same game by level; some activities include a worksheet for a quick review after class.",
-  "get.6": "<b>A one-time PDF</b> — in a live sale it would be emailed after payment, to open on your phone, tablet, or computer, or to print. <b>Yours to keep, no subscription.</b>",
-  "prev.pill": "See inside",
-  "prev.h2": "Page previews (illustrated placeholders)",
-  "prev.lead": "These are mock cards so you can picture the layout: theme, age, target sentences, and steps would sit on one page.",
-  "prev.1t": "Color Hunt",
-  "prev.1m": "Ages 4–6 · Vocabulary",
-  "prev.2t": "Market Day",
-  "prev.2m": "Ages 6–8 · Role-play",
-  "prev.3t": "Jump and Say",
-  "prev.3m": "Ages 5–7 · Movement English",
-  "prev.4t": "Story Train",
-  "prev.4m": "Ages 7–9 · Sentence practice",
-  "prev.5t": "Quiet Corner",
-  "prev.5m": "Ages 3–5 · Listening and speaking",
-  "prev.6t": "Weather Walk",
-  "prev.6m": "Ages 4–8 · Theme activity",
-  "prev.hint": "👆 Swipe sideways to browse the demo pages",
-  "cat.h2": "Nine categories, so you can choose for today’s class",
-  "cat.lead": "It isn’t only flashcards. Themes, levels, and teaching styles are sorted so planning is easier.",
-  "cat.1": "🗣️ Speaking-frame games",
-  "cat.2": "🃏 Vocabulary and flashcard play",
-  "cat.3": "🎭 Role-play and situations",
-  "cat.4": "🤸 Movement and TPR English",
-  "cat.5": "🌧️ Quiet indoor games",
-  "cat.6": "🎵 Songs and rhythm",
-  "cat.7": "📖 Picture-book extensions",
-  "cat.8": "🧠 Listening and memory",
-  "cat.9": "🎉 Holiday-themed lessons",
-  "bon.h2": "5 free bonuses 🎁",
-  "bon.lead": "Ready-to-use planning tools to make a whole term of English class a little easier. (Demo items.)",
-  "bon.1t": "12-week theme planner",
-  "bon.1d": "A term-long theme rhythm that already lines up week by week.",
-  "bon.2t": "Printable flashcard pack",
-  "bon.2d": "200 themed cards — print and use.",
-  "bon.3t": "Classroom English posters",
-  "bon.3d": "Common instructions in Chinese and English, ready to put on the wall.",
-  "bon.4t": "Parent feedback cards",
-  "bon.4d": "A short take-home note so families know what the class practiced today.",
-  "bon.5t": "Level-adjustment guide",
-  "bon.5d": "Clear steps for using the same activity with beginners and stronger learners.",
-  "bon.free": "Demo bonus",
-  "p3": "360 games + 80 lesson plans + 5 bonuses, all in one pack. (Demo price.)",
-  "price.h2": "Here’s what you get today",
-  "price.v1": "360 illustrated English games",
-  "price.v2": "80 ready-made 30-minute lesson plans",
-  "price.v3": "🎁 Bonus 1 · 12-week theme planner",
-  "price.v4": "🎁 Bonus 2 · Printable flashcard pack",
-  "price.v5": "🎁 Bonus 3 · Classroom English posters",
-  "price.v6": "🎁 Bonus 4 · Parent feedback cards",
-  "price.v7": "🎁 Bonus 5 · Level-adjustment guide",
-  "price.tot": "Total value",
-  "price.today": "Demo price",
-  "price.save": "Pay once · no subscription",
-  "price.cap": "One payment, not a monthly plan. That’s less than NT$3 per activity. This is a demo page — the button does not open a real checkout.",
-  "cta.price": "Get PlayEnglish (demo)",
-  "cta.priceSub": "NT$990 · one-time · no real checkout",
-  "price.demo": "Demo page · swap in your real content and checkout later",
-  "guar.h": "7-day refund guarantee",
-  "guar.p": "Try it in a real class first. If it doesn’t help your students or your planning, <b>we’ll refund you in full within 7 days</b>, no questions asked. (Sample terms — confirm before a live sale.)",
-  "use.h2": "A class with PlayEnglish",
-  "use.lead": "Whether it’s morning circle, a rainy-day indoor swap, or the last ten minutes, there’s a way to use it.",
-  "use.1d": "Open a 5-minute warm-up and use today’s target words to get kids moving and talking before the main activity.",
-  "use.1t": "Use case: pre-class warm-up",
-  "use.2d": "Outdoor or movement time cancelled? Switch to a quiet indoor version. You can still practice listening and speaking without the room descending into chaos.",
-  "use.2t": "Use case: rainy-day backup",
-  "use.3d": "The same game has an easier and a more challenging version. Beginners stay with the core sentence; stronger kids can extend it or ask their own questions.",
-  "use.3t": "Use case: mixed levels",
-  "use.4d": "Don’t want to put on a video in the last ten minutes? Choose a short speaking wrap-up and have the class say today’s sentences once more.",
-  "use.4t": "Use case: the closing ten minutes",
-  "faq.h2": "Frequently asked questions",
-  "faq.q1": "How do I receive the materials?",
-  "faq.a1": "It’s a digital pack (PDF). In a live sale, it would be emailed after payment so you can open it on your phone, tablet, or computer, or print it — yours to keep. This page is a demo and nothing is actually sent.",
-  "faq.q2": "Who is this for?",
-  "faq.a2": "Children’s English teachers, cram-school and after-school teachers, kindergarten English classes, tutors, and enrichment programs. It focuses on ages 3–12, and every activity lists a suggested age and level.",
-  "faq.q3": "Do I need a lot of materials?",
-  "faq.a3": "Not usually. Many games only need flashcards, colored paper, or things already in the classroom. When something is required, the materials list spells it out. Printable flashcards are also included as a bonus.",
-  "faq.q4": "Is it a one-time payment?",
-  "faq.a4": "Yes. The demo price is a one-time NT$990 — no subscription and no monthly charge. The buttons on this page do not open a real checkout.",
-  "faq.q5": "Can I follow it as written?",
-  "faq.a5": "Yes. Each game includes how to run it, the target sentences, and teacher talk, and the lesson plans already have a time breakdown. Open it, follow along, and tweak it for your class.",
-  "faq.q6": "Is this a real product?",
-  "faq.a6": "No. This is a demo landing page. The brand, reviews, game titles, and illustrations were invented to preview the layout. You can later replace the copy, images, and checkout with your real content.",
-  "final.h2": "“What shall we play today?” doesn’t have to be a problem from this class on",
-  "final.lead": "Let PlayEnglish be your activity library. Next English class, just open it and go.",
-  "cta.final": "See the demo offer — NT$990",
-  "cta.finalSub": "Pay once · no real checkout on this page",
-  "foot.brand": "PlayEnglish 玩美英語",
-  "foot.tag": "A game and lesson pack for children’s English teachers (demo)",
-  "foot.legal": "Everything on this page is for demonstration only. It is not a real product or real customer reviews. Always follow safety practice for your space and the children in front of you.",
-  "aria.lang": "Language",
-  "aria.prev": "Previous",
-  "aria.next": "Next",
-  "aria.track": "Page previews",
-  "doc.title": "PlayEnglish 玩美英語 | Children’s English games and lessons (demo)"
-}
-    };
-    const STORAGE_KEY = "playenglish-lang";
-
+    var EN = {"doc.title": "Sense Rainbow English | Seven-sense play that gets kids 3–8 speaking English", "topbar": "🎉 New course in the works · Online checkout coming soon", "hero.pill": "For parents and teachers of kids aged 3–8", "hero.h1": "Kids won't memorize words?<br>Let them <span class=\"li\">touch, sniff and jump</span> —<br>and the English comes out", "hero.sub": "<b>Sense Rainbow English</b> turns touch, sight, hearing, smell, taste, balance and body awareness into English games. Kids feel it with their bodies first, then say it out loud. Works at home and in the classroom.", "hero.n1": "sense modules", "hero.n2": "original game cards", "hero.n3": "minutes a session", "cta.main": "See course plans", "cta.sub": "Online checkout coming soon · join the waitlist", "hero.trust": "Every game has an easy and a challenge version — mixed ages welcome", "t.h2": "What families and teachers say", "t.lead": "These are layout placeholders, not real reviews. They will be replaced with genuine feedback after launch.", "t.badge": "Sample review", "t.q1": "“(Sample) My son reached into the mystery bag, felt the sponge and said ‘It feels soft!’ all by himself. No drilling — he just picked it up while playing.”", "t.w1": "Sample parent A", "t.r1": "Mom of a 4-year-old (sample)", "t.q2": "“(Sample) My class has very mixed levels. Each card has an easy and a challenge version, so everyone can join the same game — and prep takes far less time.”", "t.w2": "Sample teacher B", "t.r2": "Kids' English teacher (sample)", "p1": "Feel it first. Then say it.", "pain.h2": "Teaching kids English — sound familiar?", "pain.lead": "It's not that kids aren't smart or that you aren't trying. Most English activities only use eyes and mouths. Kids' bodies want to move, so their attention drifts.", "pain.1": "<b>Flashcards get boring after three rounds.</b> Kids wander off and the words don't stick.", "pain.2": "<b>Kids can't sit still.</b> They want to run and jump, and class turns into ‘please sit down’ on repeat.", "pain.3": "<b>They understand but won't speak.</b> Ask ‘What color?’ and they just smile and shake their heads.", "pain.4": "<b>Parents aren't confident in English.</b> They want to play at home but worry about pronunciation and what to say.", "sol.pill": "The solution", "sol.h2": "Sense Rainbow English", "sol.lead": "Every game follows three steps, so every child gets to speak.", "sol.s1t": "Feel", "sol.s1d": "Start with one sense: touch, look, listen, smell, taste, sway or push.", "sol.s2t": "Play", "sol.s2d": "Play from the game card. Simple rules, easy and challenge versions.", "sol.s3t": "Say", "sol.s3d": "Each game has a ‘say it to move on’ moment, so speaking feels natural.", "about.pill": "About your teacher", "about.h2": "Hi, I'm Teacher Kelly", "about.p1": "I'm Kelly Chang (張正儀), a children's English teacher in Kaohsiung, Taiwan [years of experience: TBD]. I noticed kids are most engaged not when they sit with flashcards, but when their hands are busy and their bodies are moving.", "about.p2": "So I completed professional training in sensory integration and play-based learning, and earned a PARS Playwork (PPP1) attendance certificate. Then I combined that with my English teaching to design this original course.", "about.b1": "Children's English teacher", "about.b2": "Training in sensory integration & play-based learning", "about.b3": "PARS Playwork PPP1 attendance certificate", "about.photo": "Photo coming", "senses.h2": "Seven senses, seven ways to play in English", "senses.lead": "Each module focuses on one sense, with sentence patterns built around it.", "s1t": "Touch", "s1d": "soft, bumpy, sticky<br><i>It feels soft.</i>", "s2t": "Sight", "s2d": "colors, shapes, places<br><i>I spy something red.</i>", "s3t": "Hearing", "s3d": "loud, quiet, animal sounds<br><i>What's that sound?</i>", "s4t": "Smell", "s4d": "fruit, spices<br><i>It smells like lemon.</i>", "s5t": "Taste", "s5d": "sweet, sour, salty<br><i>It tastes sweet.</i>", "s6t": "Balance", "s6d": "spin, rock, directions<br><i>Spin around! Go left!</i>", "s7t": "Body awareness", "s7d": "push, pull, carry<br><i>Push! It's heavy.</i>", "get.h2": "What you get", "get.lead": "Planned contents. Final materials will be confirmed at launch.", "get.1": "<b>9 demo video lessons</b> — 8–12 minutes per module, showing how to lead each game and what to say.", "get.2": "<b>About 30 original game cards</b> — goal, materials, steps, English phrases, easy/challenge versions and safety notes on one card.", "get.3": "<b>9 ready-made 30-minute lesson plans</b> — hello, warm-up, main game, speaking time, calm-down and home link.", "get.4": "<b>Word cards, sentence strips and worksheets</b> — printable, bilingual.", "get.5": "<b>Pronunciation audio</b> — every word and sentence recorded by Teacher Kelly, so parents can follow along.", "get.6": "<b>Parent & teacher guide</b> — safety basics, allergy checklist and tips for mixed ages.", "prev.pill": "Peek at the game cards", "prev.h2": "Game card previews (illustrations)", "prev.lead": "Swipe to see sample cards. Each one shows the sense, age, English phrases and how to play.", "prev.1t": "Mystery Touch Bag", "prev.1m": "Touch · ages 3–8", "prev.2t": "Color Mission", "prev.2m": "Sight · ages 3–6", "prev.3t": "Shaker Band", "prev.3m": "Hearing · ages 3–7", "prev.4t": "Smell Jars", "prev.4m": "Smell · ages 4–8", "prev.5t": "Spin & Stop", "prev.5m": "Balance · ages 4–8", "prev.6t": "Animal Walk Parade", "prev.6m": "Body · ages 3–8", "prev.hint": "👆 Swipe for more", "mod.h2": "9 modules, one step at a time", "mod.lead": "Start by meeting the senses, explore one sense per module, and finish with a Sense Party.", "m0": "<b>M0 Hello, Senses!</b><span>body parts, sense verbs · <i>I can see with my eyes.</i></span>", "m1": "<b>M1 Touch Town</b><span>texture words · <i>It feels bumpy.</i></span>", "m2": "<b>M2 Color Detective</b><span>colors, shapes, prepositions · <i>It's under the chair.</i></span>", "m3": "<b>M3 Sound Safari</b><span>animal sounds, loud/quiet · <i>What's that sound?</i></span>", "m4": "<b>M4 Sniff & Guess</b><span>fruit, spices · <i>It smells like orange.</i></span>", "m5": "<b>M5 Yummy Lab</b><span>tastes, likes · <i>Do you like it? Yes, I do.</i></span>", "m6": "<b>M6 Wobble & Spin</b><span>actions, directions · <i>Turn left! Stop!</i></span>", "m7": "<b>M7 Strong Body Club</b><span>push, pull, heavy/light · <i>Lift together!</i></span>", "m8": "<b>M8 Rainbow Party</b><span>seven-station quest + Little Teacher show</span>", "bon.h2": "Bonuses (planned)", "bon.lead": "Extras for rainy days, holidays and everyday moments.", "b1t": "Rainy-day 10-minute games", "b1d": "8 cards, no materials needed", "b2t": "Classroom English cards", "b2d": "The 50 most-used instructions", "b3t": "Sensory holiday calendar", "b3d": "12 months, one themed game each", "b4t": "DIY materials recipes", "b4d": "Cloud dough, shakers, smell jars", "b5t": "Parent letters (Teacher plan)", "b5d": "Feedback phrases and consent form templates", "bfree": "BONUS", "price.pill": "Suggested plans", "price.h2": "Choose your plan", "price.lead": "Prices below are proposed and will be confirmed at launch.", "pl1n": "🏠 Family", "pl1f": "For parents playing at home", "pl1p": "NT$1,280", "pl1e": "Proposed early-bird NT$990", "pl1l": "<li>9 video modules + all PDFs</li><li>Pronunciation audio</li><li>Bonuses 1–4</li><li>For one family</li>", "pl2n": "🍎 Teacher", "pl2f": "For individual teachers & tutors", "pl2p": "NT$2,480", "pl2e": "Expected favorite", "pl2l": "<li>Everything in Family</li><li>Classroom lesson plans & group setups</li><li>License for your own classes</li><li>Bonuses 1–5</li>", "pl3n": "🏫 Center", "pl3f": "For tutoring centers & preschools", "pl3p": "From NT$6,800", "pl3e": "Custom quotes available", "pl3l": "<li>Everything in Teacher</li><li>Up to 5 teachers</li><li>One 60-minute online training</li>", "price.soon": "🛒 Online checkout coming soon", "price.wait": "Join the waitlist", "price.waitnote": "Be the first to know when it opens (waitlist being set up)", "toast": "The waitlist is being set up — sign-ups open soon! Contact: [TBD]", "guar.h": "Satisfaction guarantee (terms TBD)", "guar.p": "Refund terms will be published before launch, with clear rules for digital content under Taiwan's consumer protection law. [Refund policy: TBD]", "use.h2": "When can you use it?", "u1": "<b>Weekend family time</b>: one 15-minute game, then a calm-down.", "u2": "<b>Tutoring-center theme class</b>: run the 30-minute plan as is — no prep from scratch.", "u3": "<b>Preschool English time</b>: split mixed ages with easy and challenge versions.", "u4": "<b>Rainy days at home</b>: use the rainy-day pack to get moving in the living room.", "faq.h2": "FAQ", "fq1": "What ages is it for?", "fa1": "It's designed for ages 3–8. Every game has an easy version for ages 3–5 and a challenge version for ages 6–8, so siblings of different ages can play together.", "fq2": "Can I use it if my English isn't great?", "fa2": "Yes. Each card has ‘read-aloud’ phrases for parents, and every word and sentence comes with Teacher Kelly's audio, so you can just follow along.", "fq3": "Do I need to buy lots of materials?", "fa3": "No. Most games use things you already have, like towels, cups, fruit and boxes. DIY recipes are included too.", "fq4": "When can I buy it, and how do I pay?", "fa4": "The course is being produced and online checkout opens soon. Join the waitlist to hear first. Payment options will be announced at launch.", "fq5": "Is it safe? What about the taste and spinning games?", "fa5": "Every card includes safety notes. For taste games, always check allergies and get parental consent first, and avoid choking hazards like whole grapes and nuts. For spinning, no more than 3 turns per round, and stop if a child feels dizzy. An adult should supervise at all times.", "fq6": "Is this sensory integration therapy?", "fa6": "No. This is an English course that uses sensory play — not medical treatment or therapy. If you have concerns about your child's sensory processing or development, please consult an occupational therapist or doctor.", "fq7": "Can several teachers at a center use it?", "fa7": "Yes — the Center plan is planned for up to 5 teachers and includes one online training session. Larger teams can ask for a quote.", "final.h2": "Next English time, let kids learn with their whole body", "final.lead": "Sense Rainbow English is getting ready to launch. Check the plans and be the first to know.", "cta.final": "See plans & join the waitlist", "cta.finalSub": "Online checkout coming soon", "foot.brand": "Sense Rainbow English 感官彩虹英語", "foot.tag": "An original seven-sense English play course by Teacher Kelly | Kaohsiung, Taiwan", "foot.legal": "This is a pre-launch page. Contents and prices may change at launch; reviews are samples. All games require adult supervision. This is an English-learning course, not a medical or therapy service. Contact: [TBD]", "chat.btn": "AI Assistant", "chat.title": "AI Assistant", "chat.hello": "Hi! I'm the Sense Rainbow AI assistant 👋 What would you like to know? Tap a question below.", "chat.human": "Complex questions go to a real teacher", "chat.note": "(Demo: answers common questions only)", "chat.close": "Close", "aria.lang": "Language", "aria.prev": "Previous", "aria.next": "Next", "tagline": "Seven senses. One rainbow of English. 🌈", "senses.rb": "Each sense has its own rainbow color, used on every game card and word card."};
+    var ZH = {};
+    var STORAGE_KEY = "senserainbow-lang";
+    var CUR = "zh";
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      ZH[el.getAttribute("data-i18n-html")] = el.innerHTML;
+    });
+    var ZH_EXTRA = {"doc.title": "感官彩虹英語 Sense Rainbow English｜用七大感官遊戲帶 3–8 歲孩子開口說英文", "toast": "候補名單功能建置中，很快就能登記！聯絡方式【待填】", "chat.hello": "嗨！我是感官彩虹英語的 AI 小助手 👋 想知道什麼？點下面的問題試試看。", "chat.close": "關閉", "aria.lang": "語言", "aria.prev": "上一張", "aria.next": "下一張", "fa1": "主要設計給 3–8 歲。每個遊戲都分成 3–5 歲的簡單版與 6–8 歲的挑戰版，家裡有兩個不同年齡的孩子也能一起玩。", "fa2": "可以。每張遊戲卡都有「家長照念句」，單字和句型都附 Kelly 老師的錄音，跟著念就好。", "fa3": "不用。大部分遊戲用家裡現有的東西就能玩，例如毛巾、杯子、水果、紙箱。另附自製教具食譜。", "fa4": "課程正在製作中，線上購買即將開放。可以先加入候補名單，開賣時會優先通知你。付款方式會在開賣時公布。"};
+    for (var k in ZH_EXTRA) ZH[k] = ZH_EXTRA[k];
+    function t(key) { var d = CUR === "en" ? EN : ZH; return d[key] != null ? d[key] : (ZH[key] || ""); }
     function applyLang(lang) {
-      const dict = I18N[lang] || I18N.zh;
-      document.documentElement.lang = lang === "en" ? "en" : "zh-TW";
-      document.querySelectorAll("[data-i18n]").forEach(function (el) {
-        const key = el.getAttribute("data-i18n");
-        if (dict[key] != null) el.textContent = dict[key];
-      });
+      CUR = lang === "en" ? "en" : "zh";
+      document.documentElement.lang = CUR === "en" ? "en" : "zh-TW";
       document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-        const key = el.getAttribute("data-i18n-html");
-        if (dict[key] != null) el.innerHTML = dict[key];
+        var v = t(el.getAttribute("data-i18n-html")); if (v) el.innerHTML = v;
       });
-      if (dict["doc.title"]) document.title = dict["doc.title"];
-      const group = document.querySelector(".lang-toggle");
-      if (group && dict["aria.lang"]) group.setAttribute("aria-label", dict["aria.lang"]);
-      const track = document.getElementById("previewTrack");
-      if (track && dict["aria.track"]) track.setAttribute("aria-label", dict["aria.track"]);
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      if (prevBtn && dict["aria.prev"]) prevBtn.setAttribute("aria-label", dict["aria.prev"]);
-      if (nextBtn && dict["aria.next"]) nextBtn.setAttribute("aria-label", dict["aria.next"]);
-      document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
-        btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
+      document.title = t("doc.title");
+      var g = document.querySelector(".lang-toggle"); g && g.setAttribute("aria-label", t("aria.lang"));
+      document.getElementById("prevBtn").setAttribute("aria-label", t("aria.prev"));
+      document.getElementById("nextBtn").setAttribute("aria-label", t("aria.next"));
+      document.getElementById("chatClose").setAttribute("aria-label", t("chat.close"));
+      document.getElementById("chatPanel").setAttribute("aria-label", t("chat.title"));
+      document.querySelectorAll(".lang-toggle button").forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-lang") === CUR ? "true" : "false");
       });
-      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      try { localStorage.setItem(STORAGE_KEY, CUR); } catch (e) {}
+      resetChat();
     }
+    document.querySelectorAll(".lang-toggle button").forEach(function (b) {
+      b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
+    });
 
-    document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        applyLang(btn.getAttribute("data-lang"));
+    var toastEl = document.getElementById("toast"), toastT;
+    document.querySelectorAll(".js-wait").forEach(function (b) {
+      b.addEventListener("click", function () {
+        toastEl.textContent = t("toast"); toastEl.classList.add("show");
+        clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove("show"); }, 3800);
+      });
+    });
+
+    var fab = document.getElementById("chatFab"), panel = document.getElementById("chatPanel"), body = document.getElementById("chatBody");
+    function addMsg(html, who) { var d = document.createElement("div"); d.className = "msg " + who; d.innerHTML = html; body.appendChild(d); body.scrollTop = body.scrollHeight; }
+    function resetChat() { body.innerHTML = ""; addMsg(t("chat.hello"), "bot"); }
+    function setOpen(o) { panel.classList.toggle("open", o); fab.setAttribute("aria-expanded", o ? "true" : "false"); }
+    fab.addEventListener("click", function () { setOpen(!panel.classList.contains("open")); });
+    document.getElementById("chatClose").addEventListener("click", function () { setOpen(false); });
+    document.querySelectorAll("#chatQs button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var q = b.getAttribute("data-q");
+        addMsg(t("fq" + q), "me");
+        setTimeout(function () { addMsg(t("fa" + q), "bot"); }, 350);
       });
     });
 
     (function initLang() {
-      var saved = null;
-      try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+      var saved = null; try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
       applyLang(saved === "en" ? "en" : "zh");
     })();
 
     (function carousel() {
-      var track = document.getElementById("previewTrack");
-      var dotsWrap = document.getElementById("previewDots");
-      var prevBtn = document.getElementById("prevBtn");
-      var nextBtn = document.getElementById("nextBtn");
-      if (!track || !dotsWrap) return;
+      var track = document.getElementById("previewTrack"), dotsWrap = document.getElementById("previewDots");
+      var prevBtn = document.getElementById("prevBtn"), nextBtn = document.getElementById("nextBtn");
       var cards = Array.prototype.slice.call(track.querySelectorAll(".pcard"));
-      cards.forEach(function (_, i) {
-        var d = document.createElement("i");
-        if (i === 0) d.className = "on";
-        dotsWrap.appendChild(d);
-      });
+      cards.forEach(function (_, i) { var d = document.createElement("i"); if (i === 0) d.className = "on"; dotsWrap.appendChild(d); });
       var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll("i"));
-      function currentIndex() {
-        var mid = track.scrollLeft + track.clientWidth / 2;
-        var best = 0, bestDist = Infinity;
-        cards.forEach(function (c, i) {
-          var d = Math.abs((c.offsetLeft + c.offsetWidth / 2) - mid);
-          if (d < bestDist) { bestDist = d; best = i; }
-        });
-        return best;
-      }
-      function updateDots() {
-        var i = currentIndex();
-        dots.forEach(function (d, idx) { d.classList.toggle("on", idx === i); });
-      }
-      function go(dir) {
-        var i = Math.max(0, Math.min(cards.length - 1, currentIndex() + dir));
-        cards[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-      }
-      prevBtn && prevBtn.addEventListener("click", function () { go(-1); });
-      nextBtn && nextBtn.addEventListener("click", function () { go(1); });
-      track.addEventListener("scroll", function () {
-        window.clearTimeout(track._t);
-        track._t = window.setTimeout(updateDots, 60);
-      }, { passive: true });
-      updateDots();
+      function cur() { var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
+        cards.forEach(function (c, i) { var d = Math.abs((c.offsetLeft + c.offsetWidth / 2) - mid); if (d < bd) { bd = d; best = i; } }); return best; }
+      function upd() { var i = cur(); dots.forEach(function (d, j) { d.classList.toggle("on", j === i); }); }
+      function go(dir) { var i = Math.max(0, Math.min(cards.length - 1, cur() + dir)); var c = cards[i];
+        track.scrollTo({ left: c.offsetLeft - (track.clientWidth - c.offsetWidth) / 2, behavior: "smooth" }); }
+      prevBtn.addEventListener("click", function () { go(-1); });
+      nextBtn.addEventListener("click", function () { go(1); });
+      track.addEventListener("scroll", function () { clearTimeout(track._t); track._t = setTimeout(upd, 60); }, { passive: true });
+      upd();
     })();
   </script>
 </body>
